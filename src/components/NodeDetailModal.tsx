@@ -1,6 +1,14 @@
-import { Modal, Box, Button, Typography, useTheme } from "@mui/material";
+import {
+  Modal,
+  Box,
+  Button,
+  Typography,
+  useTheme,
+  Skeleton,
+} from "@mui/material";
 import NodeDetail from "../data/NodeDetail";
 import "../index.css";
+import { useState, useEffect } from "react";
 
 interface Node {
   code: number;
@@ -43,6 +51,17 @@ const NodeDetailModal = ({
 
   const nodeDetail = NodeDetail[node.code];
   const { banner, title, description, text } = nodeDetail;
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    setImageLoaded(false); // Reset loading state when modal opens or node changes
+  }, [node]);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <>
       <Modal
@@ -52,7 +71,10 @@ const NodeDetailModal = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={OuterBoxStyle}>
-          <img id="banner" src={banner} />
+          {!imageLoaded && (
+            <Skeleton variant="rectangular" width="100%" height={200} />
+          )}
+          <img id="banner" src={banner} onLoad={handleImageLoad} />
           <Box sx={InnerBoxStyle}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {title}
