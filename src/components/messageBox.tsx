@@ -45,7 +45,7 @@ const MessageBox = ({ node, nodeClickEvent }: any) => {
                 animation="wave"
                 variant="rectangular"
                 width="100%"
-                height="150px"
+                height="300px"
               />
             )}
             <CardMedia
