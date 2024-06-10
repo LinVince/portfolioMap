@@ -73,12 +73,7 @@ const NodeDetailModal = ({
         <Box sx={OuterBoxStyle}>
           <Box sx={{ position: "relative", width: "100%", height: "auto" }}>
             {!imageLoaded && (
-              <Skeleton
-                variant="rectangular"
-                width="100%"
-                height="100%"
-                sx={{ position: "absolute", top: 0, left: 0 }}
-              />
+              <Skeleton variant="rectangular" width={210} height={118} />
             )}
             <img
               id="banner"
