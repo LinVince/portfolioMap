@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Portfolio detail page*/
+
+#banner{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 0;
+}
+
+[class*="title"] {
+  margin-top: 50px !important;
+  margin-bottom: 0px !important;
+  font-weight: bold !important;
+}
+
+[class*="text"] {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.MuiModal-root img{
+margin-top:50px;
+margin-bottom: 50px;
+width:800px;
+}
+
+.boldText{
+font-weight: bold;
+}
+
+@media(min-width:600px) and (max-width:1199px){
+
+.MuiModal-root img{
+  margin-top:20px;
+  margin-bottom: 20px;
+  width:500px;
+  }
+}
+  
+  
+@media(min-width:300px) and (max-width:599px){
+  
+
+  
+  
+}
+
+/* Deck.gl wrapper unscrollable */
+#deckgl-wrapper {
+  overflow-y: hidden;
+}
+
+
+/* Zoom Control */
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  display: vertical;
+  z-index: 999;
+}
+.zoom-controls-button {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+  font-size: 20px;
+  border: 0px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
