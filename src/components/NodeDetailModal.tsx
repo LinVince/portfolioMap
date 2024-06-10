@@ -71,10 +71,28 @@ const NodeDetailModal = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={OuterBoxStyle}>
-          {!imageLoaded && (
-            <Skeleton variant="rectangular" width="100%" height={200} />
-          )}
-          <img id="banner" src={banner} onLoad={handleImageLoad} />
+          <Box sx={{ position: "relative", width: "100%", height: "auto" }}>
+            {!imageLoaded && (
+              <Skeleton
+                variant="rectangular"
+                width="100%"
+                height="100%"
+                sx={{ position: "absolute", top: 0, left: 0 }}
+              />
+            )}
+            <img
+              id="banner"
+              src={banner}
+              onLoad={handleImageLoad}
+              style={{
+                display: imageLoaded ? "block" : "none",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+              alt="Banner"
+            />
+          </Box>
           <Box sx={InnerBoxStyle}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {title}
