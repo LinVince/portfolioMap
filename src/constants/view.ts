@@ -3,9 +3,9 @@ const MAX_ZOOM = 16;
 const MIN_ZOOM = 1.4;
 
 export const INITIAL_VIEW_STATE = {
-    latitude: 23.7416668866832955,
-    longitude: 0,
-    zoom: 1.0,
+    latitude: 25.02434493613632,
+    longitude: 121.53592051950127,
+    zoom: 12,
     maxZoom: MAX_ZOOM,
     minZoom: MIN_ZOOM,
     pitch: 0,

@@ -22,7 +22,16 @@ const nodes =
         "latitude": 25.035958249225917, 
         "img":"../image/ga_img_3.jpg",
        
-    }
+    },
+    {
+        "code":4,
+        "text":"B2B - Bitcoin Generator",
+        "skill": "Fullstack",
+        "longitude": 121.53592051950127 ,
+        "latitude": 25.02434493613632, 
+        "img":"../image/ga_img_4.jpg",
+       
+    },
 ]
 
 
