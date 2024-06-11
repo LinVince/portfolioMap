@@ -27,9 +27,18 @@ const nodes =
         "code":4,
         "text":"B2B - Bitcoin Generator",
         "skill": "Fullstack",
-        "longitude": 121.53592051950127 ,
+        "longitude": 121.53592051950127,
         "latitude": 25.02434493613632, 
         "img":"../image/ga_img_4.jpg",
+       
+    },
+    {
+        "code":5,
+        "text":"UK GOV - Energy Scenario Explorer",
+        "skill": "Fullstack",
+        "longitude": -0.13409374722408254,
+        "latitude": 51.52467265105652,
+        "img":"../image/ga_img_5.jpg",
        
     },
 ]

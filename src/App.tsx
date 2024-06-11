@@ -90,6 +90,18 @@ function App({ darkMode }: { darkMode: boolean }) {
     setModalOpen(false);
   };
 
+  //Change View as City Button Clicked
+  const onCityButtonClick = (obj: any) => {
+    const { longitude, latitude } = obj;
+    setViewState({
+      ...viewState,
+      longitude,
+      latitude,
+      zoom: 12,
+      transitionDuration: 1000,
+    });
+  };
+
   return (
     <>
       <DeckGL
@@ -104,7 +116,11 @@ function App({ darkMode }: { darkMode: boolean }) {
           mapStyle={darkMode ? MAP_STYLE_DARK : MAP_STYLE_LIGHT}
           attributionControl={false}
         />
-        <ButtonGroup darkMode={darkMode} objects={trendingProject} />
+        <ButtonGroup
+          darkMode={darkMode}
+          objects={trendingProject}
+          onButtonClick={onCityButtonClick}
+        />
         <ZoomControls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} />
       </DeckGL>
       <MessageBox node={nodeBrief} nodeClickEvent={nodeClickEvent} />

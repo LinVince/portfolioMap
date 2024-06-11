@@ -12,9 +12,11 @@ interface MapNode {
 export default function ButtonGroup({
   darkMode,
   objects,
+  onButtonClick,
 }: {
   darkMode: boolean;
   objects: MapNode[];
+  onButtonClick: (node: MapNode) => void;
 }) {
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
 
@@ -23,6 +25,7 @@ export default function ButtonGroup({
       <Stack sx={{ position: "absolute", top: "10px", left: "10px" }}>
         {objects.map((o) => (
           <Button
+            onClick={() => onButtonClick(o)}
             sx={{
               width: "200px",
               borderRadius: "30px",

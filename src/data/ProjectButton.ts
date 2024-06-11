@@ -1,6 +1,6 @@
 const trendingProject = [
 
-    { text: "Hello", type: "Hello", longitude: 0, latitude: 0 }];
+    { text: "Taipei", type: "Taipei", longitude: 121.53592051950127, latitude: 25.02434493613632 }];
 
 
 export default trendingProject
