@@ -111,7 +111,22 @@ const NodeDetailModal = ({
                       marginBottom: 5,
                     }}
                   >
-                    <img key={index} src={item.src} />
+                    {!imageLoaded && (
+                      <Skeleton
+                        animation="wave"
+                        variant="rectangular"
+                        width="100%"
+                        height="600px"
+                      />
+                    )}
+                    <img
+                      key={index}
+                      src={item.src}
+                      onLoad={handleImageLoad}
+                      style={{
+                        display: imageLoaded ? "block" : "none",
+                      }}
+                    />
                   </Box>
                 );
               } else if (item.tag === "a") {
