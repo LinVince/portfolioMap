@@ -4,7 +4,6 @@ import { darkThemeOptions, lightThemeOptions } from "../theme";
 
 interface MapNode {
   text: string;
-  type: string;
   longitude: number;
   latitude: number;
 }
@@ -22,14 +21,23 @@ export default function ButtonGroup({
 
   return (
     <>
-      <Stack sx={{ position: "absolute", top: "10px", left: "10px" }}>
+      <Stack
+        sx={{
+          flexDirection: "row",
+          position: "absolute",
+          top: "10px",
+          left: "10px",
+        }}
+      >
         {objects.map((o) => (
           <Button
             onClick={() => onButtonClick(o)}
             sx={{
-              width: "200px",
+              paddingX: 5,
+              marginX: 2,
+              width: "auto",
               borderRadius: "30px",
-              backgroundColor: theme.palette.background.paper + 50,
+              backgroundColor: theme.palette.background.paper,
             }}
           >
             <Typography

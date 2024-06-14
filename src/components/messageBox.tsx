@@ -7,11 +7,13 @@ import {
   Button,
   Box,
   Skeleton,
+  IconButton,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import { useState, useEffect } from "react";
 /*Expected Props: When you pass props to the MessageBox component, such as in <MessageBox myGod="hei" msg="hei" />, those props will be combined into a single object { myGod: "hei", msg: "hei" } and passed to the component.*/
 
-const MessageBox = ({ node, nodeClickEvent }: any) => {
+const MessageBox = ({ node, nodeClickEvent, onClose }: any) => {
   if (node === undefined) {
     return <></>;
   } else {
@@ -40,6 +42,21 @@ const MessageBox = ({ node, nodeClickEvent }: any) => {
           }}
         >
           <Box sx={{ position: "relative", width: "100%", height: "auto" }}>
+            <IconButton
+              sx={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                zIndex: 1,
+                color: "rgba(0, 0, 0, 0.2)", // Set the color with transparency
+                "&:hover": {
+                  color: "rgba(0, 0, 0, 0.8)", // Change color on hover
+                },
+              }}
+              onClick={onClose}
+            >
+              <CloseIcon sx={{ fontSize: 12 }} />
+            </IconButton>
             {!imageLoaded && (
               <Skeleton
                 animation="wave"

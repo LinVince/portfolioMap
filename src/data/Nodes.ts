@@ -41,6 +41,33 @@ const nodes =
         "img":"../image/ga_img_5.jpg",
        
     },
+    {
+        "code":6,
+        "text":"TruthTech - Network Knowledge Map",
+        "skill": "Fullstack, Team Management",
+        "longitude": -0.10069366214252222,
+        "latitude": 51.52121938709922, 
+        "img":"../image/ga_img_6.jpg",
+       
+    },
+    {
+        "code":7,
+        "text":"GameHub",
+        "skill": "Frontend",
+        "longitude": -0.15089766214252222,
+        "latitude": 51.52121938709922, 
+        "img":"../image/ga_img_11.jpg",
+       
+    },
+    {
+        "code":8,
+        "text":"ICT Spring - Cybersecurity Product Launch",
+        "skill": "Pitch, Presentation",
+        "longitude": 6.128362689034088,
+        "latitude": 49.6114555238771, 
+        "img":"../image/IctSpring_1.jpg",
+       
+    },
 ]
 
 

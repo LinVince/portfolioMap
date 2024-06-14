@@ -321,7 +321,97 @@ const NodeDetail : Record<number, NodeDetailItem> = {
                 'text':"The website contains the source code. The GitHub README.md contains all the information for both users and developers."},
               
         ]
-}
+},    
+
+    6: {
+    'banner':'../image/banner_p6.jpg',
+    'title':'TruthTech - Network Knowledge Map',
+    'description':"The knowledge navigation map is a truth tech product I developed with TiiQu, a London-based organization devoted to green and truth technology. During my study in London, I've got the opportunity to work with them. From a UX designer in the first place, a overall product designer and then the frontend engineer, eventually the lead of the whole frontend team, I've seen the product built from scratch. As more and more people devoted their time and efforts, we finally achieved the concept of turning knowledge into a map to defeat misinformation as we aim to let people know what they don't know and show them 'what they don't know they don't know.",
+    'client':'TiiQu',
+    'text':[
+        {'tag':'div',
+            'class':'title',
+            'text':"Starting from a Small Idea - Network Graph"},
+            {'tag':'img','src':"../image/tiiqu_gephi.jpg"},
+            {'tag':'div',
+              'class':'text',
+              'text':"What may be the best way to present knowledge? I would say network graph is a good tool to visualize the relation between each domain or knowledge 'node'. However, network graph looks fancy but is not necessarily the best visual representation type. On one hand, users may feel lost due to its complexity. On the other hand, people may not know how the information could be leveraged."},
+              {'tag':'div',
+              'class':'title',
+              'text':"Analogous Design - Prioritized Usability over Fancy Features"},
+              {'tag':'img','src':"../image/tiiqu_navigating.gif"},
+              {'tag':'div',
+              'class':'text',
+              'text':"Who doesn't use Google Map? I guess no one. Using navigation apps for direction has firmly formed users' behaviors. We are all used to scroll up and down for new information or target destination. It involves exploring, discovering and seeking. Rather than using network graph, we decided to lean toward navigation. We call it 'knowledge map'."},
+              {'tag':'div',
+              'class':'title',
+              'text':"Visual Representation Incorporated with Information Architecture"},
+              {'tag':'img','src':"../image/tiiqu_knowledgeMap.jpg"},
+              {'tag':'div',
+              'class':'text',
+              'text':"We spent quite some time integrating the backend endpoints with the frontend. Whenever a topic on the map is clicked, the information on the left would fly in presenting AI generated questions and answers based on academic papers."},
+              {'tag':'img','src':"../image/tiiqu_knowledgeMap2.jpg"},
+              {'tag':'div',
+              'class':'text',
+              'text':"The project indeed involves the orchestration between the frontend and the backend. As the frontend team lead, I enjoy bridging different technologies for the benevolent purposes."},
+              {'tag':'div',
+              'class':'title',
+              'text':"Demonstration of this Innovative Technology"},
+              {'tag':'div',
+              'class':'text',
+              'text':"Soon the official and the latest version will be launched here."},
+              {'tag':'a','href':'https://qutii.org','text':'qutii.org'},
+              {'tag':'div',
+              'class':'text',
+              'text':"For temporary demonstration purpoes (only Desktop), visit"},
+              {'tag':'a','href':'https://qutii.vercel.app/','text':'qutii.vercel.app'},
+    ]
+},
+    7: {
+    'banner':'../image/banner_p7.jpg',
+    'title':'GameHub',
+    'description':"The knowledge navigation map is a truth tech product I developed with TiiQu, a London-based organization devoted to green and truth technology. During my study in London, I've got the opportunity to work with them. From a UX designer in the first place, a overall product designer and then the frontend engineer, eventually the lead of the whole frontend team, I've seen the product built from scratch. As more and more people devoted their time and efforts, we finally achieved the concept of turning knowledge into a map to defeat misinformation as we aim to let people know what they don't know and show them 'what they don't know they don't know.",
+    'client':'TiiQu',
+    'text':[ 
+        {'tag':'div',
+        'class':'title',
+        'text':"React Best Practice"},
+        {'tag':'div',
+          'class':'text',
+          'text':"The web application utilizes zustand for state management and follows the best practices for modular structure. Click the link below for demonstration."},
+        {'tag':'div',
+        'class':'text',
+        'text':"For  demonstration purpoes"},
+        {'tag':'a','href':'https://game-hub-six-coral.vercel.app/','text':'GameHub'},
+    ]
+
+}, 
+    8: {
+    'banner':'../image/IctSpring_2.jpg',
+    'title':'ICT Spring - Cybersecurity Product Launch',
+    'description':"ICT Spring, held annually in Luxembourg, is a significant global tech conference that brings together leaders from the information and communication technology (ICT) sector to discuss innovations and trends shaping the future. The event features keynotes, exhibitions, and networking opportunities, focusing on the latest advancements in technology and digital transformation. WiSECURE Technologies, a prominent participant at ICT Spring, showcases its cutting-edge cybersecurity products designed to enhance digital security. Their offerings include kvHSM, a hardware security module that ensures robust key management and encryption, and passwordless authentication solutions that streamline secure access without the need for traditional passwords, providing both enhanced security and user convenience.",
+    'client':'',
+    'text':[ 
+        {'tag':'div',
+        'class':'title',
+        'text':"Product Exhibition and Presentation"},
+        {'tag':'div',
+          'class':'text',
+          'text':"Check the following media links for more information."},
+        {'tag':'a','href':'https://www.linkedin.com/posts/luxembourg-trade-and-invest_ictspring2022-luxembourg-taiwan-activity-6948654755900489728-HSc2?utm_source=share&utm_medium=member_desktop','text':"Luxembourg Trade and Invest Post"},
+        {'tag':'div',
+            'class':'text',
+            'text':""},
+        {'tag':'a','href':'https://www.linkedin.com/posts/wisecure-tech_ictspring2022-cryptography-fido2-activity-6948895717562138624-vxZ1?utm_source=share&utm_medium=member_desktop','text':'WiSECURE Post'},
+        {'tag':'div',
+            'class':'text',
+            'text':""},
+        {'tag':'a','href':'https://www.linkedin.com/posts/robertmachado_companies-from-taipei-activity-6947446769874046977-_dN0?utm_source=share&utm_medium=member_desktop','text':"Partner's Post"},
+     
+    ]
+
 }
 
+
+}
 export default NodeDetail

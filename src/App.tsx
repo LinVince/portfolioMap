@@ -26,7 +26,7 @@ function App({ darkMode }: { darkMode: boolean }) {
       ...viewState,
       longitude,
       latitude,
-      zoom: 12,
+      zoom: 12.6,
       transitionDuration: 1000,
     });
     setNodeBrief(obj);
@@ -97,9 +97,14 @@ function App({ darkMode }: { darkMode: boolean }) {
       ...viewState,
       longitude,
       latitude,
-      zoom: 12,
+      zoom: 12.6,
       transitionDuration: 1000,
     });
+  };
+
+  // Close the messageBox
+  const MessageBoxClose = () => {
+    setNodeBrief(undefined);
   };
 
   return (
@@ -123,7 +128,11 @@ function App({ darkMode }: { darkMode: boolean }) {
         />
         <ZoomControls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} />
       </DeckGL>
-      <MessageBox node={nodeBrief} nodeClickEvent={nodeClickEvent} />
+      <MessageBox
+        node={nodeBrief}
+        nodeClickEvent={nodeClickEvent}
+        onClose={MessageBoxClose}
+      />
       <NodeDetailModal
         open={modalOpen}
         handleModalClose={handleModalClose}
