@@ -1,5 +1,4 @@
 import { Button, Stack, Typography } from "@mui/material";
-import "../theme";
 import { darkThemeOptions, lightThemeOptions } from "../theme";
 
 interface MapNode {
@@ -10,10 +9,12 @@ interface MapNode {
 
 export default function ButtonGroup({
   darkMode,
+  layout,
   objects,
   onButtonClick,
 }: {
   darkMode: boolean;
+  layout: string;
   objects: MapNode[];
   onButtonClick: (node: MapNode) => void;
 }) {
@@ -23,7 +24,8 @@ export default function ButtonGroup({
     <>
       <Stack
         sx={{
-          flexDirection: "row",
+          flexDirection: layout,
+          justifyContent: layout === "row" ? "center" : "flex-start",
           position: "absolute",
           top: "10px",
           left: "10px",
@@ -33,9 +35,9 @@ export default function ButtonGroup({
           <Button
             onClick={() => onButtonClick(o)}
             sx={{
-              paddingX: 5,
-              marginX: 2,
-              width: "auto",
+              paddingX: 0.8,
+              marginX: 1,
+              width: "fit-content",
               borderRadius: "30px",
               backgroundColor: theme.palette.background.paper,
             }}
@@ -43,6 +45,7 @@ export default function ButtonGroup({
             <Typography
               noWrap
               style={{
+                fontSize: "12px",
                 textOverflow: "ellipsis",
                 overflow: "hidden",
                 whiteSpace: "nowrap",

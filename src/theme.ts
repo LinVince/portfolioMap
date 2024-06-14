@@ -16,6 +16,7 @@ const lightThemeOptions = createTheme({
       secondary: "#555555",
     },
   },
+ 
 });
 
 // Dark theme options
@@ -35,5 +36,7 @@ const darkThemeOptions = createTheme({
     },
   },
 });
+
+
 
 export { lightThemeOptions, darkThemeOptions };

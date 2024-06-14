@@ -13,11 +13,20 @@ import ButtonGroup from "./components/ButtonGroup";
 import trendingProject from "./data/ProjectButton";
 import MessageBox from "./components/messageBox";
 import NodeDetailModal from "./components/NodeDetailModal";
+import { useMediaQuery, Box } from "@mui/material";
 
-function App({ darkMode }: { darkMode: boolean }) {
+interface Props {
+  darkMode: boolean;
+}
+
+function App({ darkMode }: Props) {
   const [viewState, setViewState] = useState(INITIAL_VIEW_STATE);
-  const [nodeBrief, setNodeBrief] = useState(undefined);
+  const [nodeBrief, setNodeBrief] = useState<any>(undefined);
   const [modalOpen, setModalOpen] = useState(false);
+
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  const isTablet = useMediaQuery("(min-width: 601px) and (max-width: 960px)");
+  const isDesktop = useMediaQuery("(min-width: 961px)");
 
   // Click event of the map text label
   const handleClickEvent = (obj: any) => {
@@ -107,6 +116,8 @@ function App({ darkMode }: { darkMode: boolean }) {
     setNodeBrief(undefined);
   };
 
+  // Set the buttongroup layout
+  const layout = isMobile ? "column" : "row";
   return (
     <>
       <DeckGL
@@ -121,11 +132,14 @@ function App({ darkMode }: { darkMode: boolean }) {
           mapStyle={darkMode ? MAP_STYLE_DARK : MAP_STYLE_LIGHT}
           attributionControl={false}
         />
+
         <ButtonGroup
           darkMode={darkMode}
+          layout={layout}
           objects={trendingProject}
           onButtonClick={onCityButtonClick}
         />
+
         <ZoomControls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} />
       </DeckGL>
       <MessageBox
