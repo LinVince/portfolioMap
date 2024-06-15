@@ -123,7 +123,7 @@ function App({ darkMode }: Props) {
         layers={[textLayer]}
         initialViewState={viewState}
         onViewStateChange={handleViewStateChange}
-        controller={{ touchRotate: true, dragRotate: true }}
+        controller={{ touchRotate: false, dragRotate: false }}
         getCursor={({ isHovering }) => (isHovering ? "pointer" : "default")}
       >
         <Map

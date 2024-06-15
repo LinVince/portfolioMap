@@ -1,11 +1,15 @@
 import { TextLayer } from "@deck.gl/layers";
 import { CollisionFilterExtension } from "@deck.gl/extensions";
 import nodes from "../data/Nodes";
+import { useMediaQuery } from "@mui/material";
 
-const fontSize = 32;
-const noOverlap = true;
+
 
 export function createTextLayer(changeViewState: any, viewState: any,  darkMode: boolean) {
+    const isMobile = useMediaQuery("(max-width: 600px)");
+    const fontSize = isMobile? 12:16;
+    const noOverlap = true;
+   
     const scale = 2 ** viewState.zoom;
     const sizeMaxPixels = (scale / 3) * fontSize;
     const sizeMinPixels = Math.min(scale / 1000, 0.5) * fontSize;
@@ -22,7 +26,7 @@ export function createTextLayer(changeViewState: any, viewState: any,  darkMode:
         getPosition: (d) => [d.longitude, d.latitude],
         getText: (d) => d.text,
         getColor: darkMode? [255, 255, 255] : [117, 117, 117],
-        getSize: 16,
+        getSize: fontSize,
         sizeMaxPixels,
         sizeMinPixels,
         maxWidth: 64 * 12,

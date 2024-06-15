@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState, useEffect } from "react";
+import { useMediaQuery } from "@mui/material";
 /*Expected Props: When you pass props to the MessageBox component, such as in <MessageBox myGod="hei" msg="hei" />, those props will be combined into a single object { myGod: "hei", msg: "hei" } and passed to the component.*/
 
 const MessageBox = ({ node, nodeClickEvent, onClose }: any) => {
@@ -18,6 +19,7 @@ const MessageBox = ({ node, nodeClickEvent, onClose }: any) => {
     return <></>;
   } else {
     const [imageLoaded, setImageLoaded] = useState(false);
+    const isMobile = useMediaQuery("(max-width: 600px)");
 
     useEffect(() => {
       setImageLoaded(false); // Reset loading state when modal opens or node changes
@@ -31,9 +33,9 @@ const MessageBox = ({ node, nodeClickEvent, onClose }: any) => {
       <Container>
         <Card
           sx={{
-            width: "50vh",
+            width: isMobile ? "45vh" : "50vh",
             position: "absolute", // Positioning the box
-            bottom: "60px", // Top padding
+            bottom: isMobile ? "10px" : "60px", // Top padding
             left: "10px", // Right padding
             border: "0px solid #555", // Border
             padding: "10px", // Padding inside the box
@@ -68,6 +70,7 @@ const MessageBox = ({ node, nodeClickEvent, onClose }: any) => {
             <CardMedia
               style={{
                 display: imageLoaded ? "block" : "none",
+                objectFit: "cover",
               }}
               component="img"
               width="100%"
