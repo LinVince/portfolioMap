@@ -9,6 +9,7 @@ import {
 import NodeDetail from "../data/NodeDetail";
 import "../index.css";
 import { useState, useEffect } from "react";
+import { useMediaQuery } from "@mui/material";
 
 interface Node {
   code: number;
@@ -26,6 +27,7 @@ const NodeDetailModal = ({
   if (!node) return <></>;
 
   const theme = useTheme();
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   const linkStyle = {
     textDecoration: "none",
@@ -38,7 +40,7 @@ const NodeDetailModal = ({
     left: "50%",
     maxHeight: "90%",
     transform: "translate(-50%, -50%)",
-    width: "80%",
+    width: isMobile ? "95%" : "80%",
     bgcolor: theme.palette.background.default,
     boxShadow: 24,
     borderRadius: 3,
@@ -77,7 +79,7 @@ const NodeDetailModal = ({
                 animation="wave"
                 variant="rectangular"
                 width="100%"
-                height="600px"
+                height={isMobile ? "200px" : "600px"}
               />
             )}
             <img
@@ -116,7 +118,7 @@ const NodeDetailModal = ({
                         animation="wave"
                         variant="rectangular"
                         width="100%"
-                        height="600px"
+                        height={isMobile ? "200px" : "600px"}
                       />
                     )}
                     <img
@@ -125,6 +127,9 @@ const NodeDetailModal = ({
                       onLoad={handleImageLoad}
                       style={{
                         display: imageLoaded ? "block" : "none",
+                        width: "100%",
+                        height: "auto",
+                        objectFit: "cover",
                       }}
                     />
                   </Box>
