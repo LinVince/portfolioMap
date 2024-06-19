@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import App from "./App.tsx";
 import "./index.css";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import ColorModeSwitch from "./components/colorSwitch";
 import { lightThemeOptions, darkThemeOptions } from "./theme.ts";
+import router from "./routes.tsx";
+import { RouterProvider } from "react-router-dom";
+import useDarkModeStore from "./store.ts";
 
 const Root = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const { darkMode, setDarkMode } = useDarkModeStore((state: any) => ({
+    darkMode: state.darkMode,
+    setDarkMode: state.setDarkMode,
+  }));
+
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
 
   return (
@@ -15,7 +21,7 @@ const Root = () => {
       <CssBaseline />
       <ColorModeSwitch darkMode={darkMode} setDarkMode={setDarkMode} />
       <React.StrictMode>
-        <App darkMode={darkMode} />
+        <RouterProvider router={router} />
       </React.StrictMode>
     </ThemeProvider>
   );

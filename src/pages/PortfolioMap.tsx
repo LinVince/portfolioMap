@@ -1,28 +1,29 @@
 import { DeckGL } from "@deck.gl/react";
 import { useState } from "react";
 import { MapView } from "@deck.gl/core";
-import { createTextLayer } from "./components/textLayer";
+import { createTextLayer } from "../components/textLayer";
 import {
   INITIAL_VIEW_STATE,
   MAP_STYLE_DARK,
   MAP_STYLE_LIGHT,
-} from "./constants/view";
+} from "../constants/view";
 import { Map } from "react-map-gl/maplibre";
-import ZoomControls from "./components/zoomControl";
-import ButtonGroup from "./components/ButtonGroup";
-import trendingProject from "./data/ProjectButton";
-import MessageBox from "./components/messageBox";
-import NodeDetailModal from "./components/NodeDetailModal";
+import ZoomControls from "../components/zoomControl";
+import ButtonGroup from "../components/ButtonGroup";
+import trendingProject from "../data/ProjectButton";
+import MessageBox from "../components/messageBox";
+import NodeDetailModal from "../components/NodeDetailModal";
 import { useMediaQuery } from "@mui/material";
+import useDarkModeStore from "../store";
 
-interface Props {
-  darkMode: boolean;
-}
-
-function App({ darkMode }: Props) {
+function PortfolioMap() {
   const [viewState, setViewState] = useState(INITIAL_VIEW_STATE);
   const [nodeBrief, setNodeBrief] = useState<any>(undefined);
   const [modalOpen, setModalOpen] = useState(false);
+
+  const { darkMode } = useDarkModeStore((state: any) => ({
+    darkMode: state.darkMode,
+  }));
 
   const isMobile = useMediaQuery("(max-width: 600px)");
 
@@ -154,4 +155,4 @@ function App({ darkMode }: Props) {
   );
 }
 
-export default App;
+export default PortfolioMap;
