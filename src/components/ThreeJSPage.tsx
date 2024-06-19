@@ -3,7 +3,7 @@ import * as Three from "three";
 import useDarkModeStore from "../store";
 import { darkThemeOptions, lightThemeOptions } from "../theme";
 import { useMediaQuery, Box, Button } from "@mui/material";
-import { Link, useHistory } from "react-router-dom"; // Import useHistory hook from React Router
+import { Link } from "react-router-dom"; // Import useHistory hook from React Router
 
 const ThreeJSPage: React.FC = () => {
   const sphereContainerRef = useRef<HTMLDivElement>(null);
