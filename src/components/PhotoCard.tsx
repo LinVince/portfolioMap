@@ -9,16 +9,6 @@ import {
 /*Expected Props: When you pass props to the MessageBox component, such as in <MessageBox myGod="hei" msg="hei" />, those props will be combined into a single object { myGod: "hei", msg: "hei" } and passed to the component.*/
 
 const PhotoCard = ({ node, nodeClickEvent }: any) => {
-  /*const [imageLoaded, setImageLoaded] = useState(false);*/
-
-  /*useEffect(() => {
-    setImageLoaded(false); // Reset loading state when modal opens or node changes
-  }, [node]);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };*/
-
   return (
     <Card
       sx={{
