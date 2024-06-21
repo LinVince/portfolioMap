@@ -19,17 +19,9 @@ const PhotoCard = ({ node, nodeClickEvent }: any) => {
         boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
       }}
     >
-      {/*!imageLoaded && (
-          <Skeleton
-            animation="wave"
-            variant="rectangular"
-            width="100%"
-            height="300px"
-          />
-        )*/}
       <CardMedia
         style={{
-          display: "block" /*imageLoaded ? "block" : "none"*/,
+          display: "block",
           objectFit: "cover",
         }}
         component="img"
@@ -37,7 +29,6 @@ const PhotoCard = ({ node, nodeClickEvent }: any) => {
         height="250px"
         image={node.img}
         alt={node.text}
-        /*onLoad={handleImageLoad}*/
       />
 
       <CardContent>
