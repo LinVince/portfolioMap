@@ -27,7 +27,7 @@ const ThreeJSPage: React.FC = () => {
           0.1,
           1000
         );
-        camera.position.z = 5;
+        camera.position.z = 3;
 
         const renderer = new Three.WebGLRenderer();
         renderer.setSize(container.offsetWidth, container.offsetHeight);
@@ -131,7 +131,7 @@ const ThreeJSPage: React.FC = () => {
           ref={sphereContainerRef}
           sx={{
             width: "100%", // Adjust width as needed
-            height: "100%", // Take full height of parent container
+            height: "60%", // Take full height of parent container
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -167,23 +167,25 @@ const ThreeJSPage: React.FC = () => {
           ref={planeContainerRef}
           sx={{
             width: "100%", // Adjust width as needed
-            height: "100%", // Take full height of parent container
+            height: "60%", // Take full height of parent container
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         />
-        <Button
-          sx={{
-            paddingX: 2,
-            marginX: 1,
-            width: "fit-content",
-            borderRadius: "30px",
-            backgroundColor: theme.palette.background.paper,
-          }}
-        >
-          Portfolio Gallery Coming Soon
-        </Button>
+        <Link to="/portfolioGallery" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              paddingX: 2,
+              marginX: 1,
+              width: "fit-content",
+              borderRadius: "30px",
+              backgroundColor: theme.palette.background.paper,
+            }}
+          >
+            Portfolio Gallery
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import ColorModeSwitch from "./components/colorSwitch";
+import ColorModeSwitch from "./components/ColorSwitch.tsx";
 import { lightThemeOptions, darkThemeOptions } from "./theme.ts";
 import router from "./routes.tsx";
 import { RouterProvider } from "react-router-dom";

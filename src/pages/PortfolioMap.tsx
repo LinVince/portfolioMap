@@ -1,17 +1,17 @@
 import { DeckGL } from "@deck.gl/react";
 import { useState } from "react";
 import { MapView } from "@deck.gl/core";
-import { createTextLayer } from "../components/textLayer";
+import { createTextLayer } from "../components/TextLayer";
 import {
   INITIAL_VIEW_STATE,
   MAP_STYLE_DARK,
   MAP_STYLE_LIGHT,
 } from "../constants/view";
 import { Map } from "react-map-gl/maplibre";
-import ZoomControls from "../components/zoomControl";
+import ZoomControls from "../components/ZoomControl";
 import ButtonGroup from "../components/ButtonGroup";
 import trendingProject from "../data/ProjectButton";
-import MessageBox from "../components/messageBox";
+import MessageBox from "../components/MessageBox";
 import NodeDetailModal from "../components/NodeDetailModal";
 import { useMediaQuery } from "@mui/material";
 import useDarkModeStore from "../store";
