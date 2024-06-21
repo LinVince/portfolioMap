@@ -2,7 +2,6 @@ import { Box, Grid, Container } from "@mui/material";
 import PhotoCard from "./PhotoCard";
 import NodeDetailModal from "./NodeDetailModal";
 import { useState } from "react";
-import { useMediaQuery } from "@mui/material";
 
 const PhotoGallery = ({ nodes }: { nodes: any[] }) => {
   const [nodeBrief, setNodeBrief] = useState<any>(undefined);

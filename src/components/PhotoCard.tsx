@@ -5,14 +5,11 @@ import {
   Typography,
   Button,
   Box,
-  Skeleton,
 } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
 /*Expected Props: When you pass props to the MessageBox component, such as in <MessageBox myGod="hei" msg="hei" />, those props will be combined into a single object { myGod: "hei", msg: "hei" } and passed to the component.*/
 
 const PhotoCard = ({ node, nodeClickEvent }: any) => {
   /*const [imageLoaded, setImageLoaded] = useState(false);*/
-  const isMobile = useMediaQuery("(max-width: 600px)");
 
   /*useEffect(() => {
     setImageLoaded(false); // Reset loading state when modal opens or node changes
