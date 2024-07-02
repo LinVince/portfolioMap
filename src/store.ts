@@ -1,8 +1,10 @@
-import { create } from 'zustand';
+import { configureStore } from '@reduxjs/toolkit';
+import darkModeReducer from './reducers/darkModeReducer'
 
-const useDarkModeStore = create((set) => ({
-    darkMode: false,
-    setDarkMode: (isDarkMode:any) => set({ darkMode: isDarkMode }),
-}));
+const store = configureStore({
+  reducer: {
+    darkMode: darkModeReducer,
+  },
+});
 
-export default useDarkModeStore;
+export default store;

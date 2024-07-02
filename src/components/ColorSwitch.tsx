@@ -1,16 +1,18 @@
 import { Stack, Switch, Box } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../reducers/darkModeReducer";
 
 interface DarkModeState {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ColorModeSwitch: React.FC<DarkModeState> = ({
-  darkMode,
-  setDarkMode,
-}) => {
-  const handleColorSwitch = () => {
-    setDarkMode(!darkMode);
+const ColorModeSwitch: React.FC<DarkModeState> = () => {
+  const darkMode = useSelector((state: any) => state.darkMode);
+  const dispatch = useDispatch();
+
+  const setDarkMode = () => {
+    dispatch(toggleDarkMode());
   };
 
   return (
@@ -25,7 +27,7 @@ const ColorModeSwitch: React.FC<DarkModeState> = ({
       }}
     >
       <Stack direction="row" alignItems="center">
-        <Switch checked={darkMode} onChange={handleColorSwitch} />
+        <Switch checked={darkMode} onChange={setDarkMode} />
         <div>Dark Mode</div>
       </Stack>
     </Box>

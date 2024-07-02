@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as Three from "three";
-import useDarkModeStore from "../store";
+import { useSelector } from "react-redux";
 import { darkThemeOptions, lightThemeOptions } from "../theme";
 import { useMediaQuery, Box, Button } from "@mui/material";
 import { Link } from "react-router-dom"; // Import useHistory hook from React Router
@@ -8,9 +8,7 @@ import { Link } from "react-router-dom"; // Import useHistory hook from React Ro
 const ThreeJSPage: React.FC = () => {
   const sphereContainerRef = useRef<HTMLDivElement>(null);
   const planeContainerRef = useRef<HTMLDivElement>(null);
-  const { darkMode } = useDarkModeStore((state: any) => ({
-    darkMode: state.darkMode,
-  }));
+  const darkMode = useSelector((state: any) => state.darkMode);
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
 

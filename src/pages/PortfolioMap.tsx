@@ -14,16 +14,14 @@ import trendingProject from "../data/ProjectButton";
 import MessageBox from "../components/MessageBox";
 import NodeDetailModal from "../components/NodeDetailModal";
 import { useMediaQuery } from "@mui/material";
-import useDarkModeStore from "../store";
+import { useSelector } from "react-redux";
 
 function PortfolioMap() {
   const [viewState, setViewState] = useState(INITIAL_VIEW_STATE);
   const [nodeBrief, setNodeBrief] = useState<any>(undefined);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { darkMode } = useDarkModeStore((state: any) => ({
-    darkMode: state.darkMode,
-  }));
+  const darkMode = useSelector((state: any) => state.darkMode);
 
   const isMobile = useMediaQuery("(max-width: 600px)");
 
@@ -61,7 +59,7 @@ function PortfolioMap() {
   };
 
   // Import the textLayer and apply text label events
-  const textLayer = createTextLayer(handleClickEvent, viewState, darkMode);
+  const textLayer = createTextLayer(handleClickEvent, viewState);
 
   // Set the zoom handler
   const MIN_ZOOM = INITIAL_VIEW_STATE.minZoom;

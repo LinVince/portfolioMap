@@ -6,15 +6,18 @@ import ColorModeSwitch from "./components/ColorSwitch.tsx";
 import { lightThemeOptions, darkThemeOptions } from "./theme.ts";
 import router from "./routes.tsx";
 import { RouterProvider } from "react-router-dom";
-import useDarkModeStore from "./store.ts";
+import { Provider, useSelector, useDispatch } from "react-redux";
+import store from "./store";
+import { toggleDarkMode } from "./reducers/darkModeReducer";
 
 const Root = () => {
-  const { darkMode, setDarkMode } = useDarkModeStore((state: any) => ({
-    darkMode: state.darkMode,
-    setDarkMode: state.setDarkMode,
-  }));
-
+  const darkMode = useSelector((state: any) => state.darkMode);
+  const dispatch = useDispatch();
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+
+  const setDarkMode = () => {
+    dispatch(toggleDarkMode());
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -27,4 +30,12 @@ const Root = () => {
   );
 };
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Root />
+    </Provider>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));

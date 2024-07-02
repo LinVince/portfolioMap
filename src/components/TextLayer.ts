@@ -2,10 +2,11 @@ import { TextLayer } from "@deck.gl/layers";
 import { CollisionFilterExtension } from "@deck.gl/extensions";
 import nodes from "../data/Nodes";
 import { useMediaQuery } from "@mui/material";
+import { useSelector } from "react-redux";
 
 
 
-export function createTextLayer(changeViewState: any, viewState: any,  darkMode: boolean) {
+export function createTextLayer(changeViewState: any, viewState: any) {
     const isMobile = useMediaQuery("(max-width: 600px)");
     const fontSize = isMobile? 12:16;
     const noOverlap = true;
@@ -13,6 +14,8 @@ export function createTextLayer(changeViewState: any, viewState: any,  darkMode:
     const scale = 2 ** viewState.zoom;
     const sizeMaxPixels = (scale / 3) * fontSize;
     const sizeMinPixels = Math.min(scale / 1000, 0.5) * fontSize;
+
+    const darkMode = useSelector((state:any) => state.darkMode)
 
     return new TextLayer({
         id: "Vocabulary",
