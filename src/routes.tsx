@@ -3,6 +3,7 @@ import ErrorPage from "./pages/ErrorPage";
 import PortfolioMap from "./pages/PortfolioMap";
 import HomePage from "./pages/HomePage";
 import PhotoGallery from "./pages/PhotoGallery";
+import ExperiencePage from "./pages/Experience";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "portfolioMap", element: <PortfolioMap /> },
       { path: "portfolioGallery", element: <PhotoGallery /> },
+      { path: "experience", element: <ExperiencePage /> },
     ],
   },
 ]);

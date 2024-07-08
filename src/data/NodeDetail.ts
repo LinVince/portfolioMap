@@ -312,10 +312,10 @@ const NodeDetail : Record<number, NodeDetailItem> = {
                 'class':'text',
                 'text':"The web app will soon be hosted on"},
                 {'tag':'a','href':'https://energytransitionexplorer.uk','text':'energytransitionexplorer.uk'},
-                {'tag':'div',
+               /* {'tag':'div',
                 'class':'text',
                 'text':"The current version (11/4/2024) is available at"},
-                {'tag':'a','href':"http://vincejim91126.pythonanywhere.com/",'text':'vincejim91126.pythonanywhere.com'},
+                {'tag':'a','href':"http://vincejim91126.pythonanywhere.com/",'text':'vincejim91126.pythonanywhere.com'},*/
                 {'tag':'div',
                 'class':'text',
                 'text':"The website contains the source code. The GitHub README.md contains all the information for both users and developers."},

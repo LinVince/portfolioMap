@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"; // Import useHistory hook from React Ro
 const ThreeJSPage: React.FC = () => {
   const sphereContainerRef = useRef<HTMLDivElement>(null);
   const planeContainerRef = useRef<HTMLDivElement>(null);
+  const cubeContainerRef = useRef<HTMLDivElement>(null);
   const darkMode = useSelector((state: any) => state.darkMode);
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
@@ -82,6 +83,16 @@ const ThreeJSPage: React.FC = () => {
       const plane = new Three.LineSegments(planeWireframe, planeMaterial);
       initScene(planeContainerRef.current, plane);
     }
+    // Initialize cube scene
+    if (cubeContainerRef.current) {
+      const cubeGeometry = new Three.BoxGeometry(1, 1, 1);
+      const cubeWireframe = new Three.WireframeGeometry(cubeGeometry);
+      const cubeMaterial = new Three.LineBasicMaterial({
+        color: theme.palette.text.secondary,
+      });
+      const cube = new Three.LineSegments(cubeWireframe, cubeMaterial);
+      initScene(cubeContainerRef.current, cube);
+    }
 
     // Clean up
     return () => {
@@ -101,6 +112,13 @@ const ThreeJSPage: React.FC = () => {
           );
         }
       }
+      if (cubeContainerRef.current) {
+        while (cubeContainerRef.current.firstChild) {
+          cubeContainerRef.current.removeChild(
+            cubeContainerRef.current.firstChild
+          );
+        }
+      }
     };
   }, [darkMode]);
 
@@ -117,7 +135,7 @@ const ThreeJSPage: React.FC = () => {
       {/* Sphere container */}
       <Box
         sx={{
-          width: isMobile ? "300px" : "50%", // Adjust width as needed
+          width: isMobile ? "300px" : "30%", // Adjust width as needed
           height: "100%", // Take full height of parent container
           flexDirection: "column",
           display: "flex",
@@ -153,7 +171,7 @@ const ThreeJSPage: React.FC = () => {
       {/* Plane container */}
       <Box
         sx={{
-          width: isMobile ? "300px" : "50%", // Adjust width as needed
+          width: isMobile ? "300px" : "30%", // Adjust width as needed
           height: "100%", // Take full height of parent container
           flexDirection: "column",
           display: "flex",
@@ -182,6 +200,40 @@ const ThreeJSPage: React.FC = () => {
             }}
           >
             Portfolio Gallery
+          </Button>
+        </Link>
+      </Box>
+      <Box
+        sx={{
+          width: isMobile ? "300px" : "30%", // Adjust width as needed
+          height: "100%", // Take full height of parent container
+          flexDirection: "column",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          ref={cubeContainerRef}
+          sx={{
+            width: "100%", // Adjust width as needed
+            height: "60%", // Take full height of parent container
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        />
+        <Link to="/Experience" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              paddingX: 2,
+              marginX: 1,
+              width: "fit-content",
+              borderRadius: "30px",
+              backgroundColor: theme.palette.background.paper,
+            }}
+          >
+            Experience
           </Button>
         </Link>
       </Box>
