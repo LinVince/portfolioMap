@@ -37,20 +37,20 @@ export const ExperiencePaper: React.FC = () => {
           padding: 20,
           fontSize: "20px",
           fontWeight: "bold",
-          fontFamily: "Roboto",
+          fontFamily: "Roboto, Arial, Helvetica, sans-serif",
         }}
         align="left"
         gutterBottom
       >
         Experience
       </Typography>
-      <Box sx={{ padding: "50px" }}>
+      <Box sx={{ padding: "30px" }}>
         {experiences.map((exp, index) => (
           <Paper
             key={index}
             elevation={3}
             style={{
-              width: "95%",
+              width: "100%",
               marginBottom: "50px",
               padding: "20px",
               display: "flex",
@@ -76,7 +76,7 @@ export const ExperiencePaper: React.FC = () => {
               {exp.company}
             </Typography>
             <Typography>{exp.description}</Typography>
-            <Card sx={{ p: "20px", marginTop: "20px", width: "100%" }}>
+            <Card sx={{ p: "5px", marginTop: "20px", width: "100%" }}>
               {exp.media &&
                 exp.media.map((mediaItem, mediaIndex) => (
                   <div key={mediaIndex}>
