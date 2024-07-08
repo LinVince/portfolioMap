@@ -3,7 +3,7 @@ import ErrorPage from "./pages/ErrorPage";
 import PortfolioMap from "./pages/PortfolioMap";
 import HomePage from "./pages/HomePage";
 import PhotoGallery from "./pages/PhotoGallery";
-import ExperiencePage from "./pages/Experience";
+import ExperiencePage from "./pages/ExperiencePage";
 
 const router = createBrowserRouter([
   {
