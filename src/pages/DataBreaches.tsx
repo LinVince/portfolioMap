@@ -6,8 +6,6 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
-  Tooltip,
-  Text,
 } from "recharts";
 import { DataBreachesSumedTypeByMonth } from "../data/DataBreaches";
 
@@ -96,6 +94,7 @@ const DataBreaches: React.FC = () => {
             setIsRunning(false); // Stop animation when all data points are shown
             clearInterval(interval);
           }
+          console.log(index);
           return newIndex;
         });
       }, 1000); // Update every second
