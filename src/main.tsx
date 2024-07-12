@@ -9,6 +9,7 @@ import { RouterProvider } from "react-router-dom";
 import { Provider, useSelector, useDispatch } from "react-redux";
 import store from "./store";
 import { toggleDarkMode } from "./reducers/darkModeReducer";
+import Logo from "./components/Logo.tsx";
 
 const Root = () => {
   const darkMode = useSelector((state: any) => state.darkMode);
@@ -23,6 +24,7 @@ const Root = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <ColorModeSwitch darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Logo />
       <React.StrictMode>
         <RouterProvider router={router} />
       </React.StrictMode>

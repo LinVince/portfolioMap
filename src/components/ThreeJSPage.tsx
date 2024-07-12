@@ -3,12 +3,14 @@ import * as Three from "three";
 import { useSelector } from "react-redux";
 import { darkThemeOptions, lightThemeOptions } from "../theme";
 import { useMediaQuery, Box, Button } from "@mui/material";
-import { Link } from "react-router-dom"; // Import useHistory hook from React Router
+import { Link } from "react-router-dom";
+import ScrollDownIcon from "./ScrollDownIcon";
 
 const ThreeJSPage: React.FC = () => {
   const sphereContainerRef = useRef<HTMLDivElement>(null);
   const planeContainerRef = useRef<HTMLDivElement>(null);
   const cubeContainerRef = useRef<HTMLDivElement>(null);
+  const triangleContainerRef = useRef<HTMLDivElement>(null);
   const darkMode = useSelector((state: any) => state.darkMode);
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
@@ -94,6 +96,38 @@ const ThreeJSPage: React.FC = () => {
       initScene(cubeContainerRef.current, cube);
     }
 
+    // Initialize triangle scene
+    if (triangleContainerRef.current) {
+      const triangleGeometry = new Three.BufferGeometry();
+      const vertices = new Float32Array([
+        0,
+        1,
+        0, // Vertex 1
+        -1,
+        -1,
+        0, // Vertex 2
+        1,
+        -1,
+        0, // Vertex 3
+      ]);
+
+      triangleGeometry.setAttribute(
+        "position",
+        new Three.BufferAttribute(vertices, 3)
+      );
+
+      const triangleMaterial = new Three.LineBasicMaterial({
+        color: theme.palette.text.secondary,
+      });
+
+      const triangle = new Three.LineSegments(
+        new Three.WireframeGeometry(triangleGeometry),
+        triangleMaterial
+      );
+
+      initScene(triangleContainerRef.current, triangle);
+    }
+
     // Clean up
     return () => {
       // Clean up sphere container
@@ -116,6 +150,13 @@ const ThreeJSPage: React.FC = () => {
         while (cubeContainerRef.current.firstChild) {
           cubeContainerRef.current.removeChild(
             cubeContainerRef.current.firstChild
+          );
+        }
+      }
+      if (triangleContainerRef.current) {
+        while (triangleContainerRef.current.firstChild) {
+          triangleContainerRef.current.removeChild(
+            triangleContainerRef.current.firstChild
           );
         }
       }
@@ -167,7 +208,6 @@ const ThreeJSPage: React.FC = () => {
           </Button>
         </Link>
       </Box>
-
       {/* Plane container */}
       <Box
         sx={{
@@ -237,6 +277,42 @@ const ThreeJSPage: React.FC = () => {
           </Button>
         </Link>
       </Box>
+      {/* Triangle container */}
+      <Box
+        sx={{
+          width: isMobile ? "300px" : "30%", // Adjust width as needed
+          height: "100%", // Take full height of parent container
+          flexDirection: "column",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          ref={triangleContainerRef}
+          sx={{
+            width: "100%", // Adjust width as needed
+            height: "60%", // Take full height of parent container
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        />
+        <Link to="/services" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              paddingX: 2,
+              marginX: 1,
+              width: "fit-content",
+              borderRadius: "30px",
+              backgroundColor: theme.palette.background.paper,
+            }}
+          >
+            Services
+          </Button>
+        </Link>
+      </Box>
+      <ScrollDownIcon />
     </Box>
   );
 };

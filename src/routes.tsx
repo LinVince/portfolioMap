@@ -4,6 +4,8 @@ import PortfolioMap from "./pages/PortfolioMap";
 import HomePage from "./pages/HomePage";
 import PhotoGallery from "./pages/PhotoGallery";
 import ExperiencePage from "./pages/ExperiencePage";
+import DataBreaches from "./pages/DataBreaches";
+import Services from "./pages/Services";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,8 @@ const router = createBrowserRouter([
       { path: "portfolioMap", element: <PortfolioMap /> },
       { path: "portfolioGallery", element: <PhotoGallery /> },
       { path: "experience", element: <ExperiencePage /> },
+      { path: "dataBreaches", element: <DataBreaches /> },
+      { path: "services", element: <Services /> },
     ],
   },
 ]);

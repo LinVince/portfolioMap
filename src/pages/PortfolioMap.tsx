@@ -15,6 +15,7 @@ import MessageBox from "../components/MessageBox";
 import NodeDetailModal from "../components/NodeDetailModal";
 import { useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
+import BackToHomeIcon from "../components/HomeIcon";
 
 function PortfolioMap() {
   const [viewState, setViewState] = useState(INITIAL_VIEW_STATE);
@@ -25,6 +26,12 @@ function PortfolioMap() {
 
   const isMobile = useMediaQuery("(max-width: 600px)");
 
+  const HomeStyle = {
+    position: "fixed",
+    bottom: "10px",
+    left: "10px",
+    index: 1035,
+  };
   // Click event of the map text label
   const handleClickEvent = (obj: any) => {
     const { longitude, latitude } = obj;
@@ -138,6 +145,7 @@ function PortfolioMap() {
         />
 
         <ZoomControls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} />
+        <BackToHomeIcon style={HomeStyle} />
       </DeckGL>
       <MessageBox
         node={nodeBrief}
