@@ -13,7 +13,7 @@ import {
   Stack,
   Link,
 } from "@mui/material";
-import LanguageIcon from "@mui/icons-material/Language";
+import GTranslateRoundedIcon from "@mui/icons-material/GTranslateRounded";
 import services from "../data/Services";
 
 const ServiceTable: React.FC = () => {
@@ -50,7 +50,7 @@ const ServiceTable: React.FC = () => {
               aria-label="language"
               onClick={toggleLanguage}
             >
-              <LanguageIcon />
+              <GTranslateRoundedIcon />
             </IconButton>
           </Stack>
         </Box>

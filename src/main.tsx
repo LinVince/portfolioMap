@@ -4,12 +4,11 @@ import "./index.css";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import ColorModeSwitch from "./components/ColorSwitch.tsx";
 import { lightThemeOptions, darkThemeOptions } from "./theme.ts";
-import router from "./routes.tsx";
-import { RouterProvider } from "react-router-dom";
 import { Provider, useSelector, useDispatch } from "react-redux";
 import store from "./store";
 import { toggleDarkMode } from "./reducers/darkModeReducer";
 import Logo from "./components/Logo.tsx";
+import AppRouter from "./routes.tsx";
 
 const Root = () => {
   const darkMode = useSelector((state: any) => state.darkMode);
@@ -26,7 +25,7 @@ const Root = () => {
       <ColorModeSwitch darkMode={darkMode} setDarkMode={setDarkMode} />
       <Logo />
       <React.StrictMode>
-        <RouterProvider router={router} />
+        <AppRouter />
       </React.StrictMode>
     </ThemeProvider>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Typography, IconButton, Stack, Paper, Link } from "@mui/material";
-import LanguageIcon from "@mui/icons-material/Language";
+import GTranslateRoundedIcon from "@mui/icons-material/GTranslateRounded";
 import services from "../data/Services";
 
 const ServiceTableMobile: React.FC = () => {
@@ -29,7 +29,7 @@ const ServiceTableMobile: React.FC = () => {
           <Typography variant="h6" fontWeight={600}>
             {language === "en" ? "Services" : "服務"}
           </Typography>
-          <Stack direction="row" spacing={2} alignItems="center">
+          <Stack direction="row" spacing={1} alignItems="center">
             <Typography fontWeight={400}>
               {language === "en" ? "切換繁中" : "Switch to English"}
             </Typography>
@@ -38,7 +38,7 @@ const ServiceTableMobile: React.FC = () => {
               aria-label="language"
               onClick={toggleLanguage}
             >
-              <LanguageIcon />
+              <GTranslateRoundedIcon />
             </IconButton>
           </Stack>
         </Box>
