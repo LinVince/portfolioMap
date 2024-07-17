@@ -1,6 +1,17 @@
+export const SumedTypeByMonthLinesColor = [
+  { key: "Hacking/IT Incident", color: "#FF5733" }, // Bright Red
+  { key: "Improper Disposal", color: "#33FF57" }, // Bright Green
+  { key: "Loss", color: "#3357FF" }, // Bright Blue
+  { key: "Other", color: "#FF33A6" }, // Bright Pink
+  { key: "Theft", color: "#FFC300" }, // Bright Yellow
+  { key: "Unauthorized Access/Disclosure", color: "#A633FF" }, // Bright Purple
+  { key: "Unknown", color: "#33A6FF" } // Light Blue
+];
+
+
 export const DataBreachesSumedTypeByMonth = [
     {
-      "name": "2009-10",
+      "Time": "2009-10",
       "Hacking/IT Incident": 0.0,
       "Improper Disposal": 0.0,
       "Loss": 0.0,
@@ -10,7 +21,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2009-11",
+      "Time": "2009-11",
       "Hacking/IT Incident": 0.0,
       "Improper Disposal": 0.0,
       "Loss": 1.0,
@@ -20,7 +31,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2009-12",
+      "Time": "2009-12",
       "Hacking/IT Incident": 0.0,
       "Improper Disposal": 0.0,
       "Loss": 1.0,
@@ -30,7 +41,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-01",
+      "Time": "2010-01",
       "Hacking/IT Incident": 0.0,
       "Improper Disposal": 0.0,
       "Loss": 2.0,
@@ -40,7 +51,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-02",
+      "Time": "2010-02",
       "Hacking/IT Incident": 0.0,
       "Improper Disposal": 0.0,
       "Loss": 2.0,
@@ -50,7 +61,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-03",
+      "Time": "2010-03",
       "Hacking/IT Incident": 2.0,
       "Improper Disposal": 0.0,
       "Loss": 2.0,
@@ -60,7 +71,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-04",
+      "Time": "2010-04",
       "Hacking/IT Incident": 2.0,
       "Improper Disposal": 2.0,
       "Loss": 5.0,
@@ -70,7 +81,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-05",
+      "Time": "2010-05",
       "Hacking/IT Incident": 2.0,
       "Improper Disposal": 3.0,
       "Loss": 6.0,
@@ -80,7 +91,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-06",
+      "Time": "2010-06",
       "Hacking/IT Incident": 3.0,
       "Improper Disposal": 3.0,
       "Loss": 8.0,
@@ -90,7 +101,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-07",
+      "Time": "2010-07",
       "Hacking/IT Incident": 5.0,
       "Improper Disposal": 4.0,
       "Loss": 11.0,
@@ -100,7 +111,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-08",
+      "Time": "2010-08",
       "Hacking/IT Incident": 6.0,
       "Improper Disposal": 5.0,
       "Loss": 15.0,
@@ -110,7 +121,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-09",
+      "Time": "2010-09",
       "Hacking/IT Incident": 7.0,
       "Improper Disposal": 6.0,
       "Loss": 17.0,
@@ -120,7 +131,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-10",
+      "Time": "2010-10",
       "Hacking/IT Incident": 8.0,
       "Improper Disposal": 7.0,
       "Loss": 17.0,
@@ -130,7 +141,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-11",
+      "Time": "2010-11",
       "Hacking/IT Incident": 8.0,
       "Improper Disposal": 9.0,
       "Loss": 19.0,
@@ -140,7 +151,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2010-12",
+      "Time": "2010-12",
       "Hacking/IT Incident": 9.0,
       "Improper Disposal": 10.0,
       "Loss": 21.0,
@@ -150,7 +161,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2011-01",
+      "Time": "2011-01",
       "Hacking/IT Incident": 11.0,
       "Improper Disposal": 10.0,
       "Loss": 22.0,
@@ -160,7 +171,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2011-02",
+      "Time": "2011-02",
       "Hacking/IT Incident": 13.0,
       "Improper Disposal": 10.0,
       "Loss": 26.0,
@@ -170,7 +181,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 0.0
     },
     {
-      "name": "2011-03",
+      "Time": "2011-03",
       "Hacking/IT Incident": 13.0,
       "Improper Disposal": 10.0,
       "Loss": 26.0,
@@ -180,7 +191,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 2.0
     },
     {
-      "name": "2011-04",
+      "Time": "2011-04",
       "Hacking/IT Incident": 19.0,
       "Improper Disposal": 12.0,
       "Loss": 27.0,
@@ -190,7 +201,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 3.0
     },
     {
-      "name": "2011-05",
+      "Time": "2011-05",
       "Hacking/IT Incident": 20.0,
       "Improper Disposal": 13.0,
       "Loss": 27.0,
@@ -200,7 +211,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 3.0
     },
     {
-      "name": "2011-06",
+      "Time": "2011-06",
       "Hacking/IT Incident": 20.0,
       "Improper Disposal": 14.0,
       "Loss": 30.0,
@@ -210,7 +221,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 6.0
     },
     {
-      "name": "2011-07",
+      "Time": "2011-07",
       "Hacking/IT Incident": 22.0,
       "Improper Disposal": 15.0,
       "Loss": 30.0,
@@ -220,7 +231,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 6.0
     },
     {
-      "name": "2011-08",
+      "Time": "2011-08",
       "Hacking/IT Incident": 23.0,
       "Improper Disposal": 15.0,
       "Loss": 31.0,
@@ -230,7 +241,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 6.0
     },
     {
-      "name": "2011-09",
+      "Time": "2011-09",
       "Hacking/IT Incident": 26.0,
       "Improper Disposal": 15.0,
       "Loss": 33.0,
@@ -240,7 +251,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 6.0
     },
     {
-      "name": "2011-10",
+      "Time": "2011-10",
       "Hacking/IT Incident": 26.0,
       "Improper Disposal": 15.0,
       "Loss": 37.0,
@@ -250,7 +261,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 7.0
     },
     {
-      "name": "2011-11",
+      "Time": "2011-11",
       "Hacking/IT Incident": 26.0,
       "Improper Disposal": 16.0,
       "Loss": 40.0,
@@ -260,7 +271,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 7.0
     },
     {
-      "name": "2011-12",
+      "Time": "2011-12",
       "Hacking/IT Incident": 26.0,
       "Improper Disposal": 17.0,
       "Loss": 41.0,
@@ -270,7 +281,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 7.0
     },
     {
-      "name": "2012-01",
+      "Time": "2012-01",
       "Hacking/IT Incident": 27.0,
       "Improper Disposal": 17.0,
       "Loss": 42.0,
@@ -280,7 +291,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 7.0
     },
     {
-      "name": "2012-02",
+      "Time": "2012-02",
       "Hacking/IT Incident": 28.0,
       "Improper Disposal": 17.0,
       "Loss": 43.0,
@@ -290,7 +301,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 7.0
     },
     {
-      "name": "2012-03",
+      "Time": "2012-03",
       "Hacking/IT Incident": 28.0,
       "Improper Disposal": 17.0,
       "Loss": 43.0,
@@ -300,7 +311,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 7.0
     },
     {
-      "name": "2012-04",
+      "Time": "2012-04",
       "Hacking/IT Incident": 29.0,
       "Improper Disposal": 19.0,
       "Loss": 45.0,
@@ -310,7 +321,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 8.0
     },
     {
-      "name": "2012-05",
+      "Time": "2012-05",
       "Hacking/IT Incident": 32.0,
       "Improper Disposal": 21.0,
       "Loss": 50.0,
@@ -320,7 +331,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 8.0
     },
     {
-      "name": "2012-06",
+      "Time": "2012-06",
       "Hacking/IT Incident": 32.0,
       "Improper Disposal": 21.0,
       "Loss": 51.0,
@@ -330,7 +341,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 8.0
     },
     {
-      "name": "2012-07",
+      "Time": "2012-07",
       "Hacking/IT Incident": 34.0,
       "Improper Disposal": 21.0,
       "Loss": 54.0,
@@ -340,7 +351,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 10.0
     },
     {
-      "name": "2012-08",
+      "Time": "2012-08",
       "Hacking/IT Incident": 34.0,
       "Improper Disposal": 21.0,
       "Loss": 55.0,
@@ -350,7 +361,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 10.0
     },
     {
-      "name": "2012-09",
+      "Time": "2012-09",
       "Hacking/IT Incident": 36.0,
       "Improper Disposal": 21.0,
       "Loss": 56.0,
@@ -360,7 +371,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 10.0
     },
     {
-      "name": "2012-10",
+      "Time": "2012-10",
       "Hacking/IT Incident": 38.0,
       "Improper Disposal": 23.0,
       "Loss": 56.0,
@@ -370,7 +381,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 10.0
     },
     {
-      "name": "2012-11",
+      "Time": "2012-11",
       "Hacking/IT Incident": 39.0,
       "Improper Disposal": 25.0,
       "Loss": 62.0,
@@ -380,7 +391,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 10.0
     },
     {
-      "name": "2012-12",
+      "Time": "2012-12",
       "Hacking/IT Incident": 43.0,
       "Improper Disposal": 25.0,
       "Loss": 62.0,
@@ -390,7 +401,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 10.0
     },
     {
-      "name": "2013-01",
+      "Time": "2013-01",
       "Hacking/IT Incident": 47.0,
       "Improper Disposal": 28.0,
       "Loss": 64.0,
@@ -400,7 +411,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 11.0
     },
     {
-      "name": "2013-02",
+      "Time": "2013-02",
       "Hacking/IT Incident": 49.0,
       "Improper Disposal": 28.0,
       "Loss": 65.0,
@@ -410,7 +421,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 11.0
     },
     {
-      "name": "2013-03",
+      "Time": "2013-03",
       "Hacking/IT Incident": 52.0,
       "Improper Disposal": 28.0,
       "Loss": 68.0,
@@ -420,7 +431,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 12.0
     },
     {
-      "name": "2013-04",
+      "Time": "2013-04",
       "Hacking/IT Incident": 52.0,
       "Improper Disposal": 29.0,
       "Loss": 69.0,
@@ -430,7 +441,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 12.0
     },
     {
-      "name": "2013-05",
+      "Time": "2013-05",
       "Hacking/IT Incident": 56.0,
       "Improper Disposal": 32.0,
       "Loss": 71.0,
@@ -440,7 +451,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 12.0
     },
     {
-      "name": "2013-06",
+      "Time": "2013-06",
       "Hacking/IT Incident": 57.0,
       "Improper Disposal": 33.0,
       "Loss": 73.0,
@@ -450,7 +461,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 13.0
     },
     {
-      "name": "2013-07",
+      "Time": "2013-07",
       "Hacking/IT Incident": 59.0,
       "Improper Disposal": 34.0,
       "Loss": 75.0,
@@ -460,7 +471,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 14.0
     },
     {
-      "name": "2013-08",
+      "Time": "2013-08",
       "Hacking/IT Incident": 60.0,
       "Improper Disposal": 35.0,
       "Loss": 77.0,
@@ -470,7 +481,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 14.0
     },
     {
-      "name": "2013-09",
+      "Time": "2013-09",
       "Hacking/IT Incident": 63.0,
       "Improper Disposal": 36.0,
       "Loss": 78.0,
@@ -480,7 +491,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 15.0
     },
     {
-      "name": "2013-10",
+      "Time": "2013-10",
       "Hacking/IT Incident": 67.0,
       "Improper Disposal": 39.0,
       "Loss": 79.0,
@@ -490,7 +501,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 15.0
     },
     {
-      "name": "2013-11",
+      "Time": "2013-11",
       "Hacking/IT Incident": 68.0,
       "Improper Disposal": 39.0,
       "Loss": 84.0,
@@ -500,7 +511,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 15.0
     },
     {
-      "name": "2013-12",
+      "Time": "2013-12",
       "Hacking/IT Incident": 72.0,
       "Improper Disposal": 39.0,
       "Loss": 87.0,
@@ -510,7 +521,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 15.0
     },
     {
-      "name": "2014-01",
+      "Time": "2014-01",
       "Hacking/IT Incident": 74.0,
       "Improper Disposal": 39.0,
       "Loss": 93.0,
@@ -520,7 +531,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-02",
+      "Time": "2014-02",
       "Hacking/IT Incident": 76.0,
       "Improper Disposal": 39.0,
       "Loss": 95.0,
@@ -530,7 +541,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-03",
+      "Time": "2014-03",
       "Hacking/IT Incident": 81.0,
       "Improper Disposal": 41.0,
       "Loss": 102.0,
@@ -540,7 +551,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-04",
+      "Time": "2014-04",
       "Hacking/IT Incident": 90.0,
       "Improper Disposal": 41.0,
       "Loss": 107.0,
@@ -550,7 +561,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-05",
+      "Time": "2014-05",
       "Hacking/IT Incident": 90.0,
       "Improper Disposal": 42.0,
       "Loss": 107.0,
@@ -560,7 +571,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-06",
+      "Time": "2014-06",
       "Hacking/IT Incident": 93.0,
       "Improper Disposal": 42.0,
       "Loss": 107.0,
@@ -570,7 +581,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-07",
+      "Time": "2014-07",
       "Hacking/IT Incident": 96.0,
       "Improper Disposal": 43.0,
       "Loss": 108.0,
@@ -580,7 +591,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-08",
+      "Time": "2014-08",
       "Hacking/IT Incident": 106.0,
       "Improper Disposal": 48.0,
       "Loss": 113.0,
@@ -590,7 +601,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-09",
+      "Time": "2014-09",
       "Hacking/IT Incident": 107.0,
       "Improper Disposal": 48.0,
       "Loss": 115.0,
@@ -600,7 +611,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-10",
+      "Time": "2014-10",
       "Hacking/IT Incident": 109.0,
       "Improper Disposal": 49.0,
       "Loss": 116.0,
@@ -610,7 +621,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-11",
+      "Time": "2014-11",
       "Hacking/IT Incident": 109.0,
       "Improper Disposal": 50.0,
       "Loss": 117.0,
@@ -620,7 +631,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2014-12",
+      "Time": "2014-12",
       "Hacking/IT Incident": 111.0,
       "Improper Disposal": 51.0,
       "Loss": 118.0,
@@ -630,7 +641,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-01",
+      "Time": "2015-01",
       "Hacking/IT Incident": 113.0,
       "Improper Disposal": 52.0,
       "Loss": 119.0,
@@ -640,7 +651,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-02",
+      "Time": "2015-02",
       "Hacking/IT Incident": 115.0,
       "Improper Disposal": 54.0,
       "Loss": 122.0,
@@ -650,7 +661,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-03",
+      "Time": "2015-03",
       "Hacking/IT Incident": 130.0,
       "Improper Disposal": 54.0,
       "Loss": 127.0,
@@ -660,7 +671,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-04",
+      "Time": "2015-04",
       "Hacking/IT Incident": 141.0,
       "Improper Disposal": 55.0,
       "Loss": 130.0,
@@ -670,7 +681,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-05",
+      "Time": "2015-05",
       "Hacking/IT Incident": 145.0,
       "Improper Disposal": 55.0,
       "Loss": 132.0,
@@ -680,7 +691,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-06",
+      "Time": "2015-06",
       "Hacking/IT Incident": 146.0,
       "Improper Disposal": 56.0,
       "Loss": 132.0,
@@ -690,7 +701,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-07",
+      "Time": "2015-07",
       "Hacking/IT Incident": 152.0,
       "Improper Disposal": 56.0,
       "Loss": 137.0,
@@ -700,7 +711,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-08",
+      "Time": "2015-08",
       "Hacking/IT Incident": 153.0,
       "Improper Disposal": 56.0,
       "Loss": 140.0,
@@ -710,7 +721,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-09",
+      "Time": "2015-09",
       "Hacking/IT Incident": 157.0,
       "Improper Disposal": 56.0,
       "Loss": 140.0,
@@ -720,7 +731,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-10",
+      "Time": "2015-10",
       "Hacking/IT Incident": 161.0,
       "Improper Disposal": 56.0,
       "Loss": 140.0,
@@ -730,7 +741,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-11",
+      "Time": "2015-11",
       "Hacking/IT Incident": 164.0,
       "Improper Disposal": 56.0,
       "Loss": 142.0,
@@ -740,7 +751,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2015-12",
+      "Time": "2015-12",
       "Hacking/IT Incident": 167.0,
       "Improper Disposal": 57.0,
       "Loss": 142.0,
@@ -750,7 +761,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-01",
+      "Time": "2016-01",
       "Hacking/IT Incident": 170.0,
       "Improper Disposal": 59.0,
       "Loss": 143.0,
@@ -760,7 +771,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-02",
+      "Time": "2016-02",
       "Hacking/IT Incident": 176.0,
       "Improper Disposal": 59.0,
       "Loss": 145.0,
@@ -770,7 +781,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-03",
+      "Time": "2016-03",
       "Hacking/IT Incident": 186.0,
       "Improper Disposal": 59.0,
       "Loss": 147.0,
@@ -780,7 +791,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-04",
+      "Time": "2016-04",
       "Hacking/IT Incident": 193.0,
       "Improper Disposal": 59.0,
       "Loss": 148.0,
@@ -790,7 +801,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-05",
+      "Time": "2016-05",
       "Hacking/IT Incident": 204.0,
       "Improper Disposal": 59.0,
       "Loss": 148.0,
@@ -800,7 +811,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-06",
+      "Time": "2016-06",
       "Hacking/IT Incident": 213.0,
       "Improper Disposal": 61.0,
       "Loss": 149.0,
@@ -810,7 +821,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-07",
+      "Time": "2016-07",
       "Hacking/IT Incident": 222.0,
       "Improper Disposal": 61.0,
       "Loss": 149.0,
@@ -820,7 +831,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-08",
+      "Time": "2016-08",
       "Hacking/IT Incident": 231.0,
       "Improper Disposal": 61.0,
       "Loss": 150.0,
@@ -830,7 +841,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-09",
+      "Time": "2016-09",
       "Hacking/IT Incident": 245.0,
       "Improper Disposal": 61.0,
       "Loss": 152.0,
@@ -840,7 +851,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-10",
+      "Time": "2016-10",
       "Hacking/IT Incident": 255.0,
       "Improper Disposal": 62.0,
       "Loss": 155.0,
@@ -850,7 +861,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-11",
+      "Time": "2016-11",
       "Hacking/IT Incident": 262.0,
       "Improper Disposal": 63.0,
       "Loss": 158.0,
@@ -860,7 +871,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2016-12",
+      "Time": "2016-12",
       "Hacking/IT Incident": 282.0,
       "Improper Disposal": 64.0,
       "Loss": 158.0,
@@ -870,7 +881,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-01",
+      "Time": "2017-01",
       "Hacking/IT Incident": 291.0,
       "Improper Disposal": 64.0,
       "Loss": 161.0,
@@ -880,7 +891,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-02",
+      "Time": "2017-02",
       "Hacking/IT Incident": 297.0,
       "Improper Disposal": 66.0,
       "Loss": 162.0,
@@ -890,7 +901,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-03",
+      "Time": "2017-03",
       "Hacking/IT Incident": 308.0,
       "Improper Disposal": 66.0,
       "Loss": 162.0,
@@ -900,7 +911,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-04",
+      "Time": "2017-04",
       "Hacking/IT Incident": 321.0,
       "Improper Disposal": 68.0,
       "Loss": 162.0,
@@ -910,7 +921,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-05",
+      "Time": "2017-05",
       "Hacking/IT Incident": 330.0,
       "Improper Disposal": 68.0,
       "Loss": 163.0,
@@ -920,7 +931,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-06",
+      "Time": "2017-06",
       "Hacking/IT Incident": 342.0,
       "Improper Disposal": 71.0,
       "Loss": 165.0,
@@ -930,7 +941,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-07",
+      "Time": "2017-07",
       "Hacking/IT Incident": 359.0,
       "Improper Disposal": 71.0,
       "Loss": 165.0,
@@ -940,7 +951,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-08",
+      "Time": "2017-08",
       "Hacking/IT Incident": 378.0,
       "Improper Disposal": 71.0,
       "Loss": 168.0,
@@ -950,7 +961,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-09",
+      "Time": "2017-09",
       "Hacking/IT Incident": 396.0,
       "Improper Disposal": 71.0,
       "Loss": 169.0,
@@ -960,7 +971,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-10",
+      "Time": "2017-10",
       "Hacking/IT Incident": 405.0,
       "Improper Disposal": 71.0,
       "Loss": 170.0,
@@ -970,7 +981,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-11",
+      "Time": "2017-11",
       "Hacking/IT Incident": 412.0,
       "Improper Disposal": 74.0,
       "Loss": 171.0,
@@ -980,7 +991,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2017-12",
+      "Time": "2017-12",
       "Hacking/IT Incident": 430.0,
       "Improper Disposal": 75.0,
       "Loss": 174.0,
@@ -990,7 +1001,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-01",
+      "Time": "2018-01",
       "Hacking/IT Incident": 438.0,
       "Improper Disposal": 77.0,
       "Loss": 176.0,
@@ -1000,7 +1011,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-02",
+      "Time": "2018-02",
       "Hacking/IT Incident": 448.0,
       "Improper Disposal": 78.0,
       "Loss": 177.0,
@@ -1010,7 +1021,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-03",
+      "Time": "2018-03",
       "Hacking/IT Incident": 456.0,
       "Improper Disposal": 79.0,
       "Loss": 181.0,
@@ -1020,7 +1031,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-04",
+      "Time": "2018-04",
       "Hacking/IT Incident": 470.0,
       "Improper Disposal": 79.0,
       "Loss": 182.0,
@@ -1030,7 +1041,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-05",
+      "Time": "2018-05",
       "Hacking/IT Incident": 484.0,
       "Improper Disposal": 79.0,
       "Loss": 182.0,
@@ -1040,7 +1051,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-06",
+      "Time": "2018-06",
       "Hacking/IT Incident": 498.0,
       "Improper Disposal": 79.0,
       "Loss": 182.0,
@@ -1050,7 +1061,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-07",
+      "Time": "2018-07",
       "Hacking/IT Incident": 518.0,
       "Improper Disposal": 81.0,
       "Loss": 183.0,
@@ -1060,7 +1071,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-08",
+      "Time": "2018-08",
       "Hacking/IT Incident": 535.0,
       "Improper Disposal": 82.0,
       "Loss": 185.0,
@@ -1070,7 +1081,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-09",
+      "Time": "2018-09",
       "Hacking/IT Incident": 544.0,
       "Improper Disposal": 82.0,
       "Loss": 185.0,
@@ -1080,7 +1091,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-10",
+      "Time": "2018-10",
       "Hacking/IT Incident": 561.0,
       "Improper Disposal": 82.0,
       "Loss": 185.0,
@@ -1090,7 +1101,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-11",
+      "Time": "2018-11",
       "Hacking/IT Incident": 582.0,
       "Improper Disposal": 83.0,
       "Loss": 187.0,
@@ -1100,7 +1111,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2018-12",
+      "Time": "2018-12",
       "Hacking/IT Incident": 596.0,
       "Improper Disposal": 85.0,
       "Loss": 187.0,
@@ -1110,7 +1121,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-01",
+      "Time": "2019-01",
       "Hacking/IT Incident": 615.0,
       "Improper Disposal": 86.0,
       "Loss": 187.0,
@@ -1120,7 +1131,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-02",
+      "Time": "2019-02",
       "Hacking/IT Incident": 639.0,
       "Improper Disposal": 86.0,
       "Loss": 187.0,
@@ -1130,7 +1141,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-03",
+      "Time": "2019-03",
       "Hacking/IT Incident": 663.0,
       "Improper Disposal": 86.0,
       "Loss": 187.0,
@@ -1140,7 +1151,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-04",
+      "Time": "2019-04",
       "Hacking/IT Incident": 697.0,
       "Improper Disposal": 87.0,
       "Loss": 188.0,
@@ -1150,7 +1161,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-05",
+      "Time": "2019-05",
       "Hacking/IT Incident": 725.0,
       "Improper Disposal": 87.0,
       "Loss": 190.0,
@@ -1160,7 +1171,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-06",
+      "Time": "2019-06",
       "Hacking/IT Incident": 738.0,
       "Improper Disposal": 88.0,
       "Loss": 191.0,
@@ -1170,7 +1181,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-07",
+      "Time": "2019-07",
       "Hacking/IT Incident": 782.0,
       "Improper Disposal": 89.0,
       "Loss": 193.0,
@@ -1180,7 +1191,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-08",
+      "Time": "2019-08",
       "Hacking/IT Incident": 815.0,
       "Improper Disposal": 89.0,
       "Loss": 196.0,
@@ -1190,7 +1201,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-09",
+      "Time": "2019-09",
       "Hacking/IT Incident": 843.0,
       "Improper Disposal": 89.0,
       "Loss": 197.0,
@@ -1200,7 +1211,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-10",
+      "Time": "2019-10",
       "Hacking/IT Incident": 862.0,
       "Improper Disposal": 90.0,
       "Loss": 200.0,
@@ -1210,7 +1221,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-11",
+      "Time": "2019-11",
       "Hacking/IT Incident": 885.0,
       "Improper Disposal": 90.0,
       "Loss": 200.0,
@@ -1220,7 +1231,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2019-12",
+      "Time": "2019-12",
       "Hacking/IT Incident": 908.0,
       "Improper Disposal": 91.0,
       "Loss": 202.0,
@@ -1230,7 +1241,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-01",
+      "Time": "2020-01",
       "Hacking/IT Incident": 944.0,
       "Improper Disposal": 93.0,
       "Loss": 202.0,
@@ -1240,7 +1251,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-02",
+      "Time": "2020-02",
       "Hacking/IT Incident": 974.0,
       "Improper Disposal": 95.0,
       "Loss": 204.0,
@@ -1250,7 +1261,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-03",
+      "Time": "2020-03",
       "Hacking/IT Incident": 996.0,
       "Improper Disposal": 95.0,
       "Loss": 206.0,
@@ -1260,7 +1271,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-04",
+      "Time": "2020-04",
       "Hacking/IT Incident": 1018.0,
       "Improper Disposal": 95.0,
       "Loss": 207.0,
@@ -1270,7 +1281,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-05",
+      "Time": "2020-05",
       "Hacking/IT Incident": 1032.0,
       "Improper Disposal": 103.0,
       "Loss": 208.0,
@@ -1280,7 +1291,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-06",
+      "Time": "2020-06",
       "Hacking/IT Incident": 1075.0,
       "Improper Disposal": 103.0,
       "Loss": 209.0,
@@ -1290,7 +1301,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-07",
+      "Time": "2020-07",
       "Hacking/IT Incident": 1102.0,
       "Improper Disposal": 103.0,
       "Loss": 210.0,
@@ -1300,7 +1311,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-08",
+      "Time": "2020-08",
       "Hacking/IT Incident": 1129.0,
       "Improper Disposal": 103.0,
       "Loss": 212.0,
@@ -1310,7 +1321,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-09",
+      "Time": "2020-09",
       "Hacking/IT Incident": 1223.0,
       "Improper Disposal": 104.0,
       "Loss": 213.0,
@@ -1320,7 +1331,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-10",
+      "Time": "2020-10",
       "Hacking/IT Incident": 1288.0,
       "Improper Disposal": 105.0,
       "Loss": 213.0,
@@ -1330,7 +1341,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-11",
+      "Time": "2020-11",
       "Hacking/IT Incident": 1318.0,
       "Improper Disposal": 106.0,
       "Loss": 214.0,
@@ -1340,7 +1351,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2020-12",
+      "Time": "2020-12",
       "Hacking/IT Incident": 1360.0,
       "Improper Disposal": 107.0,
       "Loss": 216.0,
@@ -1350,7 +1361,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-01",
+      "Time": "2021-01",
       "Hacking/IT Incident": 1382.0,
       "Improper Disposal": 107.0,
       "Loss": 217.0,
@@ -1360,7 +1371,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-02",
+      "Time": "2021-02",
       "Hacking/IT Incident": 1416.0,
       "Improper Disposal": 107.0,
       "Loss": 218.0,
@@ -1370,7 +1381,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-03",
+      "Time": "2021-03",
       "Hacking/IT Incident": 1468.0,
       "Improper Disposal": 107.0,
       "Loss": 219.0,
@@ -1380,7 +1391,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-04",
+      "Time": "2021-04",
       "Hacking/IT Incident": 1519.0,
       "Improper Disposal": 107.0,
       "Loss": 220.0,
@@ -1390,7 +1401,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-05",
+      "Time": "2021-05",
       "Hacking/IT Incident": 1571.0,
       "Improper Disposal": 109.0,
       "Loss": 221.0,
@@ -1400,7 +1411,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-06",
+      "Time": "2021-06",
       "Hacking/IT Incident": 1629.0,
       "Improper Disposal": 110.0,
       "Loss": 222.0,
@@ -1410,7 +1421,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-07",
+      "Time": "2021-07",
       "Hacking/IT Incident": 1681.0,
       "Improper Disposal": 111.0,
       "Loss": 222.0,
@@ -1420,7 +1431,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Unknown": 16.0
     },
     {
-      "name": "2021-08",
+      "Time": "2021-08",
       "Hacking/IT Incident": 1712.0,
       "Improper Disposal": 111.0,
       "Loss": 222.0,
@@ -1431,4 +1442,1590 @@ export const DataBreachesSumedTypeByMonth = [
     }
   ]
 
+
+export const SumedLocationByMonthLinesColor = [
+    { key: "Desktop Computer", color: "#3357FF" }, // Bright Blue
+    { key: "Electronic Medical Record", color: "#33FF57" }, // Bright Green
+    { key: "Email", color: "#A633FF" },// Bright Purple
+    { key: "Laptop", color: "#FF33A6" }, // Bright Pink
+    { key: "Network Server", color: "#FF5733" }, // Bright Red
+    { key: "Other", color: "#A3A3A3" },  // Gray
+    { key: "Other Portable Electronic Device", color: "#33A6FF" }, // Light Blue
+    { key: "Paper/Films", color : "#FFC300"} // Bright Yellow
+  ];
  
+export const DataBreachesSumedLocationByMonth = [
+    {
+      "Time": "2009-10",
+      "Desktop Computer": 0.0,
+      "Electronic Medical Record": 0.0,
+      "Email": 0.0,
+      "Laptop": 0.0,
+      "Network Server": 1.0,
+      "Other": 1.0,
+      "Other Portable Electronic Device": 1.0,
+      "Paper/Films": 1.0
+    },
+    {
+      "Time": "2009-11",
+      "Desktop Computer": 5.0,
+      "Electronic Medical Record": 0.0,
+      "Email": 0.0,
+      "Laptop": 4.0,
+      "Network Server": 1.0,
+      "Other": 1.0,
+      "Other Portable Electronic Device": 1.0,
+      "Paper/Films": 1.0
+    },
+    {
+      "Time": "2009-12",
+      "Desktop Computer": 7.0,
+      "Electronic Medical Record": 1.0,
+      "Email": 1.0,
+      "Laptop": 5.0,
+      "Network Server": 2.0,
+      "Other": 2.0,
+      "Other Portable Electronic Device": 2.0,
+      "Paper/Films": 2.0
+    },
+    {
+      "Time": "2010-01",
+      "Desktop Computer": 8.0,
+      "Electronic Medical Record": 2.0,
+      "Email": 1.0,
+      "Laptop": 8.0,
+      "Network Server": 2.0,
+      "Other": 10.0,
+      "Other Portable Electronic Device": 5.0,
+      "Paper/Films": 5.0
+    },
+    {
+      "Time": "2010-02",
+      "Desktop Computer": 11.0,
+      "Electronic Medical Record": 2.0,
+      "Email": 1.0,
+      "Laptop": 9.0,
+      "Network Server": 3.0,
+      "Other": 11.0,
+      "Other Portable Electronic Device": 5.0,
+      "Paper/Films": 10.0
+    },
+    {
+      "Time": "2010-03",
+      "Desktop Computer": 11.0,
+      "Electronic Medical Record": 2.0,
+      "Email": 2.0,
+      "Laptop": 15.0,
+      "Network Server": 5.0,
+      "Other": 12.0,
+      "Other Portable Electronic Device": 6.0,
+      "Paper/Films": 12.0
+    },
+    {
+      "Time": "2010-04",
+      "Desktop Computer": 13.0,
+      "Electronic Medical Record": 2.0,
+      "Email": 2.0,
+      "Laptop": 20.0,
+      "Network Server": 5.0,
+      "Other": 19.0,
+      "Other Portable Electronic Device": 9.0,
+      "Paper/Films": 19.0
+    },
+    {
+      "Time": "2010-05",
+      "Desktop Computer": 13.0,
+      "Electronic Medical Record": 2.0,
+      "Email": 3.0,
+      "Laptop": 25.0,
+      "Network Server": 6.0,
+      "Other": 20.0,
+      "Other Portable Electronic Device": 10.0,
+      "Paper/Films": 23.0
+    },
+    {
+      "Time": "2010-06",
+      "Desktop Computer": 14.0,
+      "Electronic Medical Record": 2.0,
+      "Email": 6.0,
+      "Laptop": 34.0,
+      "Network Server": 10.0,
+      "Other": 22.0,
+      "Other Portable Electronic Device": 10.0,
+      "Paper/Films": 25.0
+    },
+    {
+      "Time": "2010-07",
+      "Desktop Computer": 19.0,
+      "Electronic Medical Record": 3.0,
+      "Email": 6.0,
+      "Laptop": 38.0,
+      "Network Server": 12.0,
+      "Other": 26.0,
+      "Other Portable Electronic Device": 15.0,
+      "Paper/Films": 32.0
+    },
+    {
+      "Time": "2010-08",
+      "Desktop Computer": 23.0,
+      "Electronic Medical Record": 3.0,
+      "Email": 6.0,
+      "Laptop": 45.0,
+      "Network Server": 13.0,
+      "Other": 34.0,
+      "Other Portable Electronic Device": 22.0,
+      "Paper/Films": 35.0
+    },
+    {
+      "Time": "2010-09",
+      "Desktop Computer": 27.0,
+      "Electronic Medical Record": 4.0,
+      "Email": 6.0,
+      "Laptop": 49.0,
+      "Network Server": 15.0,
+      "Other": 37.0,
+      "Other Portable Electronic Device": 27.0,
+      "Paper/Films": 41.0
+    },
+    {
+      "Time": "2010-10",
+      "Desktop Computer": 28.0,
+      "Electronic Medical Record": 4.0,
+      "Email": 6.0,
+      "Laptop": 52.0,
+      "Network Server": 17.0,
+      "Other": 40.0,
+      "Other Portable Electronic Device": 28.0,
+      "Paper/Films": 44.0
+    },
+    {
+      "Time": "2010-11",
+      "Desktop Computer": 32.0,
+      "Electronic Medical Record": 4.0,
+      "Email": 6.0,
+      "Laptop": 56.0,
+      "Network Server": 21.0,
+      "Other": 42.0,
+      "Other Portable Electronic Device": 29.0,
+      "Paper/Films": 50.0
+    },
+    {
+      "Time": "2010-12",
+      "Desktop Computer": 36.0,
+      "Electronic Medical Record": 4.0,
+      "Email": 7.0,
+      "Laptop": 60.0,
+      "Network Server": 23.0,
+      "Other": 47.0,
+      "Other Portable Electronic Device": 33.0,
+      "Paper/Films": 53.0
+    },
+    {
+      "Time": "2011-01",
+      "Desktop Computer": 41.0,
+      "Electronic Medical Record": 4.0,
+      "Email": 8.0,
+      "Laptop": 65.0,
+      "Network Server": 26.0,
+      "Other": 51.0,
+      "Other Portable Electronic Device": 36.0,
+      "Paper/Films": 53.0
+    },
+    {
+      "Time": "2011-02",
+      "Desktop Computer": 42.0,
+      "Electronic Medical Record": 5.0,
+      "Email": 8.0,
+      "Laptop": 66.0,
+      "Network Server": 28.0,
+      "Other": 57.0,
+      "Other Portable Electronic Device": 41.0,
+      "Paper/Films": 55.0
+    },
+    {
+      "Time": "2011-03",
+      "Desktop Computer": 47.0,
+      "Electronic Medical Record": 6.0,
+      "Email": 8.0,
+      "Laptop": 69.0,
+      "Network Server": 29.0,
+      "Other": 61.0,
+      "Other Portable Electronic Device": 44.0,
+      "Paper/Films": 58.0
+    },
+    {
+      "Time": "2011-04",
+      "Desktop Computer": 53.0,
+      "Electronic Medical Record": 6.0,
+      "Email": 13.0,
+      "Laptop": 75.0,
+      "Network Server": 36.0,
+      "Other": 67.0,
+      "Other Portable Electronic Device": 45.0,
+      "Paper/Films": 62.0
+    },
+    {
+      "Time": "2011-05",
+      "Desktop Computer": 56.0,
+      "Electronic Medical Record": 6.0,
+      "Email": 13.0,
+      "Laptop": 80.0,
+      "Network Server": 37.0,
+      "Other": 70.0,
+      "Other Portable Electronic Device": 45.0,
+      "Paper/Films": 68.0
+    },
+    {
+      "Time": "2011-06",
+      "Desktop Computer": 58.0,
+      "Electronic Medical Record": 7.0,
+      "Email": 15.0,
+      "Laptop": 84.0,
+      "Network Server": 38.0,
+      "Other": 77.0,
+      "Other Portable Electronic Device": 50.0,
+      "Paper/Films": 74.0
+    },
+    {
+      "Time": "2011-07",
+      "Desktop Computer": 62.0,
+      "Electronic Medical Record": 9.0,
+      "Email": 15.0,
+      "Laptop": 88.0,
+      "Network Server": 43.0,
+      "Other": 78.0,
+      "Other Portable Electronic Device": 50.0,
+      "Paper/Films": 81.0
+    },
+    {
+      "Time": "2011-08",
+      "Desktop Computer": 64.0,
+      "Electronic Medical Record": 10.0,
+      "Email": 16.0,
+      "Laptop": 92.0,
+      "Network Server": 46.0,
+      "Other": 85.0,
+      "Other Portable Electronic Device": 56.0,
+      "Paper/Films": 84.0
+    },
+    {
+      "Time": "2011-09",
+      "Desktop Computer": 67.0,
+      "Electronic Medical Record": 10.0,
+      "Email": 16.0,
+      "Laptop": 99.0,
+      "Network Server": 48.0,
+      "Other": 88.0,
+      "Other Portable Electronic Device": 58.0,
+      "Paper/Films": 93.0
+    },
+    {
+      "Time": "2011-10",
+      "Desktop Computer": 71.0,
+      "Electronic Medical Record": 12.0,
+      "Email": 16.0,
+      "Laptop": 103.0,
+      "Network Server": 50.0,
+      "Other": 97.0,
+      "Other Portable Electronic Device": 62.0,
+      "Paper/Films": 97.0
+    },
+    {
+      "Time": "2011-11",
+      "Desktop Computer": 72.0,
+      "Electronic Medical Record": 14.0,
+      "Email": 16.0,
+      "Laptop": 105.0,
+      "Network Server": 51.0,
+      "Other": 101.0,
+      "Other Portable Electronic Device": 64.0,
+      "Paper/Films": 101.0
+    },
+    {
+      "Time": "2011-12",
+      "Desktop Computer": 72.0,
+      "Electronic Medical Record": 14.0,
+      "Email": 16.0,
+      "Laptop": 110.0,
+      "Network Server": 52.0,
+      "Other": 104.0,
+      "Other Portable Electronic Device": 65.0,
+      "Paper/Films": 106.0
+    },
+    {
+      "Time": "2012-01",
+      "Desktop Computer": 74.0,
+      "Electronic Medical Record": 14.0,
+      "Email": 18.0,
+      "Laptop": 113.0,
+      "Network Server": 54.0,
+      "Other": 106.0,
+      "Other Portable Electronic Device": 66.0,
+      "Paper/Films": 112.0
+    },
+    {
+      "Time": "2012-02",
+      "Desktop Computer": 74.0,
+      "Electronic Medical Record": 14.0,
+      "Email": 18.0,
+      "Laptop": 120.0,
+      "Network Server": 56.0,
+      "Other": 110.0,
+      "Other Portable Electronic Device": 67.0,
+      "Paper/Films": 116.0
+    },
+    {
+      "Time": "2012-03",
+      "Desktop Computer": 75.0,
+      "Electronic Medical Record": 14.0,
+      "Email": 18.0,
+      "Laptop": 128.0,
+      "Network Server": 57.0,
+      "Other": 112.0,
+      "Other Portable Electronic Device": 70.0,
+      "Paper/Films": 121.0
+    },
+    {
+      "Time": "2012-04",
+      "Desktop Computer": 78.0,
+      "Electronic Medical Record": 15.0,
+      "Email": 23.0,
+      "Laptop": 128.0,
+      "Network Server": 60.0,
+      "Other": 116.0,
+      "Other Portable Electronic Device": 71.0,
+      "Paper/Films": 129.0
+    },
+    {
+      "Time": "2012-05",
+      "Desktop Computer": 80.0,
+      "Electronic Medical Record": 16.0,
+      "Email": 24.0,
+      "Laptop": 134.0,
+      "Network Server": 64.0,
+      "Other": 121.0,
+      "Other Portable Electronic Device": 73.0,
+      "Paper/Films": 136.0
+    },
+    {
+      "Time": "2012-06",
+      "Desktop Computer": 82.0,
+      "Electronic Medical Record": 16.0,
+      "Email": 25.0,
+      "Laptop": 138.0,
+      "Network Server": 64.0,
+      "Other": 122.0,
+      "Other Portable Electronic Device": 76.0,
+      "Paper/Films": 137.0
+    },
+    {
+      "Time": "2012-07",
+      "Desktop Computer": 83.0,
+      "Electronic Medical Record": 17.0,
+      "Email": 25.0,
+      "Laptop": 143.0,
+      "Network Server": 67.0,
+      "Other": 124.0,
+      "Other Portable Electronic Device": 80.0,
+      "Paper/Films": 140.0
+    },
+    {
+      "Time": "2012-08",
+      "Desktop Computer": 85.0,
+      "Electronic Medical Record": 19.0,
+      "Email": 25.0,
+      "Laptop": 148.0,
+      "Network Server": 67.0,
+      "Other": 124.0,
+      "Other Portable Electronic Device": 83.0,
+      "Paper/Films": 142.0
+    },
+    {
+      "Time": "2012-09",
+      "Desktop Computer": 86.0,
+      "Electronic Medical Record": 19.0,
+      "Email": 26.0,
+      "Laptop": 152.0,
+      "Network Server": 69.0,
+      "Other": 124.0,
+      "Other Portable Electronic Device": 86.0,
+      "Paper/Films": 143.0
+    },
+    {
+      "Time": "2012-10",
+      "Desktop Computer": 88.0,
+      "Electronic Medical Record": 19.0,
+      "Email": 26.0,
+      "Laptop": 155.0,
+      "Network Server": 71.0,
+      "Other": 125.0,
+      "Other Portable Electronic Device": 87.0,
+      "Paper/Films": 150.0
+    },
+    {
+      "Time": "2012-11",
+      "Desktop Computer": 94.0,
+      "Electronic Medical Record": 21.0,
+      "Email": 26.0,
+      "Laptop": 161.0,
+      "Network Server": 74.0,
+      "Other": 128.0,
+      "Other Portable Electronic Device": 93.0,
+      "Paper/Films": 156.0
+    },
+    {
+      "Time": "2012-12",
+      "Desktop Computer": 99.0,
+      "Electronic Medical Record": 21.0,
+      "Email": 27.0,
+      "Laptop": 166.0,
+      "Network Server": 78.0,
+      "Other": 131.0,
+      "Other Portable Electronic Device": 93.0,
+      "Paper/Films": 159.0
+    },
+    {
+      "Time": "2013-01",
+      "Desktop Computer": 102.0,
+      "Electronic Medical Record": 23.0,
+      "Email": 28.0,
+      "Laptop": 173.0,
+      "Network Server": 82.0,
+      "Other": 132.0,
+      "Other Portable Electronic Device": 94.0,
+      "Paper/Films": 167.0
+    },
+    {
+      "Time": "2013-02",
+      "Desktop Computer": 106.0,
+      "Electronic Medical Record": 23.0,
+      "Email": 28.0,
+      "Laptop": 182.0,
+      "Network Server": 85.0,
+      "Other": 132.0,
+      "Other Portable Electronic Device": 95.0,
+      "Paper/Films": 171.0
+    },
+    {
+      "Time": "2013-03",
+      "Desktop Computer": 109.0,
+      "Electronic Medical Record": 25.0,
+      "Email": 29.0,
+      "Laptop": 187.0,
+      "Network Server": 90.0,
+      "Other": 133.0,
+      "Other Portable Electronic Device": 97.0,
+      "Paper/Films": 178.0
+    },
+    {
+      "Time": "2013-04",
+      "Desktop Computer": 111.0,
+      "Electronic Medical Record": 27.0,
+      "Email": 30.0,
+      "Laptop": 190.0,
+      "Network Server": 92.0,
+      "Other": 135.0,
+      "Other Portable Electronic Device": 97.0,
+      "Paper/Films": 184.0
+    },
+    {
+      "Time": "2013-05",
+      "Desktop Computer": 114.0,
+      "Electronic Medical Record": 29.0,
+      "Email": 32.0,
+      "Laptop": 194.0,
+      "Network Server": 95.0,
+      "Other": 139.0,
+      "Other Portable Electronic Device": 100.0,
+      "Paper/Films": 186.0
+    },
+    {
+      "Time": "2013-06",
+      "Desktop Computer": 117.0,
+      "Electronic Medical Record": 30.0,
+      "Email": 35.0,
+      "Laptop": 197.0,
+      "Network Server": 96.0,
+      "Other": 140.0,
+      "Other Portable Electronic Device": 101.0,
+      "Paper/Films": 190.0
+    },
+    {
+      "Time": "2013-07",
+      "Desktop Computer": 123.0,
+      "Electronic Medical Record": 31.0,
+      "Email": 38.0,
+      "Laptop": 199.0,
+      "Network Server": 97.0,
+      "Other": 144.0,
+      "Other Portable Electronic Device": 102.0,
+      "Paper/Films": 199.0
+    },
+    {
+      "Time": "2013-08",
+      "Desktop Computer": 127.0,
+      "Electronic Medical Record": 32.0,
+      "Email": 39.0,
+      "Laptop": 204.0,
+      "Network Server": 99.0,
+      "Other": 146.0,
+      "Other Portable Electronic Device": 106.0,
+      "Paper/Films": 204.0
+    },
+    {
+      "Time": "2013-09",
+      "Desktop Computer": 131.0,
+      "Electronic Medical Record": 34.0,
+      "Email": 40.0,
+      "Laptop": 210.0,
+      "Network Server": 106.0,
+      "Other": 150.0,
+      "Other Portable Electronic Device": 107.0,
+      "Paper/Films": 205.0
+    },
+    {
+      "Time": "2013-10",
+      "Desktop Computer": 134.0,
+      "Electronic Medical Record": 35.0,
+      "Email": 45.0,
+      "Laptop": 220.0,
+      "Network Server": 111.0,
+      "Other": 150.0,
+      "Other Portable Electronic Device": 108.0,
+      "Paper/Films": 212.0
+    },
+    {
+      "Time": "2013-11",
+      "Desktop Computer": 136.0,
+      "Electronic Medical Record": 38.0,
+      "Email": 46.0,
+      "Laptop": 229.0,
+      "Network Server": 112.0,
+      "Other": 154.0,
+      "Other Portable Electronic Device": 114.0,
+      "Paper/Films": 217.0
+    },
+    {
+      "Time": "2013-12",
+      "Desktop Computer": 141.0,
+      "Electronic Medical Record": 38.0,
+      "Email": 51.0,
+      "Laptop": 236.0,
+      "Network Server": 117.0,
+      "Other": 155.0,
+      "Other Portable Electronic Device": 115.0,
+      "Paper/Films": 223.0
+    },
+    {
+      "Time": "2014-01",
+      "Desktop Computer": 143.0,
+      "Electronic Medical Record": 41.0,
+      "Email": 54.0,
+      "Laptop": 242.0,
+      "Network Server": 125.0,
+      "Other": 159.0,
+      "Other Portable Electronic Device": 119.0,
+      "Paper/Films": 233.0
+    },
+    {
+      "Time": "2014-02",
+      "Desktop Computer": 145.0,
+      "Electronic Medical Record": 43.0,
+      "Email": 55.0,
+      "Laptop": 248.0,
+      "Network Server": 131.0,
+      "Other": 164.0,
+      "Other Portable Electronic Device": 121.0,
+      "Paper/Films": 235.0
+    },
+    {
+      "Time": "2014-03",
+      "Desktop Computer": 152.0,
+      "Electronic Medical Record": 44.0,
+      "Email": 62.0,
+      "Laptop": 257.0,
+      "Network Server": 135.0,
+      "Other": 168.0,
+      "Other Portable Electronic Device": 131.0,
+      "Paper/Films": 239.0
+    },
+    {
+      "Time": "2014-04",
+      "Desktop Computer": 152.0,
+      "Electronic Medical Record": 44.0,
+      "Email": 68.0,
+      "Laptop": 259.0,
+      "Network Server": 140.0,
+      "Other": 174.0,
+      "Other Portable Electronic Device": 136.0,
+      "Paper/Films": 253.0
+    },
+    {
+      "Time": "2014-05",
+      "Desktop Computer": 154.0,
+      "Electronic Medical Record": 46.0,
+      "Email": 71.0,
+      "Laptop": 262.0,
+      "Network Server": 142.0,
+      "Other": 175.0,
+      "Other Portable Electronic Device": 137.0,
+      "Paper/Films": 258.0
+    },
+    {
+      "Time": "2014-06",
+      "Desktop Computer": 158.0,
+      "Electronic Medical Record": 49.0,
+      "Email": 78.0,
+      "Laptop": 266.0,
+      "Network Server": 142.0,
+      "Other": 180.0,
+      "Other Portable Electronic Device": 140.0,
+      "Paper/Films": 259.0
+    },
+    {
+      "Time": "2014-07",
+      "Desktop Computer": 161.0,
+      "Electronic Medical Record": 50.0,
+      "Email": 79.0,
+      "Laptop": 269.0,
+      "Network Server": 150.0,
+      "Other": 182.0,
+      "Other Portable Electronic Device": 141.0,
+      "Paper/Films": 266.0
+    },
+    {
+      "Time": "2014-08",
+      "Desktop Computer": 164.0,
+      "Electronic Medical Record": 50.0,
+      "Email": 80.0,
+      "Laptop": 271.0,
+      "Network Server": 164.0,
+      "Other": 187.0,
+      "Other Portable Electronic Device": 144.0,
+      "Paper/Films": 274.0
+    },
+    {
+      "Time": "2014-09",
+      "Desktop Computer": 166.0,
+      "Electronic Medical Record": 52.0,
+      "Email": 83.0,
+      "Laptop": 277.0,
+      "Network Server": 166.0,
+      "Other": 190.0,
+      "Other Portable Electronic Device": 150.0,
+      "Paper/Films": 281.0
+    },
+    {
+      "Time": "2014-10",
+      "Desktop Computer": 168.0,
+      "Electronic Medical Record": 52.0,
+      "Email": 86.0,
+      "Laptop": 282.0,
+      "Network Server": 171.0,
+      "Other": 193.0,
+      "Other Portable Electronic Device": 152.0,
+      "Paper/Films": 290.0
+    },
+    {
+      "Time": "2014-11",
+      "Desktop Computer": 169.0,
+      "Electronic Medical Record": 54.0,
+      "Email": 89.0,
+      "Laptop": 285.0,
+      "Network Server": 178.0,
+      "Other": 193.0,
+      "Other Portable Electronic Device": 153.0,
+      "Paper/Films": 294.0
+    },
+    {
+      "Time": "2014-12",
+      "Desktop Computer": 170.0,
+      "Electronic Medical Record": 54.0,
+      "Email": 91.0,
+      "Laptop": 292.0,
+      "Network Server": 180.0,
+      "Other": 195.0,
+      "Other Portable Electronic Device": 155.0,
+      "Paper/Films": 298.0
+    },
+    {
+      "Time": "2015-01",
+      "Desktop Computer": 173.0,
+      "Electronic Medical Record": 56.0,
+      "Email": 94.0,
+      "Laptop": 296.0,
+      "Network Server": 182.0,
+      "Other": 197.0,
+      "Other Portable Electronic Device": 158.0,
+      "Paper/Films": 302.0
+    },
+    {
+      "Time": "2015-02",
+      "Desktop Computer": 174.0,
+      "Electronic Medical Record": 57.0,
+      "Email": 96.0,
+      "Laptop": 298.0,
+      "Network Server": 184.0,
+      "Other": 199.0,
+      "Other Portable Electronic Device": 160.0,
+      "Paper/Films": 308.0
+    },
+    {
+      "Time": "2015-03",
+      "Desktop Computer": 177.0,
+      "Electronic Medical Record": 59.0,
+      "Email": 99.0,
+      "Laptop": 301.0,
+      "Network Server": 197.0,
+      "Other": 204.0,
+      "Other Portable Electronic Device": 161.0,
+      "Paper/Films": 317.0
+    },
+    {
+      "Time": "2015-04",
+      "Desktop Computer": 179.0,
+      "Electronic Medical Record": 61.0,
+      "Email": 108.0,
+      "Laptop": 304.0,
+      "Network Server": 206.0,
+      "Other": 207.0,
+      "Other Portable Electronic Device": 163.0,
+      "Paper/Films": 329.0
+    },
+    {
+      "Time": "2015-05",
+      "Desktop Computer": 183.0,
+      "Electronic Medical Record": 62.0,
+      "Email": 110.0,
+      "Laptop": 307.0,
+      "Network Server": 209.0,
+      "Other": 209.0,
+      "Other Portable Electronic Device": 164.0,
+      "Paper/Films": 335.0
+    },
+    {
+      "Time": "2015-06",
+      "Desktop Computer": 186.0,
+      "Electronic Medical Record": 67.0,
+      "Email": 112.0,
+      "Laptop": 314.0,
+      "Network Server": 214.0,
+      "Other": 215.0,
+      "Other Portable Electronic Device": 167.0,
+      "Paper/Films": 339.0
+    },
+    {
+      "Time": "2015-07",
+      "Desktop Computer": 187.0,
+      "Electronic Medical Record": 73.0,
+      "Email": 115.0,
+      "Laptop": 317.0,
+      "Network Server": 219.0,
+      "Other": 215.0,
+      "Other Portable Electronic Device": 170.0,
+      "Paper/Films": 345.0
+    },
+    {
+      "Time": "2015-08",
+      "Desktop Computer": 190.0,
+      "Electronic Medical Record": 74.0,
+      "Email": 117.0,
+      "Laptop": 322.0,
+      "Network Server": 221.0,
+      "Other": 216.0,
+      "Other Portable Electronic Device": 175.0,
+      "Paper/Films": 352.0
+    },
+    {
+      "Time": "2015-09",
+      "Desktop Computer": 193.0,
+      "Electronic Medical Record": 76.0,
+      "Email": 119.0,
+      "Laptop": 327.0,
+      "Network Server": 225.0,
+      "Other": 218.0,
+      "Other Portable Electronic Device": 175.0,
+      "Paper/Films": 359.0
+    },
+    {
+      "Time": "2015-10",
+      "Desktop Computer": 194.0,
+      "Electronic Medical Record": 78.0,
+      "Email": 123.0,
+      "Laptop": 332.0,
+      "Network Server": 226.0,
+      "Other": 219.0,
+      "Other Portable Electronic Device": 179.0,
+      "Paper/Films": 366.0
+    },
+    {
+      "Time": "2015-11",
+      "Desktop Computer": 196.0,
+      "Electronic Medical Record": 78.0,
+      "Email": 127.0,
+      "Laptop": 336.0,
+      "Network Server": 228.0,
+      "Other": 220.0,
+      "Other Portable Electronic Device": 181.0,
+      "Paper/Films": 369.0
+    },
+    {
+      "Time": "2015-12",
+      "Desktop Computer": 197.0,
+      "Electronic Medical Record": 79.0,
+      "Email": 131.0,
+      "Laptop": 340.0,
+      "Network Server": 232.0,
+      "Other": 220.0,
+      "Other Portable Electronic Device": 182.0,
+      "Paper/Films": 379.0
+    },
+    {
+      "Time": "2016-01",
+      "Desktop Computer": 198.0,
+      "Electronic Medical Record": 80.0,
+      "Email": 133.0,
+      "Laptop": 341.0,
+      "Network Server": 233.0,
+      "Other": 220.0,
+      "Other Portable Electronic Device": 182.0,
+      "Paper/Films": 386.0
+    },
+    {
+      "Time": "2016-02",
+      "Desktop Computer": 200.0,
+      "Electronic Medical Record": 82.0,
+      "Email": 135.0,
+      "Laptop": 343.0,
+      "Network Server": 240.0,
+      "Other": 225.0,
+      "Other Portable Electronic Device": 182.0,
+      "Paper/Films": 391.0
+    },
+    {
+      "Time": "2016-03",
+      "Desktop Computer": 204.0,
+      "Electronic Medical Record": 87.0,
+      "Email": 143.0,
+      "Laptop": 347.0,
+      "Network Server": 247.0,
+      "Other": 227.0,
+      "Other Portable Electronic Device": 185.0,
+      "Paper/Films": 397.0
+    },
+    {
+      "Time": "2016-04",
+      "Desktop Computer": 207.0,
+      "Electronic Medical Record": 88.0,
+      "Email": 148.0,
+      "Laptop": 352.0,
+      "Network Server": 253.0,
+      "Other": 231.0,
+      "Other Portable Electronic Device": 187.0,
+      "Paper/Films": 408.0
+    },
+    {
+      "Time": "2016-05",
+      "Desktop Computer": 209.0,
+      "Electronic Medical Record": 94.0,
+      "Email": 151.0,
+      "Laptop": 356.0,
+      "Network Server": 261.0,
+      "Other": 232.0,
+      "Other Portable Electronic Device": 188.0,
+      "Paper/Films": 416.0
+    },
+    {
+      "Time": "2016-06",
+      "Desktop Computer": 209.0,
+      "Electronic Medical Record": 96.0,
+      "Email": 153.0,
+      "Laptop": 356.0,
+      "Network Server": 270.0,
+      "Other": 233.0,
+      "Other Portable Electronic Device": 189.0,
+      "Paper/Films": 424.0
+    },
+    {
+      "Time": "2016-07",
+      "Desktop Computer": 209.0,
+      "Electronic Medical Record": 102.0,
+      "Email": 157.0,
+      "Laptop": 359.0,
+      "Network Server": 275.0,
+      "Other": 236.0,
+      "Other Portable Electronic Device": 191.0,
+      "Paper/Films": 430.0
+    },
+    {
+      "Time": "2016-08",
+      "Desktop Computer": 210.0,
+      "Electronic Medical Record": 102.0,
+      "Email": 163.0,
+      "Laptop": 359.0,
+      "Network Server": 285.0,
+      "Other": 239.0,
+      "Other Portable Electronic Device": 194.0,
+      "Paper/Films": 433.0
+    },
+    {
+      "Time": "2016-09",
+      "Desktop Computer": 215.0,
+      "Electronic Medical Record": 107.0,
+      "Email": 165.0,
+      "Laptop": 361.0,
+      "Network Server": 298.0,
+      "Other": 241.0,
+      "Other Portable Electronic Device": 194.0,
+      "Paper/Films": 442.0
+    },
+    {
+      "Time": "2016-10",
+      "Desktop Computer": 216.0,
+      "Electronic Medical Record": 109.0,
+      "Email": 171.0,
+      "Laptop": 363.0,
+      "Network Server": 307.0,
+      "Other": 243.0,
+      "Other Portable Electronic Device": 195.0,
+      "Paper/Films": 445.0
+    },
+    {
+      "Time": "2016-11",
+      "Desktop Computer": 218.0,
+      "Electronic Medical Record": 110.0,
+      "Email": 177.0,
+      "Laptop": 369.0,
+      "Network Server": 317.0,
+      "Other": 250.0,
+      "Other Portable Electronic Device": 203.0,
+      "Paper/Films": 451.0
+    },
+    {
+      "Time": "2016-12",
+      "Desktop Computer": 224.0,
+      "Electronic Medical Record": 114.0,
+      "Email": 182.0,
+      "Laptop": 370.0,
+      "Network Server": 332.0,
+      "Other": 253.0,
+      "Other Portable Electronic Device": 203.0,
+      "Paper/Films": 458.0
+    },
+    {
+      "Time": "2017-01",
+      "Desktop Computer": 226.0,
+      "Electronic Medical Record": 118.0,
+      "Email": 188.0,
+      "Laptop": 372.0,
+      "Network Server": 338.0,
+      "Other": 256.0,
+      "Other Portable Electronic Device": 205.0,
+      "Paper/Films": 462.0
+    },
+    {
+      "Time": "2017-02",
+      "Desktop Computer": 227.0,
+      "Electronic Medical Record": 122.0,
+      "Email": 192.0,
+      "Laptop": 373.0,
+      "Network Server": 343.0,
+      "Other": 257.0,
+      "Other Portable Electronic Device": 206.0,
+      "Paper/Films": 471.0
+    },
+    {
+      "Time": "2017-03",
+      "Desktop Computer": 228.0,
+      "Electronic Medical Record": 125.0,
+      "Email": 198.0,
+      "Laptop": 375.0,
+      "Network Server": 352.0,
+      "Other": 257.0,
+      "Other Portable Electronic Device": 210.0,
+      "Paper/Films": 479.0
+    },
+    {
+      "Time": "2017-04",
+      "Desktop Computer": 228.0,
+      "Electronic Medical Record": 129.0,
+      "Email": 205.0,
+      "Laptop": 379.0,
+      "Network Server": 363.0,
+      "Other": 257.0,
+      "Other Portable Electronic Device": 211.0,
+      "Paper/Films": 484.0
+    },
+    {
+      "Time": "2017-05",
+      "Desktop Computer": 230.0,
+      "Electronic Medical Record": 134.0,
+      "Email": 211.0,
+      "Laptop": 380.0,
+      "Network Server": 370.0,
+      "Other": 261.0,
+      "Other Portable Electronic Device": 216.0,
+      "Paper/Films": 487.0
+    },
+    {
+      "Time": "2017-06",
+      "Desktop Computer": 234.0,
+      "Electronic Medical Record": 135.0,
+      "Email": 216.0,
+      "Laptop": 386.0,
+      "Network Server": 383.0,
+      "Other": 267.0,
+      "Other Portable Electronic Device": 219.0,
+      "Paper/Films": 494.0
+    },
+    {
+      "Time": "2017-07",
+      "Desktop Computer": 237.0,
+      "Electronic Medical Record": 140.0,
+      "Email": 230.0,
+      "Laptop": 386.0,
+      "Network Server": 392.0,
+      "Other": 269.0,
+      "Other Portable Electronic Device": 219.0,
+      "Paper/Films": 499.0
+    },
+    {
+      "Time": "2017-08",
+      "Desktop Computer": 242.0,
+      "Electronic Medical Record": 143.0,
+      "Email": 237.0,
+      "Laptop": 389.0,
+      "Network Server": 406.0,
+      "Other": 269.0,
+      "Other Portable Electronic Device": 221.0,
+      "Paper/Films": 503.0
+    },
+    {
+      "Time": "2017-09",
+      "Desktop Computer": 248.0,
+      "Electronic Medical Record": 147.0,
+      "Email": 250.0,
+      "Laptop": 394.0,
+      "Network Server": 417.0,
+      "Other": 275.0,
+      "Other Portable Electronic Device": 222.0,
+      "Paper/Films": 508.0
+    },
+    {
+      "Time": "2017-10",
+      "Desktop Computer": 250.0,
+      "Electronic Medical Record": 150.0,
+      "Email": 258.0,
+      "Laptop": 396.0,
+      "Network Server": 426.0,
+      "Other": 278.0,
+      "Other Portable Electronic Device": 224.0,
+      "Paper/Films": 513.0
+    },
+    {
+      "Time": "2017-11",
+      "Desktop Computer": 250.0,
+      "Electronic Medical Record": 152.0,
+      "Email": 263.0,
+      "Laptop": 399.0,
+      "Network Server": 429.0,
+      "Other": 278.0,
+      "Other Portable Electronic Device": 226.0,
+      "Paper/Films": 521.0
+    },
+    {
+      "Time": "2017-12",
+      "Desktop Computer": 255.0,
+      "Electronic Medical Record": 154.0,
+      "Email": 273.0,
+      "Laptop": 402.0,
+      "Network Server": 441.0,
+      "Other": 279.0,
+      "Other Portable Electronic Device": 228.0,
+      "Paper/Films": 530.0
+    },
+    {
+      "Time": "2018-01",
+      "Desktop Computer": 257.0,
+      "Electronic Medical Record": 157.0,
+      "Email": 277.0,
+      "Laptop": 405.0,
+      "Network Server": 445.0,
+      "Other": 279.0,
+      "Other Portable Electronic Device": 230.0,
+      "Paper/Films": 537.0
+    },
+    {
+      "Time": "2018-02",
+      "Desktop Computer": 260.0,
+      "Electronic Medical Record": 158.0,
+      "Email": 281.0,
+      "Laptop": 407.0,
+      "Network Server": 451.0,
+      "Other": 281.0,
+      "Other Portable Electronic Device": 233.0,
+      "Paper/Films": 543.0
+    },
+    {
+      "Time": "2018-03",
+      "Desktop Computer": 262.0,
+      "Electronic Medical Record": 161.0,
+      "Email": 291.0,
+      "Laptop": 413.0,
+      "Network Server": 456.0,
+      "Other": 284.0,
+      "Other Portable Electronic Device": 237.0,
+      "Paper/Films": 548.0
+    },
+    {
+      "Time": "2018-04",
+      "Desktop Computer": 267.0,
+      "Electronic Medical Record": 162.0,
+      "Email": 307.0,
+      "Laptop": 417.0,
+      "Network Server": 462.0,
+      "Other": 288.0,
+      "Other Portable Electronic Device": 240.0,
+      "Paper/Films": 558.0
+    },
+    {
+      "Time": "2018-05",
+      "Desktop Computer": 269.0,
+      "Electronic Medical Record": 163.0,
+      "Email": 318.0,
+      "Laptop": 417.0,
+      "Network Server": 471.0,
+      "Other": 289.0,
+      "Other Portable Electronic Device": 240.0,
+      "Paper/Films": 566.0
+    },
+    {
+      "Time": "2018-06",
+      "Desktop Computer": 274.0,
+      "Electronic Medical Record": 165.0,
+      "Email": 328.0,
+      "Laptop": 419.0,
+      "Network Server": 476.0,
+      "Other": 293.0,
+      "Other Portable Electronic Device": 242.0,
+      "Paper/Films": 572.0
+    },
+    {
+      "Time": "2018-07",
+      "Desktop Computer": 277.0,
+      "Electronic Medical Record": 168.0,
+      "Email": 342.0,
+      "Laptop": 421.0,
+      "Network Server": 483.0,
+      "Other": 296.0,
+      "Other Portable Electronic Device": 242.0,
+      "Paper/Films": 576.0
+    },
+    {
+      "Time": "2018-08",
+      "Desktop Computer": 278.0,
+      "Electronic Medical Record": 169.0,
+      "Email": 356.0,
+      "Laptop": 423.0,
+      "Network Server": 491.0,
+      "Other": 298.0,
+      "Other Portable Electronic Device": 244.0,
+      "Paper/Films": 582.0
+    },
+    {
+      "Time": "2018-09",
+      "Desktop Computer": 279.0,
+      "Electronic Medical Record": 171.0,
+      "Email": 364.0,
+      "Laptop": 423.0,
+      "Network Server": 495.0,
+      "Other": 300.0,
+      "Other Portable Electronic Device": 245.0,
+      "Paper/Films": 592.0
+    },
+    {
+      "Time": "2018-10",
+      "Desktop Computer": 284.0,
+      "Electronic Medical Record": 172.0,
+      "Email": 373.0,
+      "Laptop": 426.0,
+      "Network Server": 504.0,
+      "Other": 306.0,
+      "Other Portable Electronic Device": 246.0,
+      "Paper/Films": 599.0
+    },
+    {
+      "Time": "2018-11",
+      "Desktop Computer": 285.0,
+      "Electronic Medical Record": 176.0,
+      "Email": 385.0,
+      "Laptop": 427.0,
+      "Network Server": 514.0,
+      "Other": 307.0,
+      "Other Portable Electronic Device": 248.0,
+      "Paper/Films": 608.0
+    },
+    {
+      "Time": "2018-12",
+      "Desktop Computer": 290.0,
+      "Electronic Medical Record": 178.0,
+      "Email": 396.0,
+      "Laptop": 429.0,
+      "Network Server": 520.0,
+      "Other": 312.0,
+      "Other Portable Electronic Device": 250.0,
+      "Paper/Films": 613.0
+    },
+    {
+      "Time": "2019-01",
+      "Desktop Computer": 294.0,
+      "Electronic Medical Record": 179.0,
+      "Email": 413.0,
+      "Laptop": 431.0,
+      "Network Server": 524.0,
+      "Other": 317.0,
+      "Other Portable Electronic Device": 251.0,
+      "Paper/Films": 619.0
+    },
+    {
+      "Time": "2019-02",
+      "Desktop Computer": 297.0,
+      "Electronic Medical Record": 182.0,
+      "Email": 422.0,
+      "Laptop": 433.0,
+      "Network Server": 540.0,
+      "Other": 318.0,
+      "Other Portable Electronic Device": 251.0,
+      "Paper/Films": 623.0
+    },
+    {
+      "Time": "2019-03",
+      "Desktop Computer": 300.0,
+      "Electronic Medical Record": 185.0,
+      "Email": 436.0,
+      "Laptop": 435.0,
+      "Network Server": 550.0,
+      "Other": 321.0,
+      "Other Portable Electronic Device": 251.0,
+      "Paper/Films": 627.0
+    },
+    {
+      "Time": "2019-04",
+      "Desktop Computer": 303.0,
+      "Electronic Medical Record": 187.0,
+      "Email": 461.0,
+      "Laptop": 436.0,
+      "Network Server": 562.0,
+      "Other": 324.0,
+      "Other Portable Electronic Device": 252.0,
+      "Paper/Films": 633.0
+    },
+    {
+      "Time": "2019-05",
+      "Desktop Computer": 308.0,
+      "Electronic Medical Record": 194.0,
+      "Email": 487.0,
+      "Laptop": 439.0,
+      "Network Server": 574.0,
+      "Other": 327.0,
+      "Other Portable Electronic Device": 254.0,
+      "Paper/Films": 638.0
+    },
+    {
+      "Time": "2019-06",
+      "Desktop Computer": 312.0,
+      "Electronic Medical Record": 196.0,
+      "Email": 496.0,
+      "Laptop": 440.0,
+      "Network Server": 583.0,
+      "Other": 330.0,
+      "Other Portable Electronic Device": 255.0,
+      "Paper/Films": 642.0
+    },
+    {
+      "Time": "2019-07",
+      "Desktop Computer": 313.0,
+      "Electronic Medical Record": 196.0,
+      "Email": 519.0,
+      "Laptop": 442.0,
+      "Network Server": 607.0,
+      "Other": 335.0,
+      "Other Portable Electronic Device": 255.0,
+      "Paper/Films": 647.0
+    },
+    {
+      "Time": "2019-08",
+      "Desktop Computer": 315.0,
+      "Electronic Medical Record": 201.0,
+      "Email": 542.0,
+      "Laptop": 443.0,
+      "Network Server": 616.0,
+      "Other": 340.0,
+      "Other Portable Electronic Device": 258.0,
+      "Paper/Films": 655.0
+    },
+    {
+      "Time": "2019-09",
+      "Desktop Computer": 318.0,
+      "Electronic Medical Record": 202.0,
+      "Email": 560.0,
+      "Laptop": 444.0,
+      "Network Server": 630.0,
+      "Other": 340.0,
+      "Other Portable Electronic Device": 260.0,
+      "Paper/Films": 660.0
+    },
+    {
+      "Time": "2019-10",
+      "Desktop Computer": 320.0,
+      "Electronic Medical Record": 206.0,
+      "Email": 576.0,
+      "Laptop": 447.0,
+      "Network Server": 638.0,
+      "Other": 359.0,
+      "Other Portable Electronic Device": 261.0,
+      "Paper/Films": 664.0
+    },
+    {
+      "Time": "2019-11",
+      "Desktop Computer": 322.0,
+      "Electronic Medical Record": 210.0,
+      "Email": 595.0,
+      "Laptop": 450.0,
+      "Network Server": 644.0,
+      "Other": 361.0,
+      "Other Portable Electronic Device": 263.0,
+      "Paper/Films": 671.0
+    },
+    {
+      "Time": "2019-12",
+      "Desktop Computer": 324.0,
+      "Electronic Medical Record": 217.0,
+      "Email": 612.0,
+      "Laptop": 452.0,
+      "Network Server": 654.0,
+      "Other": 363.0,
+      "Other Portable Electronic Device": 265.0,
+      "Paper/Films": 675.0
+    },
+    {
+      "Time": "2020-01",
+      "Desktop Computer": 325.0,
+      "Electronic Medical Record": 219.0,
+      "Email": 629.0,
+      "Laptop": 452.0,
+      "Network Server": 677.0,
+      "Other": 382.0,
+      "Other Portable Electronic Device": 265.0,
+      "Paper/Films": 683.0
+    },
+    {
+      "Time": "2020-02",
+      "Desktop Computer": 327.0,
+      "Electronic Medical Record": 219.0,
+      "Email": 654.0,
+      "Laptop": 454.0,
+      "Network Server": 687.0,
+      "Other": 382.0,
+      "Other Portable Electronic Device": 266.0,
+      "Paper/Films": 691.0
+    },
+    {
+      "Time": "2020-03",
+      "Desktop Computer": 330.0,
+      "Electronic Medical Record": 223.0,
+      "Email": 672.0,
+      "Laptop": 457.0,
+      "Network Server": 700.0,
+      "Other": 382.0,
+      "Other Portable Electronic Device": 268.0,
+      "Paper/Films": 697.0
+    },
+    {
+      "Time": "2020-04",
+      "Desktop Computer": 330.0,
+      "Electronic Medical Record": 225.0,
+      "Email": 694.0,
+      "Laptop": 460.0,
+      "Network Server": 706.0,
+      "Other": 383.0,
+      "Other Portable Electronic Device": 271.0,
+      "Paper/Films": 705.0
+    },
+    {
+      "Time": "2020-05",
+      "Desktop Computer": 330.0,
+      "Electronic Medical Record": 229.0,
+      "Email": 704.0,
+      "Laptop": 461.0,
+      "Network Server": 714.0,
+      "Other": 384.0,
+      "Other Portable Electronic Device": 271.0,
+      "Paper/Films": 715.0
+    },
+    {
+      "Time": "2020-06",
+      "Desktop Computer": 336.0,
+      "Electronic Medical Record": 232.0,
+      "Email": 740.0,
+      "Laptop": 462.0,
+      "Network Server": 739.0,
+      "Other": 386.0,
+      "Other Portable Electronic Device": 273.0,
+      "Paper/Films": 718.0
+    },
+    {
+      "Time": "2020-07",
+      "Desktop Computer": 338.0,
+      "Electronic Medical Record": 234.0,
+      "Email": 756.0,
+      "Laptop": 463.0,
+      "Network Server": 753.0,
+      "Other": 391.0,
+      "Other Portable Electronic Device": 275.0,
+      "Paper/Films": 726.0
+    },
+    {
+      "Time": "2020-08",
+      "Desktop Computer": 338.0,
+      "Electronic Medical Record": 235.0,
+      "Email": 770.0,
+      "Laptop": 464.0,
+      "Network Server": 769.0,
+      "Other": 396.0,
+      "Other Portable Electronic Device": 277.0,
+      "Paper/Films": 729.0
+    },
+    {
+      "Time": "2020-09",
+      "Desktop Computer": 340.0,
+      "Electronic Medical Record": 240.0,
+      "Email": 793.0,
+      "Laptop": 464.0,
+      "Network Server": 841.0,
+      "Other": 397.0,
+      "Other Portable Electronic Device": 279.0,
+      "Paper/Films": 735.0
+    },
+    {
+      "Time": "2020-10",
+      "Desktop Computer": 341.0,
+      "Electronic Medical Record": 243.0,
+      "Email": 816.0,
+      "Laptop": 466.0,
+      "Network Server": 888.0,
+      "Other": 400.0,
+      "Other Portable Electronic Device": 279.0,
+      "Paper/Films": 739.0
+    },
+    {
+      "Time": "2020-11",
+      "Desktop Computer": 342.0,
+      "Electronic Medical Record": 247.0,
+      "Email": 831.0,
+      "Laptop": 467.0,
+      "Network Server": 910.0,
+      "Other": 403.0,
+      "Other Portable Electronic Device": 279.0,
+      "Paper/Films": 750.0
+    },
+    {
+      "Time": "2020-12",
+      "Desktop Computer": 344.0,
+      "Electronic Medical Record": 250.0,
+      "Email": 851.0,
+      "Laptop": 468.0,
+      "Network Server": 937.0,
+      "Other": 406.0,
+      "Other Portable Electronic Device": 282.0,
+      "Paper/Films": 766.0
+    },
+    {
+      "Time": "2021-01",
+      "Desktop Computer": 346.0,
+      "Electronic Medical Record": 255.0,
+      "Email": 866.0,
+      "Laptop": 469.0,
+      "Network Server": 949.0,
+      "Other": 407.0,
+      "Other Portable Electronic Device": 282.0,
+      "Paper/Films": 769.0
+    },
+    {
+      "Time": "2021-02",
+      "Desktop Computer": 349.0,
+      "Electronic Medical Record": 257.0,
+      "Email": 888.0,
+      "Laptop": 469.0,
+      "Network Server": 964.0,
+      "Other": 411.0,
+      "Other Portable Electronic Device": 282.0,
+      "Paper/Films": 773.0
+    },
+    {
+      "Time": "2021-03",
+      "Desktop Computer": 349.0,
+      "Electronic Medical Record": 259.0,
+      "Email": 900.0,
+      "Laptop": 471.0,
+      "Network Server": 1011.0,
+      "Other": 417.0,
+      "Other Portable Electronic Device": 284.0,
+      "Paper/Films": 779.0
+    },
+    {
+      "Time": "2021-04",
+      "Desktop Computer": 350.0,
+      "Electronic Medical Record": 265.0,
+      "Email": 920.0,
+      "Laptop": 473.0,
+      "Network Server": 1055.0,
+      "Other": 421.0,
+      "Other Portable Electronic Device": 286.0,
+      "Paper/Films": 780.0
+    },
+    {
+      "Time": "2021-05",
+      "Desktop Computer": 352.0,
+      "Electronic Medical Record": 266.0,
+      "Email": 929.0,
+      "Laptop": 475.0,
+      "Network Server": 1101.0,
+      "Other": 424.0,
+      "Other Portable Electronic Device": 287.0,
+      "Paper/Films": 786.0
+    },
+    {
+      "Time": "2021-06",
+      "Desktop Computer": 354.0,
+      "Electronic Medical Record": 272.0,
+      "Email": 949.0,
+      "Laptop": 475.0,
+      "Network Server": 1144.0,
+      "Other": 426.0,
+      "Other Portable Electronic Device": 288.0,
+      "Paper/Films": 789.0
+    },
+    {
+      "Time": "2021-07",
+      "Desktop Computer": 356.0,
+      "Electronic Medical Record": 276.0,
+      "Email": 970.0,
+      "Laptop": 476.0,
+      "Network Server": 1177.0,
+      "Other": 432.0,
+      "Other Portable Electronic Device": 288.0,
+      "Paper/Films": 794.0
+    },
+    {
+      "Time": "2021-08",
+      "Desktop Computer": 356.0,
+      "Electronic Medical Record": 278.0,
+      "Email": 985.0,
+      "Laptop": 476.0,
+      "Network Server": 1196.0,
+      "Other": 432.0,
+      "Other Portable Electronic Device": 288.0,
+      "Paper/Films": 796.0
+    }
+  ]

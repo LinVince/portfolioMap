@@ -1,79 +1,25 @@
 import React, { useState, useEffect } from "react";
 import {
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-} from "recharts";
-import { DataBreachesSumedTypeByMonth } from "../data/DataBreaches";
+  DataBreachesSumedTypeByMonth,
+  SumedTypeByMonthLinesColor,
+  DataBreachesSumedLocationByMonth,
+  SumedLocationByMonthLinesColor,
+} from "../data/DataBreaches";
+import { Box, Typography } from "@mui/material";
+import { IconButton } from "@mui/material";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import MultiLineChart, { DataPoint } from "../components/MultiLineChart";
+import BackToHomeIcon from "../components/HomeIcon";
 
-interface DataPoint {
-  name: string;
-  [key: string]: number | string;
-}
-
-interface MultiLineChartProps {
-  data: DataPoint[];
-  lines: { key: string; color: string }[];
-}
-
-const MultiLineChart: React.FC<MultiLineChartProps> = ({ data, lines }) => {
-  return (
-    <ResponsiveContainer width="100%" height={500}>
-      <LineChart
-        data={data}
-        margin={{ top: 5, right: 40, left: 10, bottom: 5 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis domain={[0, 50]} />
-
-        {lines.map((line) => {
-          const lastDataPoint = data[data.length - 1];
-          const yValue = lastDataPoint ? lastDataPoint[line.key] : 0;
-          const yPos = 100 - (yValue as number) / 100; // Adjust y position calculation as per your requirement
-
-          return (
-            <React.Fragment key={line.key}>
-              <Line
-                type="monotone"
-                dataKey={line.key}
-                stroke={line.color}
-                activeDot={{ r: 8 }}
-              />
-              <text
-                x="95%" // Adjust based on chart width
-                y={`${yPos}%`}
-                fill={line.color}
-                className="labelText"
-                fontSize={30}
-                textAnchor="middle"
-              >
-                {line.key}
-              </text>
-            </React.Fragment>
-          );
-        })}
-      </LineChart>
-    </ResponsiveContainer>
-  );
-};
-
-const data = DataBreachesSumedTypeByMonth;
-
-const lines = [
-  { key: "Hacking/IT Incident", color: "#8884d8" },
-  { key: "Improper Disposal", color: "#82ca9d" },
-  { key: "Loss", color: "#ff7300" },
-];
-
-const DataBreaches: React.FC = () => {
+const DataBreachesByType: React.FC = () => {
   const [currentData, setCurrentData] = useState<DataPoint[]>([]);
+  const [max, setMaxData] = useState<number>(0);
   const [index, setIndex] = useState<number>(0);
   const [isRunning, setIsRunning] = useState<boolean>(false); // State to control animation
   const [latestTimestamp, setLatestTimestamp] = useState<string | null>(null); // State to track latest timestamp
+
+  const data = DataBreachesSumedTypeByMonth;
+  const lines = SumedTypeByMonthLinesColor;
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -87,17 +33,20 @@ const DataBreaches: React.FC = () => {
             setCurrentData(newData);
             // Update latest timestamp
             const latestDataPoint = newData[newData.length - 1];
+            const { Time, ...others } = latestDataPoint;
+            const maxValue = Math.max(...Object.values(others));
+            setMaxData(maxValue);
             if (latestDataPoint) {
-              setLatestTimestamp(latestDataPoint.name);
+              setLatestTimestamp(latestDataPoint.Time);
             }
           } else {
             setIsRunning(false); // Stop animation when all data points are shown
             clearInterval(interval);
           }
-          console.log(index);
+          console.log(index, latestTimestamp);
           return newIndex;
         });
-      }, 1000); // Update every second
+      }, 150); // Update every second
     }
 
     return () => clearInterval(interval);
@@ -110,16 +59,122 @@ const DataBreaches: React.FC = () => {
     setIsRunning(true); // Start the animation
   };
 
+  const buttonStyle = {
+    top: "0",
+    left: "0",
+  };
+
   return (
-    <div className="App">
-      <h1>Link Chart</h1>
-      <p>Latest Data Point Time: {latestTimestamp}</p>
-      <MultiLineChart data={currentData} lines={lines} />
-      {!isRunning && (
-        <button onClick={handleStartAnimation}>Start Animation</button>
-      )}
-    </div>
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box className="App" sx={{ width: "80%", paddingTop: 10 }}>
+        <Box sx={{ display: "flex", alignItems: "center", spacing: 2 }}>
+          <Typography variant="h6">
+            Types of Data Breaches 2009 - 2021
+          </Typography>
+          {!isRunning && (
+            <IconButton
+              fontSize="large"
+              onClick={handleStartAnimation}
+              sx={buttonStyle}
+            >
+              <PlayArrowIcon />
+            </IconButton>
+          )}
+        </Box>
+        <MultiLineChart data={currentData} max={max} lines={lines} />
+      </Box>
+    </Box>
   );
 };
 
-export default DataBreaches;
+const DataBreachesByLocation: React.FC = () => {
+  const [currentData, setCurrentData] = useState<DataPoint[]>([]);
+  const [max, setMaxData] = useState<number>(0);
+  const [index, setIndex] = useState<number>(0);
+  const [isRunning, setIsRunning] = useState<boolean>(false); // State to control animation
+  const [latestTimestamp, setLatestTimestamp] = useState<string | null>(null); // State to track latest timestamp
+
+  const data = DataBreachesSumedLocationByMonth;
+  const lines = SumedLocationByMonthLinesColor;
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isRunning) {
+      interval = setInterval(() => {
+        setIndex((prevIndex) => {
+          const newIndex = prevIndex + 1;
+          if (newIndex <= data.length) {
+            const newData = data.slice(0, newIndex);
+            setCurrentData(newData);
+            // Update latest timestamp
+            const latestDataPoint = newData[newData.length - 1];
+            const { Time, ...others } = latestDataPoint;
+            const maxValue = Math.max(...Object.values(others));
+            setMaxData(maxValue);
+            if (latestDataPoint) {
+              setLatestTimestamp(latestDataPoint.Time);
+            }
+          } else {
+            setIsRunning(false); // Stop animation when all data points are shown
+            clearInterval(interval);
+          }
+          console.log(index, latestTimestamp);
+          return newIndex;
+        });
+      }, 150); // Update every second
+    }
+
+    return () => clearInterval(interval);
+  }, [isRunning]);
+
+  const handleStartAnimation = () => {
+    setIndex(0); // Reset index to start from the beginning
+    setCurrentData([]); // Clear currentData to start over
+    setLatestTimestamp(null); // Clear latest timestamp
+    setIsRunning(true); // Start the animation
+  };
+
+  const buttonStyle = {
+    top: "0",
+    left: "0",
+  };
+
+  return (
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box className="App" sx={{ width: "80%", paddingTop: 10 }}>
+        <Box sx={{ display: "flex", alignItems: "center", spacing: 2 }}>
+          <Typography variant="h6">
+            Location of Data Breaches 2009 - 2021
+          </Typography>
+          {!isRunning && (
+            <IconButton
+              fontSize="large"
+              onClick={handleStartAnimation}
+              sx={buttonStyle}
+            >
+              <PlayArrowIcon />
+            </IconButton>
+          )}
+        </Box>
+        <MultiLineChart data={currentData} max={max} lines={lines} />
+      </Box>
+    </Box>
+  );
+};
+
+export default function DataBreaches() {
+  const HomeStyle = {
+    position: "fixed !important",
+    bottom: "10px",
+    left: "10px",
+  };
+
+  return (
+    <>
+      <BackToHomeIcon style={HomeStyle} />
+      <DataBreachesByType />
+      <DataBreachesByLocation />
+    </>
+  );
+}

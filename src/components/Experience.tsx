@@ -38,6 +38,7 @@ export const ExperiencePaper: React.FC = () => {
           fontSize: "20px",
           fontWeight: "bold",
           fontFamily: "Roboto, Arial, Helvetica, sans-serif",
+          marginTop: 50,
         }}
         align="left"
         gutterBottom
@@ -58,12 +59,12 @@ export const ExperiencePaper: React.FC = () => {
               alignItems: "flex-start",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
-            onMouseEnter={(e) => {
+            onMouseEnter={(e: any) => {
               e.currentTarget.style.transform = "scale(1.05)";
               e.currentTarget.style.boxShadow =
                 "0 10px 20px rgba(0, 0, 0, 0.2)";
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={(e: any) => {
               e.currentTarget.style.transform = "scale(1)";
               e.currentTarget.style.boxShadow = "0 3px 6px rgba(0, 0, 0, 0.1)";
             }}
@@ -200,12 +201,12 @@ export const ExperienceTimeline: React.FC = () => {
                     alignItems: "flex-start",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                   }}
-                  onMouseEnter={(e) => {
+                  onMouseEnter={(e: any) => {
                     e.currentTarget.style.transform = "scale(1.05)";
                     e.currentTarget.style.boxShadow =
                       "0 10px 20px rgba(0, 0, 0, 0.2)";
                   }}
-                  onMouseLeave={(e) => {
+                  onMouseLeave={(e: any) => {
                     e.currentTarget.style.transform = "scale(1)";
                     e.currentTarget.style.boxShadow =
                       "0 3px 6px rgba(0, 0, 0, 0.1)";

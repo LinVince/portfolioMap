@@ -11,6 +11,7 @@ const ThreeJSPage: React.FC = () => {
   const planeContainerRef = useRef<HTMLDivElement>(null);
   const cubeContainerRef = useRef<HTMLDivElement>(null);
   const triangleContainerRef = useRef<HTMLDivElement>(null);
+  const highHatContainerRef = useRef<HTMLDivElement>(null);
   const darkMode = useSelector((state: any) => state.darkMode);
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
@@ -128,6 +129,33 @@ const ThreeJSPage: React.FC = () => {
       initScene(triangleContainerRef.current, triangle);
     }
 
+    // Initialize high hat scene
+    if (highHatContainerRef.current) {
+      // Create the brim of the high hat
+      const brimGeometry = new Three.CylinderGeometry(1, 1, 0.2, 10);
+      const brimWireframe = new Three.WireframeGeometry(brimGeometry);
+      const brimMaterial = new Three.LineBasicMaterial({
+        color: theme.palette.text.secondary,
+      });
+      const brim = new Three.LineSegments(brimWireframe, brimMaterial);
+
+      // Create the top part of the high hat
+      const topGeometry = new Three.CylinderGeometry(0.5, 0.5, 1.5, 10);
+      const topWireframe = new Three.WireframeGeometry(topGeometry);
+      const topMaterial = new Three.LineBasicMaterial({
+        color: theme.palette.text.secondary,
+      });
+      const top = new Three.LineSegments(topWireframe, topMaterial);
+      top.position.y = 0.85; // Move the top part above the brim
+
+      // Create a group to combine the brim and top part
+      const highHat = new Three.Group();
+      highHat.add(brim);
+      highHat.add(top);
+
+      initScene(highHatContainerRef.current, highHat);
+    }
+
     // Clean up
     return () => {
       // Clean up sphere container
@@ -157,6 +185,13 @@ const ThreeJSPage: React.FC = () => {
         while (triangleContainerRef.current.firstChild) {
           triangleContainerRef.current.removeChild(
             triangleContainerRef.current.firstChild
+          );
+        }
+      }
+      if (highHatContainerRef.current) {
+        while (highHatContainerRef.current.firstChild) {
+          highHatContainerRef.current.removeChild(
+            highHatContainerRef.current.firstChild
           );
         }
       }
@@ -309,6 +344,41 @@ const ThreeJSPage: React.FC = () => {
             }}
           >
             Services
+          </Button>
+        </Link>
+      </Box>
+      {/* High Hat container */}
+      <Box
+        sx={{
+          width: isMobile ? "300px" : "30%", // Adjust width as needed
+          height: "100%", // Take full height of parent container
+          flexDirection: "column",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          ref={highHatContainerRef}
+          sx={{
+            width: "100%", // Adjust width as needed
+            height: "60%", // Take full height of parent container
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        />
+        <Link to="/dataBreaches" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              paddingX: 2,
+              marginX: 1,
+              width: "fit-content",
+              borderRadius: "30px",
+              backgroundColor: theme.palette.background.paper,
+            }}
+          >
+            Cybersecurity
           </Button>
         </Link>
       </Box>
