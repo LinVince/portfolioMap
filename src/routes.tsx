@@ -7,7 +7,6 @@ import ExperiencePage from "./pages/ExperiencePage";
 import DataBreachesByType from "./pages/DataBreaches";
 import Services from "./pages/Services";
 import ScrollToTop from "./components/ScrollToTop";
-import Dot from "./pages/Dots";
 
 const AppRouter = () => {
   return (
@@ -20,7 +19,6 @@ const AppRouter = () => {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/dataBreaches" element={<DataBreachesByType />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/dot" element={<Dot />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>

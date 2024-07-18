@@ -5,8 +5,7 @@ import {
   DataBreachesSumedLocationByMonth,
   SumedLocationByMonthLinesColor,
 } from "../data/DataBreaches";
-import { Box, Typography } from "@mui/material";
-import { IconButton } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import MultiLineChart, { DataPoint } from "../components/MultiLineChart";
 import BackToHomeIcon from "../components/HomeIcon";
@@ -60,8 +59,8 @@ const DataBreachesByType: React.FC = () => {
   };
 
   const buttonStyle = {
-    top: "0",
-    left: "0",
+    top: 0,
+    left: 0,
   };
 
   return (
@@ -73,7 +72,7 @@ const DataBreachesByType: React.FC = () => {
           </Typography>
           {!isRunning && (
             <IconButton
-              fontSize="large"
+              size="large"
               onClick={handleStartAnimation}
               sx={buttonStyle}
             >
@@ -136,8 +135,8 @@ const DataBreachesByLocation: React.FC = () => {
   };
 
   const buttonStyle = {
-    top: "0",
-    left: "0",
+    top: 0,
+    left: 0,
   };
 
   return (
@@ -149,7 +148,7 @@ const DataBreachesByLocation: React.FC = () => {
           </Typography>
           {!isRunning && (
             <IconButton
-              fontSize="large"
+              size="large"
               onClick={handleStartAnimation}
               sx={buttonStyle}
             >
