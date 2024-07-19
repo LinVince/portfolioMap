@@ -1,4 +1,4 @@
-import { IconButton, Link, Box } from "@mui/material";
+import { IconButton, Link, Box, useMediaQuery } from "@mui/material";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import { useSelector } from "react-redux";
 import { useGSAP } from "@gsap/react";
@@ -6,9 +6,15 @@ import { gsap } from "gsap";
 
 const BackToHomeIcon = ({ style }: any) => {
   const darkMode = useSelector((state: any) => state.darkMode);
+  const isDevice = useMediaQuery("(max-width:800px)");
 
   useGSAP(() => {
-    gsap.to("#iconRef", { x: 70, repeat: -1, yoyo: true, duration: 2 });
+    gsap.to("#iconRef", {
+      x: isDevice ? 5 : 30,
+      repeat: -1,
+      yoyo: true,
+      duration: isDevice ? 0.8 : 2,
+    });
   }, []);
 
   return (
@@ -18,7 +24,7 @@ const BackToHomeIcon = ({ style }: any) => {
           <ArrowCircleLeftIcon
             style={{
               fontSize: "32px",
-              color: darkMode ? "#333333" : "#EAEAEA",
+              color: darkMode ? "#555555" : "#DDDDDD",
             }}
           />
         </IconButton>
