@@ -2,7 +2,6 @@ import ServiceTable from "../components/ServicesTable";
 import ServiceTableMobile from "../components/ServicesTableMobile";
 import { useMediaQuery } from "@mui/system";
 import BackToHomeIcon from "../components/HomeIcon";
-import ScrollTriggerText from "../components/AnimatedTexts";
 
 function Services() {
   const isDevice = useMediaQuery("(max-width:800px)");
