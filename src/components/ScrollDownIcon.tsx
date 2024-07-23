@@ -1,7 +1,7 @@
 // ScrollDownIcon.tsx
 
 import React, { useState, useEffect } from "react";
-import { IconButton } from "@mui/material";
+import { IconButton, Box } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -28,7 +28,7 @@ const ScrollDownIcon: React.FC = () => {
   };
 
   return (
-    <IconButton
+    <Box
       //onClick={scrollToContent}
       style={{
         position: "fixed",
@@ -37,14 +37,13 @@ const ScrollDownIcon: React.FC = () => {
         transform: "translateX(-50%)",
         opacity: show ? 1 : 0,
         transition: "opacity 0.3s ease",
-        backgroundColor: "rgba(255, 255, 255, 0.3)",
         backdropFilter: "blur(5px)",
       }}
       color="primary"
       aria-label="scroll down"
     >
       <ArrowDownwardIcon fontSize="small" />
-    </IconButton>
+    </Box>
   );
 };
 

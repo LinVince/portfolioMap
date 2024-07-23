@@ -40,6 +40,43 @@ body {
   margin-left: 1rem;
 }
 
+.textBox {
+    --borderWidth: 3px;
+    background: #000000;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(18, 194, 233, 0.5), 0 0 30px rgba(196, 113, 237, 0.5), 0 0 40px rgba(246, 79, 89, 0.5); /* Glowing border shadow */
+    
+}
+
+.textBox:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #ffffff, #d1e8f9, #a3d2f4, #759cce, #3a6698, #1f3a6d, #091a42, #000000);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+  filter: blur(5px); /* Optional: to make the glow smoother */
+}
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;

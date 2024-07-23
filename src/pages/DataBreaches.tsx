@@ -65,7 +65,7 @@ const DataBreachesByType: React.FC = () => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
-      <Box className="App" sx={{ width: "80%", paddingTop: 10 }}>
+      <Box className="App" sx={{ width: "90vw", paddingTop: 10 }}>
         <Box sx={{ display: "flex", alignItems: "center", spacing: 2 }}>
           <Typography variant="h6">
             Types of Data Breaches 2009 - 2021
@@ -141,7 +141,7 @@ const DataBreachesByLocation: React.FC = () => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
-      <Box className="App" sx={{ width: "80%", paddingTop: 10 }}>
+      <Box className="App" sx={{ width: "90vw", paddingTop: 10 }}>
         <Box sx={{ display: "flex", alignItems: "center", spacing: 2 }}>
           <Typography variant="h6">
             Location of Data Breaches 2009 - 2021

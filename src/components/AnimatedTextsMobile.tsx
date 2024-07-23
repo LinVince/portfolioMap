@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Box, Typography } from "@mui/material";
+import "../App.css";
 
 const AnimatedTextsComponentMobile = () => {
   const fontFamily = "Orbitron, sans-serif";
-  const fontSize = "5vw";
+  const fontSize = "3.5vw";
 
-  useEffect(() => {
+  /*useEffect(() => {
     const timeline = gsap.timeline({ repeat: -1 });
 
     timeline.fromTo(
@@ -33,7 +34,7 @@ const AnimatedTextsComponentMobile = () => {
     );
 
     timeline.to({}, { duration: 5 });
-  }, []);
+  }, []);*/
 
   return (
     <>
@@ -53,11 +54,9 @@ const AnimatedTextsComponentMobile = () => {
             className="textBox"
             id="e1"
             sx={{
-              backgroundColor: "rgba(0, 255, 255, 0.1)", // Light cyan background
-              padding: 1,
+              // Light cyan background
+              padding: 2,
               borderRadius: 2,
-              boxShadow: "0 0 10px rgba(0, 255, 255, 0.5)", // Neon glow
-              border: "1px solid rgba(0, 255, 255, 0.3)",
             }}
           >
             <Typography
@@ -74,12 +73,12 @@ const AnimatedTextsComponentMobile = () => {
           <Box
             id="e2"
             sx={{
-              padding: 1,
+              padding: 2,
               borderRadius: 2,
             }}
           >
             <Typography
-              fontSize={"24px"}
+              fontSize={"2.5vw"}
               fontWeight={500}
               fontFamily={fontFamily}
             >
@@ -91,11 +90,9 @@ const AnimatedTextsComponentMobile = () => {
             id="e3"
             className="textBox"
             sx={{
-              backgroundColor: "rgba(50, 205, 50, 0.1)", // Light green background
-              padding: 1,
+              // Light green background
+              padding: 2,
               borderRadius: 2,
-              boxShadow: "0 0 10px rgba(50, 205, 50, 0.5)", // Green neon glow
-              border: "1px solid rgba(50, 205, 50, 0.3)",
             }}
           >
             <Typography
@@ -113,11 +110,8 @@ const AnimatedTextsComponentMobile = () => {
             id="e4"
             className="textBox"
             sx={{
-              backgroundColor: "rgba(255, 215, 0, 0.1)", // Light gold background
-              padding: 1,
+              padding: 2,
               borderRadius: 2,
-              boxShadow: "0 0 10px rgba(255, 215, 0, 0.5)", // Gold neon glow
-              border: "1px solid rgba(255, 215, 0, 0.3)",
             }}
           >
             <Typography
