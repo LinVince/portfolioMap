@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { gsap } from "gsap";
 import { Box, Typography } from "@mui/material";
 import "../App.css";
 

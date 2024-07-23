@@ -1,9 +1,6 @@
-// ScrollDownIcon.tsx
-
 import React, { useState, useEffect } from "react";
-import { IconButton, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import { animateScroll as scroll } from "react-scroll";
 
 const ScrollDownIcon: React.FC = () => {
   const [show, setShow] = useState(true);
@@ -20,12 +17,14 @@ const ScrollDownIcon: React.FC = () => {
     };
   }, []);
 
-  const scrollToContent = () => {
+  {
+    /*const scrollToContent = () => {
     scroll.scrollToBottom({
       smooth: true,
       duration: 500,
     });
-  };
+  };*/
+  }
 
   return (
     <Box
