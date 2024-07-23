@@ -29,7 +29,7 @@ const ScrollDownIcon: React.FC = () => {
 
   return (
     <IconButton
-      onClick={scrollToContent}
+      //onClick={scrollToContent}
       style={{
         position: "fixed",
         bottom: "10px",
