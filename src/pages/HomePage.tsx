@@ -1,13 +1,12 @@
 import ThreeJSPage from "../components/ThreeJSPage";
-import AnimatedTextsComponent from "../components/AnimatedTexts";
-import AnimatedTextsComponentMobile from "../components/AnimatedTextsMobile";
-import { useMediaQuery } from "@mui/system";
+import { TypeWritterEffect } from "../components/AnimatedTexts";
+
+import { intro } from "../data/FrontPageIntro";
 
 function HomePage() {
-  const isDevice = useMediaQuery("(max-width:1200px)");
   return (
     <>
-      {isDevice ? <AnimatedTextsComponentMobile /> : <AnimatedTextsComponent />}
+      <TypeWritterEffect Text={intro} />
       <ThreeJSPage />
     </>
   );

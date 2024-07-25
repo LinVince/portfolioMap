@@ -1,10 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import "../App.css";
+import { useEffect } from "react";
+import { TextPlugin } from "gsap/TextPlugin";
+import { gsap } from "gsap";
+
+gsap.registerPlugin(TextPlugin);
+const fontFamily = "Orbitron, sans-serif";
 
 const AnimatedTextsComponent = () => {
-  const fontFamily = "Orbitron, sans-serif";
-  const fontSize = "32px";
-
+  const isDevice = useMediaQuery("(max-width:600px)");
+  const fontSize = isDevice ? "5vw" : "2vw";
   return (
     <>
       {/*border effect defined in css*/}
@@ -95,6 +100,58 @@ const AnimatedTextsComponent = () => {
             color="#FFD700"
           >
             8+ Years in Cybersecurity - Crypto Solution
+          </Typography>
+        </Box>
+      </Box>
+    </>
+  );
+};
+
+export const TypeWritterEffect = ({ Text }: { Text: String[] }) => {
+  const isDevice = useMediaQuery("(max-width:600px)");
+  const fontSize = isDevice ? "5vw" : "2vw";
+  useEffect(() => {
+    gsap.to("#cursor", {
+      opacity: 0,
+      repeat: -1,
+      yoyo: true,
+      duration: 0.5,
+      ease: "power2.inOut",
+    });
+    let tlMaster = gsap.timeline({ repeat: -1 });
+
+    Text.forEach((word: any) => {
+      const tlText = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
+      tlText.to("#animated_text", { duration: 1, text: word });
+      tlMaster.add(tlText);
+    });
+  }, []);
+
+  return (
+    <>
+      <Box
+        sx={{
+          width: "95%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          p: 10,
+        }}
+      >
+        <Box id="textArea">
+          <Typography
+            id="animated_text"
+            display="inline"
+            fontSize={fontSize}
+            fontFamily={fontFamily}
+          ></Typography>
+          <Typography
+            id="cursor"
+            display="inline"
+            fontSize={fontSize}
+            fontFamily={fontFamily}
+          >
+            {"   "}|{"   "}
           </Typography>
         </Box>
       </Box>
