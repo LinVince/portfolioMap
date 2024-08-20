@@ -198,7 +198,7 @@ const ThreeJSPage: React.FC = () => {
         }
       }
     };
-  }, [darkMode]);
+  }, [darkMode, isMobile]);
 
   return (
     <>
