@@ -4,8 +4,6 @@ body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   color: #212529;
   background-color: #fff;
   font-family: 'Montserrat', sans-serif;

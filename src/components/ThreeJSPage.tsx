@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import * as Three from "three";
 import { useSelector } from "react-redux";
 import { darkThemeOptions, lightThemeOptions } from "../theme";
-import { useMediaQuery, Box, Button } from "@mui/material";
+import { useMediaQuery, Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import ScrollDownIcon from "./ScrollDownIcon";
 
@@ -15,6 +15,8 @@ const ThreeJSPage: React.FC = () => {
   const darkMode = useSelector((state: any) => state.darkMode);
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  const fontFamily = "Orbitron, sans-serif";
+  const fontSize = isMobile ? "20px" : "32px";
 
   useEffect(() => {
     // Function to initialize each scene and object
@@ -199,85 +201,108 @@ const ThreeJSPage: React.FC = () => {
   }, [darkMode]);
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-        flexWrap: "wrap",
-      }}
-    >
-      {/* Sphere container */}
+    <>
       <Box
         sx={{
-          width: isMobile ? "300px" : "30%", // Adjust width as needed
-          height: "100%", // Take full height of parent container
-          flexDirection: "column",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          paddingTop: 20,
         }}
       >
+        <Typography
+          variant="h4"
+          fontWeight={400}
+          fontFamily={fontFamily}
+          fontStyle={{ color: "#CCC" }}
+          fontSize={fontSize}
+        >
+          Portfolio in Different Forms
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          height: "100%",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* Sphere container */}
         <Box
-          ref={sphereContainerRef}
           sx={{
-            width: "100%", // Adjust width as needed
-            height: "60%", // Take full height of parent container
+            flex: "1 1 300px",
+            height: "600px",
+            flexDirection: "column",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-        />
-        <Link to="/portfolioMap" style={{ textDecoration: "none" }}>
-          <Button
+        >
+          <Box
+            ref={sphereContainerRef}
             sx={{
-              paddingX: 2,
-              marginX: 1,
-              width: "fit-content",
-              borderRadius: "30px",
-              backgroundColor: theme.palette.background.paper,
+              width: "100%", // Adjust width as needed
+              height: "60%", // Take full height of parent container
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          >
-            Portfolio Map
-          </Button>
-        </Link>
-      </Box>
-      {/* Plane container */}
-      <Box
-        sx={{
-          width: isMobile ? "300px" : "30%", // Adjust width as needed
-          height: "100%", // Take full height of parent container
-          flexDirection: "column",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+          />
+          <Link to="/portfolioMap" style={{ textDecoration: "none" }}>
+            <Button
+              sx={{
+                paddingX: 2,
+                marginX: 1,
+                width: "fit-content",
+                borderRadius: "30px",
+                backgroundColor: theme.palette.background.paper,
+              }}
+            >
+              Map
+            </Button>
+          </Link>
+        </Box>
+        {/* Plane container */}
         <Box
-          ref={planeContainerRef}
           sx={{
-            width: "100%", // Adjust width as needed
-            height: "60%", // Take full height of parent container
+            flex: "1 1 300px", // Adjust width as needed
+            height: "600px", // Take full height of parent container
+            flexDirection: "column",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-        />
-        <Link to="/portfolioGallery" style={{ textDecoration: "none" }}>
-          <Button
+        >
+          <Box
+            ref={planeContainerRef}
             sx={{
-              paddingX: 2,
-              marginX: 1,
-              width: "fit-content",
-              borderRadius: "30px",
-              backgroundColor: theme.palette.background.paper,
+              width: "100%", // Adjust width as needed
+              height: "60%", // Take full height of parent container
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          >
-            Portfolio Gallery
-          </Button>
-        </Link>
+          />
+          <Link to="/portfolioGallery" style={{ textDecoration: "none" }}>
+            <Button
+              sx={{
+                paddingX: 2,
+                marginX: 1,
+                width: "fit-content",
+                borderRadius: "30px",
+                backgroundColor: theme.palette.background.paper,
+              }}
+            >
+              Gallery
+            </Button>
+          </Link>
+        </Box>
       </Box>
+      {/*Cube Container*/}
+      {/* 
+
       <Box
         sx={{
           width: isMobile ? "300px" : "30%", // Adjust width as needed
@@ -311,8 +336,9 @@ const ThreeJSPage: React.FC = () => {
             Experience
           </Button>
         </Link>
-      </Box>
+      </Box>*/}
       {/* Triangle container */}
+      {/* 
       <Box
         sx={{
           width: isMobile ? "300px" : "30%", // Adjust width as needed
@@ -346,44 +372,72 @@ const ThreeJSPage: React.FC = () => {
             Services
           </Button>
         </Link>
-      </Box>
-      {/* High Hat container */}
+      </Box>*/}
       <Box
         sx={{
-          width: isMobile ? "300px" : "30%", // Adjust width as needed
-          height: "100%", // Take full height of parent container
-          flexDirection: "column",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          paddingTop: 20,
         }}
       >
+        <Typography
+          variant="h4"
+          fontWeight={400}
+          fontFamily={fontFamily}
+          fontStyle={{ color: "#CCC" }}
+          fontSize={fontSize}
+        >
+          Data Visualization Playground
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          height: "100%",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* High Hat container */}
         <Box
-          ref={highHatContainerRef}
           sx={{
-            width: "100%", // Adjust width as needed
-            height: "60%", // Take full height of parent container
+            flex: "1 1 100%", // Adjust width as needed
+            height: "600px", // Take full height of parent container
+            flexDirection: "column",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-        />
-        <Link to="/dataBreaches" style={{ textDecoration: "none" }}>
-          <Button
+        >
+          <Box
+            ref={highHatContainerRef}
             sx={{
-              paddingX: 2,
-              marginX: 1,
-              width: "fit-content",
-              borderRadius: "30px",
-              backgroundColor: theme.palette.background.paper,
+              width: "100%", // Adjust width as needed
+              height: "60%", // Take full height of parent container
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          >
-            Cybersecurity
-          </Button>
-        </Link>
+          />
+          <Link to="/dataBreaches" style={{ textDecoration: "none" }}>
+            <Button
+              sx={{
+                paddingX: 2,
+                marginX: 1,
+                width: "fit-content",
+                borderRadius: "30px",
+                backgroundColor: theme.palette.background.paper,
+              }}
+            >
+              Cybersecurity
+            </Button>
+          </Link>
+        </Box>
       </Box>
       <ScrollDownIcon />
-    </Box>
+    </>
   );
 };
 

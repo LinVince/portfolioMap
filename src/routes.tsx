@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ErrorPage from "./pages/ErrorPage";
+import AuroraHero from "./pages/ErrorPage";
 import PortfolioMap from "./pages/PortfolioMap";
 import HomePage from "./pages/HomePage";
 import PhotoGallery from "./pages/PhotoGallery";
@@ -19,7 +19,7 @@ const AppRouter = () => {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/dataBreaches" element={<DataBreachesByType />} />
         <Route path="/services" element={<Services />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<AuroraHero />} />
       </Routes>
     </Router>
   );

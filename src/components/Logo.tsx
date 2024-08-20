@@ -32,7 +32,7 @@ const Logo = () => {
   }, []);
 
   return (
-    <Box ref={logoRef} sx={{ position: "absolute", top: 5, left: 5 }}>
+    <Box sx={{ position: "absolute", top: 5, left: 5 }}>
       <img width={isDevice ? "70px" : "100px"} src={path} alt="Yueh Logo" />
     </Box>
   );

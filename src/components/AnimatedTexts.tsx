@@ -132,10 +132,10 @@ export const TypeWritterEffect = ({ Text }: { Text: String[] }) => {
       <Box
         sx={{
           width: "95%",
-          height: "100%",
+          height: isDevice ? "600px" : "800px",
           display: "flex",
-          alignItems: "center",
           p: 10,
+          paddingTop: 40,
         }}
       >
         <Box id="textArea">
