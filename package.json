@@ -32,6 +32,7 @@
     "@types/react-scroll": "^1.8.10",
     "@types/three": "^0.165.0",
     "chroma-js": "^2.4.2",
+    "d3": "^7.9.0",
     "deck.gl": "^9.0.9",
     "framer-motion": "^11.1.7",
     "gsap": "^3.12.5",
@@ -61,6 +62,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
     "@types/d3-force": "^3.0.10",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.2.17",

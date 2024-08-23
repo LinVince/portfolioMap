@@ -1,4 +1,4 @@
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
+/*import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
 import { Box } from "@mui/material";
 import React from "react";
 
@@ -66,6 +66,161 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
         </LineChart>
       </ResponsiveContainer>
     </Box>
+  );
+};
+
+export default MultiLineChart;
+*/
+
+import * as d3 from "d3";
+import React, { useRef, useEffect } from "react";
+
+export interface DataPoint {
+  Time: string;
+  [key: string]: number | string;
+}
+
+interface MultiLineChartProps {
+  data: DataPoint[];
+  max: number;
+  lines: { key: string; color: string }[];
+}
+
+const MultiLineChart: React.FC<MultiLineChartProps> = ({
+  data,
+  max,
+  lines,
+}) => {
+  const chartRef = useRef<SVGSVGElement | null>(null);
+
+  useEffect(() => {
+    // Clear previous SVG content
+    d3.select(chartRef.current).selectAll("*").remove();
+
+    // Calculate responsive dimensions
+    const containerWidth = chartRef.current?.parentElement?.clientWidth || 960;
+    const containerHeight = 500;
+    const margin = { top: 20, right: 150, bottom: 50, left: 50 }; // Increase right margin for more label space
+    const width = containerWidth - margin.left - margin.right;
+    const height = containerHeight - margin.top - margin.bottom;
+
+    // Define scales
+    const x = d3
+      .scaleUtc()
+      .domain(d3.extent(data, (d) => new Date(d.Time)) as [Date, Date])
+      .range([0, width - 50]); // Shorten the range to leave room for labels
+
+    const y = d3
+      .scaleLinear()
+      .domain([0, max + 100])
+      .range([height, 0]);
+
+    // Create the SVG container
+    const svg = d3
+      .select(chartRef.current)
+      .attr("width", "100%")
+      .attr("height", containerHeight)
+      .attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Add the X axis
+    svg
+      .append("g")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x));
+
+    // Add the Y axis
+    svg
+      .append("g")
+      .call(d3.axisLeft(y))
+      .append("text")
+      .attr("fill", "currentColor")
+      .attr("x", -margin.left)
+      .attr("y", -10)
+      .attr("text-anchor", "start")
+      .text("Number of Incidents");
+
+    // Create a line generator
+    const line = d3
+      .line<DataPoint>()
+      .x((d) => x(new Date(d.Time)))
+      .y((d) => y(d[lines[0].key] as number));
+
+    // Draw the lines
+    lines.forEach(({ key, color }) => {
+      svg
+        .append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", color)
+        .attr("stroke-width", 2)
+        .attr(
+          "d",
+          line.y((d) => y(d[key] as number))
+        );
+
+      // Add the label at the end of the line in the reserved label area
+      const lastDataPoint = data[data.length - 1];
+      const yValue = lastDataPoint ? lastDataPoint[key] : 0;
+      const yPos = y(yValue as number);
+      const labelXPos = width + 10; // Position labels outside shortened lines
+
+      // Wrap text if it's too long
+      const wrapText = (
+        text: string,
+        x: number,
+        y: number,
+        maxWidth: number
+      ) => {
+        const words = text.split(" ");
+        let line = "";
+        let lineNumber = 0;
+        const lineHeight = 1.1; // ems
+        const dy = 0;
+
+        const tspan = svg
+          .append("text")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("fill", color)
+          .attr("text-anchor", "start")
+          .attr("alignment-baseline", "middle");
+
+        words.forEach((word, i) => {
+          const testLine = line + word + " ";
+          const testWidth = svg.node()?.getBoundingClientRect().width || 0;
+
+          if (testWidth > maxWidth && i > 0) {
+            tspan
+              .append("tspan")
+              .attr("x", x)
+              .attr("y", y)
+              .attr("dy", `${lineNumber++ * lineHeight + dy}em`)
+              .text(line);
+            line = word + " ";
+          } else {
+            line = testLine;
+          }
+        });
+
+        tspan
+          .append("tspan")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", `${lineNumber * lineHeight + dy}em`)
+          .text(line.trim());
+      };
+
+      // Use wrapText function for the label
+      wrapText(key, labelXPos, yPos, margin.right);
+    });
+  }, [data, lines, max]);
+
+  return (
+    <div style={{ display: "flex", justifyContent: "center", paddingTop: 20 }}>
+      <svg ref={chartRef}></svg>
+    </div>
   );
 };
 
