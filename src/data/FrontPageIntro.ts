@@ -1,1 +1,1 @@
-export const intro = ["Hi, I'm Yueh, a product designer and a frontend developer.", "I've been working in cybersecurity and data visualization for years.", "Check my standout projects!"]
+export const intro = ["Hi, I'm Yueh, a fullstack developer / product designer.", "I've been working in cybersecurity and data visualization for years.", "Check my standout projects!"]
