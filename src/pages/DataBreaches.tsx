@@ -98,7 +98,7 @@ const DataBreachesByType: React.FC = () => {
   ];
 
   const isDevice = useMediaQuery("(max-width:600px)");
-  const fontSize = isDevice ? "2vw" : "1.4vw";
+  const fontSize = isDevice ? "4vw" : "1.4vw";
   const fontFamily = "Inter, sans-serif; Orbitron, sans-serif";
 
   useEffect(() => {
@@ -212,27 +212,26 @@ const DataBreachesByType: React.FC = () => {
           </Box>
         )}
         <Box sx={{ position: "relative" }}>
-          <MultiLineChart data={currentData} max={max} lines={lines} />
           {/*Animated Texts*/}
           <Box
             sx={{
               width: "100%",
               //height: isDevice ? "600px" : "800px",
               display: "flex",
-              p: 10,
+              p: isDevice ? 0 : 10,
               //paddingTop: 40,
-              position: "absolute",
+              position: isDevice ? "relative" : "absolute",
               top: 0,
               left: 0,
               alignItems: "center",
               justifyContent: "start",
             }}
           >
-            <Box id="textArea" sx={{ width: "50%" }}>
+            <Box id="textArea" sx={{ width: isDevice ? "100%" : "50%" }}>
               <Typography
                 id="animated_year"
                 fontSize={fontSize}
-                paddingBottom={5}
+                paddingBottom={isDevice ? 1 : 5}
                 fontFamily={fontFamily}
               ></Typography>
               <Typography
@@ -244,6 +243,7 @@ const DataBreachesByType: React.FC = () => {
             </Box>
           </Box>
           {/*Closed */}
+          <MultiLineChart data={currentData} max={max} lines={lines} />
         </Box>
       </Box>
     </Box>
