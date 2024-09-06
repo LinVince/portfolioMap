@@ -10,12 +10,13 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import MultiLineChart, { DataPoint } from "../components/MultiLineChart";
 import BackToHomeIcon from "../components/HomeIcon";
+import { gsap } from "gsap";
 
 const DataBreachesByType: React.FC = () => {
   const [currentData, setCurrentData] = useState<DataPoint[]>([]);
   const [max, setMaxData] = useState<number>(0);
   const [index, setIndex] = useState<number>(0);
-  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [isRunning, setIsRunning] = useState<boolean>(true);
   const [isPause, setPause] = useState<boolean>(false);
   const [latestTimestamp, setLatestTimestamp] = useState<string | null>(null);
 
@@ -77,6 +78,85 @@ const DataBreachesByType: React.FC = () => {
     left: 0,
   };
 
+  /*Area for the animated texts */
+  const Text = [
+    {
+      text: "Bitcoin was launched, built on blockchain, making transactions untrackable and anonymous. At the moment, most of the incidents resulted from physical theft.",
+      duration: 8,
+      delay: 1,
+    },
+    {
+      text: "Bitcoin became extremely popular, later enabling hackers to use WannaCry ransomware to demand ransom without being easily tracked or caught.",
+      duration: 8,
+      delay: 1,
+    },
+    {
+      text: "Hacking and IT incidents quickly became the severest incident type.",
+      duration: 6,
+      delay: 1,
+    },
+  ];
+
+  const isDevice = useMediaQuery("(max-width:600px)");
+  const fontSize = isDevice ? "2vw" : "1.4vw";
+  const fontFamily = "Inter, sans-serif; Orbitron, sans-serif";
+
+  useEffect(() => {
+    let tlMaster = gsap.timeline();
+
+    Text.forEach((word: any) => {
+      const tlText = gsap.timeline({
+        yoyo: false,
+      });
+      tlText
+        .to("#animated_text", { duration: 0.5, opacity: 0 }) // Fade out current text
+        .set("#animated_text", { text: word.text }) // Set new text
+        .to("#animated_text", {
+          duration: word.duration,
+          opacity: 1,
+        }); // Fade in new text
+      tlMaster.add(tlText);
+    });
+    if (isRunning) {
+      gsap.globalTimeline.resume();
+    } else {
+      gsap.globalTimeline.pause();
+    }
+    return () => {
+      // Clean up the animation when the component unmounts
+      tlMaster.kill();
+    };
+  }, [isRunning]);
+
+  const Years = Array.from({ length: 13 }, (_, i) => 2009 + i);
+  useEffect(() => {
+    let tlMaster = gsap.timeline();
+
+    Years.forEach((year: any) => {
+      const tlText = gsap.timeline({
+        yoyo: false,
+      });
+      tlText
+        .set("#animated_year", { text: year }) // Set new text
+        .to("#animated_year", {
+          duration: 1.8,
+          opacity: 1,
+        }); // Fade in new text
+      tlMaster.add(tlText);
+    });
+    if (isRunning) {
+      gsap.globalTimeline.resume();
+    } else {
+      gsap.globalTimeline.pause();
+    }
+    return () => {
+      // Clean up the animation when the component unmounts
+      tlMaster.kill();
+    };
+  }, [isRunning]);
+
+  /*Closed */
+
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Box className="App" sx={{ width: "100%", paddingTop: 10 }}>
@@ -106,6 +186,7 @@ const DataBreachesByType: React.FC = () => {
             </Typography>
           </Box>
         </Box>
+
         {!isRunning && (
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Typography>Play</Typography>
@@ -130,7 +211,40 @@ const DataBreachesByType: React.FC = () => {
             </IconButton>
           </Box>
         )}
-        <MultiLineChart data={currentData} max={max} lines={lines} />
+        <Box sx={{ position: "relative" }}>
+          <MultiLineChart data={currentData} max={max} lines={lines} />
+          {/*Animated Texts*/}
+          <Box
+            sx={{
+              width: "100%",
+              //height: isDevice ? "600px" : "800px",
+              display: "flex",
+              p: 10,
+              //paddingTop: 40,
+              position: "absolute",
+              top: 0,
+              left: 0,
+              alignItems: "center",
+              justifyContent: "start",
+            }}
+          >
+            <Box id="textArea" sx={{ width: "50%" }}>
+              <Typography
+                id="animated_year"
+                fontSize={fontSize}
+                paddingBottom={5}
+                fontFamily={fontFamily}
+              ></Typography>
+              <Typography
+                id="animated_text"
+                display="inline"
+                fontSize={fontSize}
+                fontFamily={fontFamily}
+              ></Typography>
+            </Box>
+          </Box>
+          {/*Closed */}
+        </Box>
       </Box>
     </Box>
   );
