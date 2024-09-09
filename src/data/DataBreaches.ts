@@ -4,7 +4,7 @@ export const SumedTypeByMonthLinesColor = [
   { key: "Loss", color: "#3357FF" }, // Bright Blue
   { key: "Other", color: "#FF33A6" }, // Bright Pink
   { key: "Theft", color: "#FFC300" }, // Bright Yellow
-  { key: "Unauthorized Access/Disclosure", color: "#A633FF" }, // Bright Purple
+  { key: "Unauthorized Access", color: "#A633FF" }, // Bright Purple
   { key: "Unknown", color: "#33A6FF" } // Light Blue
 ];
 
@@ -17,7 +17,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 0.0,
       "Other": 0.0,
       "Theft": 3.0,
-      "Unauthorized Access/Disclosure": 0.0,
+      "Unauthorized Access": 0.0,
       "Unknown": 0.0
     },
     {
@@ -27,7 +27,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 1.0,
       "Other": 0.0,
       "Theft": 11.0,
-      "Unauthorized Access/Disclosure": 0.0,
+      "Unauthorized Access": 0.0,
       "Unknown": 0.0
     },
     {
@@ -37,7 +37,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 1.0,
       "Other": 2.0,
       "Theft": 15.0,
-      "Unauthorized Access/Disclosure": 0.0,
+      "Unauthorized Access": 0.0,
       "Unknown": 0.0
     },
     {
@@ -47,7 +47,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 2.0,
       "Other": 2.0,
       "Theft": 28.0,
-      "Unauthorized Access/Disclosure": 0.0,
+      "Unauthorized Access": 0.0,
       "Unknown": 0.0
     },
     {
@@ -57,7 +57,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 2.0,
       "Other": 5.0,
       "Theft": 36.0,
-      "Unauthorized Access/Disclosure": 0.0,
+      "Unauthorized Access": 0.0,
       "Unknown": 0.0
     },
     {
@@ -67,7 +67,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 2.0,
       "Other": 7.0,
       "Theft": 44.0,
-      "Unauthorized Access/Disclosure": 1.0,
+      "Unauthorized Access": 1.0,
       "Unknown": 0.0
     },
     {
@@ -77,7 +77,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 5.0,
       "Other": 10.0,
       "Theft": 58.0,
-      "Unauthorized Access/Disclosure": 1.0,
+      "Unauthorized Access": 1.0,
       "Unknown": 0.0
     },
     {
@@ -87,7 +87,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 6.0,
       "Other": 12.0,
       "Theft": 67.0,
-      "Unauthorized Access/Disclosure": 1.0,
+      "Unauthorized Access": 1.0,
       "Unknown": 0.0
     },
     {
@@ -97,7 +97,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 8.0,
       "Other": 16.0,
       "Theft": 78.0,
-      "Unauthorized Access/Disclosure": 1.0,
+      "Unauthorized Access": 1.0,
       "Unknown": 0.0
     },
     {
@@ -107,7 +107,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 11.0,
       "Other": 19.0,
       "Theft": 92.0,
-      "Unauthorized Access/Disclosure": 2.0,
+      "Unauthorized Access": 2.0,
       "Unknown": 0.0
     },
     {
@@ -117,7 +117,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 15.0,
       "Other": 22.0,
       "Theft": 106.0,
-      "Unauthorized Access/Disclosure": 2.0,
+      "Unauthorized Access": 2.0,
       "Unknown": 0.0
     },
     {
@@ -127,7 +127,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 17.0,
       "Other": 24.0,
       "Theft": 120.0,
-      "Unauthorized Access/Disclosure": 2.0,
+      "Unauthorized Access": 2.0,
       "Unknown": 0.0
     },
     {
@@ -137,7 +137,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 17.0,
       "Other": 26.0,
       "Theft": 126.0,
-      "Unauthorized Access/Disclosure": 2.0,
+      "Unauthorized Access": 2.0,
       "Unknown": 0.0
     },
     {
@@ -147,7 +147,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 19.0,
       "Other": 26.0,
       "Theft": 139.0,
-      "Unauthorized Access/Disclosure": 7.0,
+      "Unauthorized Access": 7.0,
       "Unknown": 0.0
     },
     {
@@ -157,7 +157,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 21.0,
       "Other": 26.0,
       "Theft": 150.0,
-      "Unauthorized Access/Disclosure": 10.0,
+      "Unauthorized Access": 10.0,
       "Unknown": 0.0
     },
     {
@@ -167,7 +167,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 22.0,
       "Other": 26.0,
       "Theft": 162.0,
-      "Unauthorized Access/Disclosure": 10.0,
+      "Unauthorized Access": 10.0,
       "Unknown": 0.0
     },
     {
@@ -177,7 +177,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 26.0,
       "Other": 26.0,
       "Theft": 168.0,
-      "Unauthorized Access/Disclosure": 12.0,
+      "Unauthorized Access": 12.0,
       "Unknown": 0.0
     },
     {
@@ -187,7 +187,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 26.0,
       "Other": 26.0,
       "Theft": 176.0,
-      "Unauthorized Access/Disclosure": 16.0,
+      "Unauthorized Access": 16.0,
       "Unknown": 2.0
     },
     {
@@ -197,7 +197,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 27.0,
       "Other": 26.0,
       "Theft": 182.0,
-      "Unauthorized Access/Disclosure": 18.0,
+      "Unauthorized Access": 18.0,
       "Unknown": 3.0
     },
     {
@@ -207,7 +207,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 27.0,
       "Other": 26.0,
       "Theft": 195.0,
-      "Unauthorized Access/Disclosure": 22.0,
+      "Unauthorized Access": 22.0,
       "Unknown": 3.0
     },
     {
@@ -217,7 +217,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 30.0,
       "Other": 26.0,
       "Theft": 205.0,
-      "Unauthorized Access/Disclosure": 25.0,
+      "Unauthorized Access": 25.0,
       "Unknown": 6.0
     },
     {
@@ -227,7 +227,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 30.0,
       "Other": 26.0,
       "Theft": 213.0,
-      "Unauthorized Access/Disclosure": 32.0,
+      "Unauthorized Access": 32.0,
       "Unknown": 6.0
     },
     {
@@ -237,7 +237,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 31.0,
       "Other": 26.0,
       "Theft": 222.0,
-      "Unauthorized Access/Disclosure": 36.0,
+      "Unauthorized Access": 36.0,
       "Unknown": 6.0
     },
     {
@@ -247,7 +247,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 33.0,
       "Other": 26.0,
       "Theft": 238.0,
-      "Unauthorized Access/Disclosure": 39.0,
+      "Unauthorized Access": 39.0,
       "Unknown": 6.0
     },
     {
@@ -257,7 +257,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 37.0,
       "Other": 26.0,
       "Theft": 258.0,
-      "Unauthorized Access/Disclosure": 41.0,
+      "Unauthorized Access": 41.0,
       "Unknown": 7.0
     },
     {
@@ -267,7 +267,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 40.0,
       "Other": 26.0,
       "Theft": 265.0,
-      "Unauthorized Access/Disclosure": 44.0,
+      "Unauthorized Access": 44.0,
       "Unknown": 7.0
     },
     {
@@ -277,7 +277,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 41.0,
       "Other": 28.0,
       "Theft": 273.0,
-      "Unauthorized Access/Disclosure": 46.0,
+      "Unauthorized Access": 46.0,
       "Unknown": 7.0
     },
     {
@@ -287,7 +287,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 42.0,
       "Other": 33.0,
       "Theft": 281.0,
-      "Unauthorized Access/Disclosure": 51.0,
+      "Unauthorized Access": 51.0,
       "Unknown": 7.0
     },
     {
@@ -297,7 +297,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 43.0,
       "Other": 36.0,
       "Theft": 291.0,
-      "Unauthorized Access/Disclosure": 55.0,
+      "Unauthorized Access": 55.0,
       "Unknown": 7.0
     },
     {
@@ -307,7 +307,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 43.0,
       "Other": 38.0,
       "Theft": 304.0,
-      "Unauthorized Access/Disclosure": 58.0,
+      "Unauthorized Access": 58.0,
       "Unknown": 7.0
     },
     {
@@ -317,7 +317,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 45.0,
       "Other": 40.0,
       "Theft": 313.0,
-      "Unauthorized Access/Disclosure": 65.0,
+      "Unauthorized Access": 65.0,
       "Unknown": 8.0
     },
     {
@@ -327,7 +327,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 50.0,
       "Other": 40.0,
       "Theft": 327.0,
-      "Unauthorized Access/Disclosure": 71.0,
+      "Unauthorized Access": 71.0,
       "Unknown": 8.0
     },
     {
@@ -337,7 +337,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 51.0,
       "Other": 40.0,
       "Theft": 335.0,
-      "Unauthorized Access/Disclosure": 72.0,
+      "Unauthorized Access": 72.0,
       "Unknown": 8.0
     },
     {
@@ -347,7 +347,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 54.0,
       "Other": 41.0,
       "Theft": 348.0,
-      "Unauthorized Access/Disclosure": 76.0,
+      "Unauthorized Access": 76.0,
       "Unknown": 10.0
     },
     {
@@ -357,7 +357,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 55.0,
       "Other": 42.0,
       "Theft": 359.0,
-      "Unauthorized Access/Disclosure": 77.0,
+      "Unauthorized Access": 77.0,
       "Unknown": 10.0
     },
     {
@@ -367,7 +367,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 56.0,
       "Other": 43.0,
       "Theft": 365.0,
-      "Unauthorized Access/Disclosure": 80.0,
+      "Unauthorized Access": 80.0,
       "Unknown": 10.0
     },
     {
@@ -377,7 +377,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 56.0,
       "Other": 44.0,
       "Theft": 376.0,
-      "Unauthorized Access/Disclosure": 82.0,
+      "Unauthorized Access": 82.0,
       "Unknown": 10.0
     },
     {
@@ -387,7 +387,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 62.0,
       "Other": 46.0,
       "Theft": 394.0,
-      "Unauthorized Access/Disclosure": 86.0,
+      "Unauthorized Access": 86.0,
       "Unknown": 10.0
     },
     {
@@ -397,7 +397,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 62.0,
       "Other": 48.0,
       "Theft": 405.0,
-      "Unauthorized Access/Disclosure": 89.0,
+      "Unauthorized Access": 89.0,
       "Unknown": 10.0
     },
     {
@@ -407,7 +407,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 64.0,
       "Other": 49.0,
       "Theft": 417.0,
-      "Unauthorized Access/Disclosure": 93.0,
+      "Unauthorized Access": 93.0,
       "Unknown": 11.0
     },
     {
@@ -417,7 +417,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 65.0,
       "Other": 51.0,
       "Theft": 432.0,
-      "Unauthorized Access/Disclosure": 95.0,
+      "Unauthorized Access": 95.0,
       "Unknown": 11.0
     },
     {
@@ -427,7 +427,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 68.0,
       "Other": 54.0,
       "Theft": 444.0,
-      "Unauthorized Access/Disclosure": 101.0,
+      "Unauthorized Access": 101.0,
       "Unknown": 12.0
     },
     {
@@ -437,7 +437,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 69.0,
       "Other": 56.0,
       "Theft": 456.0,
-      "Unauthorized Access/Disclosure": 107.0,
+      "Unauthorized Access": 107.0,
       "Unknown": 12.0
     },
     {
@@ -447,7 +447,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 71.0,
       "Other": 58.0,
       "Theft": 466.0,
-      "Unauthorized Access/Disclosure": 111.0,
+      "Unauthorized Access": 111.0,
       "Unknown": 12.0
     },
     {
@@ -457,7 +457,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 73.0,
       "Other": 58.0,
       "Theft": 473.0,
-      "Unauthorized Access/Disclosure": 114.0,
+      "Unauthorized Access": 114.0,
       "Unknown": 13.0
     },
     {
@@ -467,7 +467,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 75.0,
       "Other": 63.0,
       "Theft": 480.0,
-      "Unauthorized Access/Disclosure": 124.0,
+      "Unauthorized Access": 124.0,
       "Unknown": 14.0
     },
     {
@@ -477,7 +477,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 77.0,
       "Other": 64.0,
       "Theft": 489.0,
-      "Unauthorized Access/Disclosure": 131.0,
+      "Unauthorized Access": 131.0,
       "Unknown": 14.0
     },
     {
@@ -487,7 +487,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 78.0,
       "Other": 64.0,
       "Theft": 503.0,
-      "Unauthorized Access/Disclosure": 135.0,
+      "Unauthorized Access": 135.0,
       "Unknown": 15.0
     },
     {
@@ -497,7 +497,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 79.0,
       "Other": 65.0,
       "Theft": 516.0,
-      "Unauthorized Access/Disclosure": 144.0,
+      "Unauthorized Access": 144.0,
       "Unknown": 15.0
     },
     {
@@ -507,7 +507,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 84.0,
       "Other": 66.0,
       "Theft": 531.0,
-      "Unauthorized Access/Disclosure": 153.0,
+      "Unauthorized Access": 153.0,
       "Unknown": 15.0
     },
     {
@@ -517,7 +517,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 87.0,
       "Other": 69.0,
       "Theft": 539.0,
-      "Unauthorized Access/Disclosure": 164.0,
+      "Unauthorized Access": 164.0,
       "Unknown": 15.0
     },
     {
@@ -527,7 +527,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 93.0,
       "Other": 73.0,
       "Theft": 556.0,
-      "Unauthorized Access/Disclosure": 173.0,
+      "Unauthorized Access": 173.0,
       "Unknown": 16.0
     },
     {
@@ -537,7 +537,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 95.0,
       "Other": 77.0,
       "Theft": 567.0,
-      "Unauthorized Access/Disclosure": 181.0,
+      "Unauthorized Access": 181.0,
       "Unknown": 16.0
     },
     {
@@ -547,7 +547,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 102.0,
       "Other": 84.0,
       "Theft": 576.0,
-      "Unauthorized Access/Disclosure": 191.0,
+      "Unauthorized Access": 191.0,
       "Unknown": 16.0
     },
     {
@@ -557,7 +557,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 107.0,
       "Other": 85.0,
       "Theft": 589.0,
-      "Unauthorized Access/Disclosure": 204.0,
+      "Unauthorized Access": 204.0,
       "Unknown": 16.0
     },
     {
@@ -567,7 +567,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 107.0,
       "Other": 86.0,
       "Theft": 595.0,
-      "Unauthorized Access/Disclosure": 213.0,
+      "Unauthorized Access": 213.0,
       "Unknown": 16.0
     },
     {
@@ -577,7 +577,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 107.0,
       "Other": 86.0,
       "Theft": 606.0,
-      "Unauthorized Access/Disclosure": 224.0,
+      "Unauthorized Access": 224.0,
       "Unknown": 16.0
     },
     {
@@ -587,7 +587,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 108.0,
       "Other": 88.0,
       "Theft": 616.0,
-      "Unauthorized Access/Disclosure": 232.0,
+      "Unauthorized Access": 232.0,
       "Unknown": 16.0
     },
     {
@@ -597,7 +597,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 113.0,
       "Other": 91.0,
       "Theft": 628.0,
-      "Unauthorized Access/Disclosure": 237.0,
+      "Unauthorized Access": 237.0,
       "Unknown": 16.0
     },
     {
@@ -607,7 +607,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 115.0,
       "Other": 92.0,
       "Theft": 639.0,
-      "Unauthorized Access/Disclosure": 249.0,
+      "Unauthorized Access": 249.0,
       "Unknown": 16.0
     },
     {
@@ -617,7 +617,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 116.0,
       "Other": 92.0,
       "Theft": 651.0,
-      "Unauthorized Access/Disclosure": 264.0,
+      "Unauthorized Access": 264.0,
       "Unknown": 16.0
     },
     {
@@ -627,7 +627,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 117.0,
       "Other": 94.0,
       "Theft": 662.0,
-      "Unauthorized Access/Disclosure": 267.0,
+      "Unauthorized Access": 267.0,
       "Unknown": 16.0
     },
     {
@@ -637,7 +637,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 118.0,
       "Other": 96.0,
       "Theft": 668.0,
-      "Unauthorized Access/Disclosure": 271.0,
+      "Unauthorized Access": 271.0,
       "Unknown": 16.0
     },
     {
@@ -647,7 +647,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 119.0,
       "Other": 96.0,
       "Theft": 675.0,
-      "Unauthorized Access/Disclosure": 279.0,
+      "Unauthorized Access": 279.0,
       "Unknown": 16.0
     },
     {
@@ -657,7 +657,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 122.0,
       "Other": 96.0,
       "Theft": 679.0,
-      "Unauthorized Access/Disclosure": 284.0,
+      "Unauthorized Access": 284.0,
       "Unknown": 16.0
     },
     {
@@ -667,7 +667,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 127.0,
       "Other": 96.0,
       "Theft": 685.0,
-      "Unauthorized Access/Disclosure": 290.0,
+      "Unauthorized Access": 290.0,
       "Unknown": 16.0
     },
     {
@@ -677,7 +677,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 130.0,
       "Other": 96.0,
       "Theft": 690.0,
-      "Unauthorized Access/Disclosure": 305.0,
+      "Unauthorized Access": 305.0,
       "Unknown": 16.0
     },
     {
@@ -687,7 +687,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 132.0,
       "Other": 96.0,
       "Theft": 696.0,
-      "Unauthorized Access/Disclosure": 311.0,
+      "Unauthorized Access": 311.0,
       "Unknown": 16.0
     },
     {
@@ -697,7 +697,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 132.0,
       "Other": 96.0,
       "Theft": 708.0,
-      "Unauthorized Access/Disclosure": 319.0,
+      "Unauthorized Access": 319.0,
       "Unknown": 16.0
     },
     {
@@ -707,7 +707,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 137.0,
       "Other": 96.0,
       "Theft": 712.0,
-      "Unauthorized Access/Disclosure": 330.0,
+      "Unauthorized Access": 330.0,
       "Unknown": 16.0
     },
     {
@@ -717,7 +717,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 140.0,
       "Other": 96.0,
       "Theft": 721.0,
-      "Unauthorized Access/Disclosure": 337.0,
+      "Unauthorized Access": 337.0,
       "Unknown": 16.0
     },
     {
@@ -727,7 +727,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 140.0,
       "Other": 96.0,
       "Theft": 729.0,
-      "Unauthorized Access/Disclosure": 345.0,
+      "Unauthorized Access": 345.0,
       "Unknown": 16.0
     },
     {
@@ -737,7 +737,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 140.0,
       "Other": 96.0,
       "Theft": 738.0,
-      "Unauthorized Access/Disclosure": 356.0,
+      "Unauthorized Access": 356.0,
       "Unknown": 16.0
     },
     {
@@ -747,7 +747,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 142.0,
       "Other": 96.0,
       "Theft": 742.0,
-      "Unauthorized Access/Disclosure": 361.0,
+      "Unauthorized Access": 361.0,
       "Unknown": 16.0
     },
     {
@@ -757,7 +757,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 142.0,
       "Other": 96.0,
       "Theft": 749.0,
-      "Unauthorized Access/Disclosure": 374.0,
+      "Unauthorized Access": 374.0,
       "Unknown": 16.0
     },
     {
@@ -767,7 +767,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 143.0,
       "Other": 96.0,
       "Theft": 750.0,
-      "Unauthorized Access/Disclosure": 380.0,
+      "Unauthorized Access": 380.0,
       "Unknown": 16.0
     },
     {
@@ -777,7 +777,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 145.0,
       "Other": 96.0,
       "Theft": 756.0,
-      "Unauthorized Access/Disclosure": 390.0,
+      "Unauthorized Access": 390.0,
       "Unknown": 16.0
     },
     {
@@ -787,7 +787,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 147.0,
       "Other": 96.0,
       "Theft": 762.0,
-      "Unauthorized Access/Disclosure": 400.0,
+      "Unauthorized Access": 400.0,
       "Unknown": 16.0
     },
     {
@@ -797,7 +797,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 148.0,
       "Other": 96.0,
       "Theft": 772.0,
-      "Unauthorized Access/Disclosure": 415.0,
+      "Unauthorized Access": 415.0,
       "Unknown": 16.0
     },
     {
@@ -807,7 +807,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 148.0,
       "Other": 96.0,
       "Theft": 779.0,
-      "Unauthorized Access/Disclosure": 426.0,
+      "Unauthorized Access": 426.0,
       "Unknown": 16.0
     },
     {
@@ -817,7 +817,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 149.0,
       "Other": 96.0,
       "Theft": 779.0,
-      "Unauthorized Access/Disclosure": 436.0,
+      "Unauthorized Access": 436.0,
       "Unknown": 16.0
     },
     {
@@ -827,7 +827,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 149.0,
       "Other": 96.0,
       "Theft": 785.0,
-      "Unauthorized Access/Disclosure": 447.0,
+      "Unauthorized Access": 447.0,
       "Unknown": 16.0
     },
     {
@@ -837,7 +837,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 150.0,
       "Other": 96.0,
       "Theft": 789.0,
-      "Unauthorized Access/Disclosure": 458.0,
+      "Unauthorized Access": 458.0,
       "Unknown": 16.0
     },
     {
@@ -847,7 +847,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 152.0,
       "Other": 96.0,
       "Theft": 793.0,
-      "Unauthorized Access/Disclosure": 472.0,
+      "Unauthorized Access": 472.0,
       "Unknown": 16.0
     },
     {
@@ -857,7 +857,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 155.0,
       "Other": 96.0,
       "Theft": 797.0,
-      "Unauthorized Access/Disclosure": 479.0,
+      "Unauthorized Access": 479.0,
       "Unknown": 16.0
     },
     {
@@ -867,7 +867,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 158.0,
       "Other": 96.0,
       "Theft": 805.0,
-      "Unauthorized Access/Disclosure": 498.0,
+      "Unauthorized Access": 498.0,
       "Unknown": 16.0
     },
     {
@@ -877,7 +877,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 158.0,
       "Other": 96.0,
       "Theft": 810.0,
-      "Unauthorized Access/Disclosure": 504.0,
+      "Unauthorized Access": 504.0,
       "Unknown": 16.0
     },
     {
@@ -887,7 +887,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 161.0,
       "Other": 96.0,
       "Theft": 814.0,
-      "Unauthorized Access/Disclosure": 515.0,
+      "Unauthorized Access": 515.0,
       "Unknown": 16.0
     },
     {
@@ -897,7 +897,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 162.0,
       "Other": 96.0,
       "Theft": 821.0,
-      "Unauthorized Access/Disclosure": 524.0,
+      "Unauthorized Access": 524.0,
       "Unknown": 16.0
     },
     {
@@ -907,7 +907,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 162.0,
       "Other": 96.0,
       "Theft": 826.0,
-      "Unauthorized Access/Disclosure": 539.0,
+      "Unauthorized Access": 539.0,
       "Unknown": 16.0
     },
     {
@@ -917,7 +917,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 162.0,
       "Other": 96.0,
       "Theft": 830.0,
-      "Unauthorized Access/Disclosure": 548.0,
+      "Unauthorized Access": 548.0,
       "Unknown": 16.0
     },
     {
@@ -927,7 +927,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 163.0,
       "Other": 96.0,
       "Theft": 834.0,
-      "Unauthorized Access/Disclosure": 558.0,
+      "Unauthorized Access": 558.0,
       "Unknown": 16.0
     },
     {
@@ -937,7 +937,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 165.0,
       "Other": 96.0,
       "Theft": 843.0,
-      "Unauthorized Access/Disclosure": 567.0,
+      "Unauthorized Access": 567.0,
       "Unknown": 16.0
     },
     {
@@ -947,7 +947,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 165.0,
       "Other": 96.0,
       "Theft": 846.0,
-      "Unauthorized Access/Disclosure": 578.0,
+      "Unauthorized Access": 578.0,
       "Unknown": 16.0
     },
     {
@@ -957,7 +957,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 168.0,
       "Other": 96.0,
       "Theft": 848.0,
-      "Unauthorized Access/Disclosure": 583.0,
+      "Unauthorized Access": 583.0,
       "Unknown": 16.0
     },
     {
@@ -967,7 +967,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 169.0,
       "Other": 96.0,
       "Theft": 851.0,
-      "Unauthorized Access/Disclosure": 601.0,
+      "Unauthorized Access": 601.0,
       "Unknown": 16.0
     },
     {
@@ -977,7 +977,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 170.0,
       "Other": 96.0,
       "Theft": 855.0,
-      "Unauthorized Access/Disclosure": 614.0,
+      "Unauthorized Access": 614.0,
       "Unknown": 16.0
     },
     {
@@ -987,7 +987,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 171.0,
       "Other": 96.0,
       "Theft": 860.0,
-      "Unauthorized Access/Disclosure": 620.0,
+      "Unauthorized Access": 620.0,
       "Unknown": 16.0
     },
     {
@@ -997,7 +997,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 174.0,
       "Other": 96.0,
       "Theft": 865.0,
-      "Unauthorized Access/Disclosure": 632.0,
+      "Unauthorized Access": 632.0,
       "Unknown": 16.0
     },
     {
@@ -1007,7 +1007,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 176.0,
       "Other": 96.0,
       "Theft": 868.0,
-      "Unauthorized Access/Disclosure": 639.0,
+      "Unauthorized Access": 639.0,
       "Unknown": 16.0
     },
     {
@@ -1017,7 +1017,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 177.0,
       "Other": 96.0,
       "Theft": 870.0,
-      "Unauthorized Access/Disclosure": 649.0,
+      "Unauthorized Access": 649.0,
       "Unknown": 16.0
     },
     {
@@ -1027,7 +1027,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 181.0,
       "Other": 96.0,
       "Theft": 875.0,
-      "Unauthorized Access/Disclosure": 663.0,
+      "Unauthorized Access": 663.0,
       "Unknown": 16.0
     },
     {
@@ -1037,7 +1037,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 182.0,
       "Other": 96.0,
       "Theft": 885.0,
-      "Unauthorized Access/Disclosure": 680.0,
+      "Unauthorized Access": 680.0,
       "Unknown": 16.0
     },
     {
@@ -1047,7 +1047,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 182.0,
       "Other": 96.0,
       "Theft": 887.0,
-      "Unauthorized Access/Disclosure": 696.0,
+      "Unauthorized Access": 696.0,
       "Unknown": 16.0
     },
     {
@@ -1057,7 +1057,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 182.0,
       "Other": 96.0,
       "Theft": 893.0,
-      "Unauthorized Access/Disclosure": 709.0,
+      "Unauthorized Access": 709.0,
       "Unknown": 16.0
     },
     {
@@ -1067,7 +1067,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 183.0,
       "Other": 96.0,
       "Theft": 895.0,
-      "Unauthorized Access/Disclosure": 717.0,
+      "Unauthorized Access": 717.0,
       "Unknown": 16.0
     },
     {
@@ -1077,7 +1077,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 185.0,
       "Other": 96.0,
       "Theft": 897.0,
-      "Unauthorized Access/Disclosure": 726.0,
+      "Unauthorized Access": 726.0,
       "Unknown": 16.0
     },
     {
@@ -1087,7 +1087,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 185.0,
       "Other": 96.0,
       "Theft": 899.0,
-      "Unauthorized Access/Disclosure": 740.0,
+      "Unauthorized Access": 740.0,
       "Unknown": 16.0
     },
     {
@@ -1097,7 +1097,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 185.0,
       "Other": 96.0,
       "Theft": 903.0,
-      "Unauthorized Access/Disclosure": 752.0,
+      "Unauthorized Access": 752.0,
       "Unknown": 16.0
     },
     {
@@ -1107,7 +1107,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 187.0,
       "Other": 96.0,
       "Theft": 904.0,
-      "Unauthorized Access/Disclosure": 763.0,
+      "Unauthorized Access": 763.0,
       "Unknown": 16.0
     },
     {
@@ -1117,7 +1117,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 187.0,
       "Other": 96.0,
       "Theft": 906.0,
-      "Unauthorized Access/Disclosure": 771.0,
+      "Unauthorized Access": 771.0,
       "Unknown": 16.0
     },
     {
@@ -1127,7 +1127,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 187.0,
       "Other": 96.0,
       "Theft": 912.0,
-      "Unauthorized Access/Disclosure": 780.0,
+      "Unauthorized Access": 780.0,
       "Unknown": 16.0
     },
     {
@@ -1137,7 +1137,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 187.0,
       "Other": 96.0,
       "Theft": 916.0,
-      "Unauthorized Access/Disclosure": 785.0,
+      "Unauthorized Access": 785.0,
       "Unknown": 16.0
     },
     {
@@ -1147,7 +1147,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 187.0,
       "Other": 96.0,
       "Theft": 920.0,
-      "Unauthorized Access/Disclosure": 792.0,
+      "Unauthorized Access": 792.0,
       "Unknown": 16.0
     },
     {
@@ -1157,7 +1157,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 188.0,
       "Other": 96.0,
       "Theft": 922.0,
-      "Unauthorized Access/Disclosure": 804.0,
+      "Unauthorized Access": 804.0,
       "Unknown": 16.0
     },
     {
@@ -1167,7 +1167,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 190.0,
       "Other": 96.0,
       "Theft": 925.0,
-      "Unauthorized Access/Disclosure": 822.0,
+      "Unauthorized Access": 822.0,
       "Unknown": 16.0
     },
     {
@@ -1177,7 +1177,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 191.0,
       "Other": 96.0,
       "Theft": 928.0,
-      "Unauthorized Access/Disclosure": 834.0,
+      "Unauthorized Access": 834.0,
       "Unknown": 16.0
     },
     {
@@ -1187,7 +1187,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 193.0,
       "Other": 96.0,
       "Theft": 931.0,
-      "Unauthorized Access/Disclosure": 843.0,
+      "Unauthorized Access": 843.0,
       "Unknown": 16.0
     },
     {
@@ -1197,7 +1197,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 196.0,
       "Other": 96.0,
       "Theft": 933.0,
-      "Unauthorized Access/Disclosure": 855.0,
+      "Unauthorized Access": 855.0,
       "Unknown": 16.0
     },
     {
@@ -1207,7 +1207,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 197.0,
       "Other": 96.0,
       "Theft": 935.0,
-      "Unauthorized Access/Disclosure": 863.0,
+      "Unauthorized Access": 863.0,
       "Unknown": 16.0
     },
     {
@@ -1217,7 +1217,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 200.0,
       "Other": 96.0,
       "Theft": 937.0,
-      "Unauthorized Access/Disclosure": 891.0,
+      "Unauthorized Access": 891.0,
       "Unknown": 16.0
     },
     {
@@ -1227,7 +1227,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 200.0,
       "Other": 96.0,
       "Theft": 941.0,
-      "Unauthorized Access/Disclosure": 900.0,
+      "Unauthorized Access": 900.0,
       "Unknown": 16.0
     },
     {
@@ -1237,7 +1237,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 202.0,
       "Other": 96.0,
       "Theft": 944.0,
-      "Unauthorized Access/Disclosure": 912.0,
+      "Unauthorized Access": 912.0,
       "Unknown": 16.0
     },
     {
@@ -1247,7 +1247,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 202.0,
       "Other": 96.0,
       "Theft": 946.0,
-      "Unauthorized Access/Disclosure": 921.0,
+      "Unauthorized Access": 921.0,
       "Unknown": 16.0
     },
     {
@@ -1257,7 +1257,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 204.0,
       "Other": 96.0,
       "Theft": 949.0,
-      "Unauthorized Access/Disclosure": 931.0,
+      "Unauthorized Access": 931.0,
       "Unknown": 16.0
     },
     {
@@ -1267,7 +1267,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 206.0,
       "Other": 96.0,
       "Theft": 956.0,
-      "Unauthorized Access/Disclosure": 942.0,
+      "Unauthorized Access": 942.0,
       "Unknown": 16.0
     },
     {
@@ -1277,7 +1277,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 207.0,
       "Other": 96.0,
       "Theft": 958.0,
-      "Unauthorized Access/Disclosure": 958.0,
+      "Unauthorized Access": 958.0,
       "Unknown": 16.0
     },
     {
@@ -1287,7 +1287,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 208.0,
       "Other": 96.0,
       "Theft": 958.0,
-      "Unauthorized Access/Disclosure": 967.0,
+      "Unauthorized Access": 967.0,
       "Unknown": 16.0
     },
     {
@@ -1297,7 +1297,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 209.0,
       "Other": 96.0,
       "Theft": 961.0,
-      "Unauthorized Access/Disclosure": 979.0,
+      "Unauthorized Access": 979.0,
       "Unknown": 16.0
     },
     {
@@ -1307,7 +1307,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 210.0,
       "Other": 96.0,
       "Theft": 966.0,
-      "Unauthorized Access/Disclosure": 988.0,
+      "Unauthorized Access": 988.0,
       "Unknown": 16.0
     },
     {
@@ -1317,7 +1317,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 212.0,
       "Other": 96.0,
       "Theft": 969.0,
-      "Unauthorized Access/Disclosure": 995.0,
+      "Unauthorized Access": 995.0,
       "Unknown": 16.0
     },
     {
@@ -1327,7 +1327,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 213.0,
       "Other": 96.0,
       "Theft": 972.0,
-      "Unauthorized Access/Disclosure": 1003.0,
+      "Unauthorized Access": 1003.0,
       "Unknown": 16.0
     },
     {
@@ -1337,7 +1337,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 213.0,
       "Other": 96.0,
       "Theft": 976.0,
-      "Unauthorized Access/Disclosure": 1015.0,
+      "Unauthorized Access": 1015.0,
       "Unknown": 16.0
     },
     {
@@ -1347,7 +1347,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 214.0,
       "Other": 96.0,
       "Theft": 978.0,
-      "Unauthorized Access/Disclosure": 1034.0,
+      "Unauthorized Access": 1034.0,
       "Unknown": 16.0
     },
     {
@@ -1357,7 +1357,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 216.0,
       "Other": 96.0,
       "Theft": 983.0,
-      "Unauthorized Access/Disclosure": 1054.0,
+      "Unauthorized Access": 1054.0,
       "Unknown": 16.0
     },
     {
@@ -1367,7 +1367,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 217.0,
       "Other": 96.0,
       "Theft": 983.0,
-      "Unauthorized Access/Disclosure": 1067.0,
+      "Unauthorized Access": 1067.0,
       "Unknown": 16.0
     },
     {
@@ -1377,7 +1377,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 218.0,
       "Other": 96.0,
       "Theft": 985.0,
-      "Unauthorized Access/Disclosure": 1079.0,
+      "Unauthorized Access": 1079.0,
       "Unknown": 16.0
     },
     {
@@ -1387,7 +1387,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 219.0,
       "Other": 96.0,
       "Theft": 987.0,
-      "Unauthorized Access/Disclosure": 1097.0,
+      "Unauthorized Access": 1097.0,
       "Unknown": 16.0
     },
     {
@@ -1397,7 +1397,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 220.0,
       "Other": 96.0,
       "Theft": 989.0,
-      "Unauthorized Access/Disclosure": 1114.0,
+      "Unauthorized Access": 1114.0,
       "Unknown": 16.0
     },
     {
@@ -1407,7 +1407,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 221.0,
       "Other": 96.0,
       "Theft": 992.0,
-      "Unauthorized Access/Disclosure": 1123.0,
+      "Unauthorized Access": 1123.0,
       "Unknown": 16.0
     },
     {
@@ -1417,7 +1417,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 222.0,
       "Other": 96.0,
       "Theft": 993.0,
-      "Unauthorized Access/Disclosure": 1134.0,
+      "Unauthorized Access": 1134.0,
       "Unknown": 16.0
     },
     {
@@ -1427,7 +1427,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 222.0,
       "Other": 96.0,
       "Theft": 995.0,
-      "Unauthorized Access/Disclosure": 1147.0,
+      "Unauthorized Access": 1147.0,
       "Unknown": 16.0
     },
     {
@@ -1437,7 +1437,7 @@ export const DataBreachesSumedTypeByMonth = [
       "Loss": 222.0,
       "Other": 96.0,
       "Theft": 995.0,
-      "Unauthorized Access/Disclosure": 1154.0,
+      "Unauthorized Access": 1154.0,
       "Unknown": 16.0
     }
   ]

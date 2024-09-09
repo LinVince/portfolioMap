@@ -81,17 +81,18 @@ const DataBreachesByType: React.FC = () => {
   /*Area for the animated texts */
   const Text = [
     {
-      text: "Bitcoin was launched, built on blockchain, making transactions untrackable and anonymous. At the moment, most of the incidents resulted from physical theft.",
+      text: "Before Bitcoin was launched and became popular, most of the data breaches resulted from physical theft.",
       duration: 8,
-      delay: 1,
+      delay: 0,
     },
     {
-      text: "Bitcoin became extremely popular, later enabling hackers to use WannaCry ransomware to demand ransom without being easily tracked or caught.",
-      duration: 8,
-      delay: 1,
+      text: "After Bitcoin became extremely popular, hackers leveraged its anonymity and untrackability to spread WannaCry ransomware.",
+      duration: 7,
+      delay: 0,
     },
+
     {
-      text: "Hacking and IT incidents quickly became the severest incident type.",
+      text: "Till now, hacking and IT incidents has become the severest incident type.",
       duration: 6,
       delay: 1,
     },
@@ -175,14 +176,18 @@ const DataBreachesByType: React.FC = () => {
             <Typography variant="body1" mb={2}>
               The chart shows the incidents of different types of data breaches
               from 2009 to 2021 in the healthcare system of the US. From the
-              animation, we can see the rise of cryptocurrency facilitates the
-              spread and implementation of ransomware like wannacry.
+              animation, we can see the in the decade, Hacking/IT incidents has
+              risen and become the severest data breach type.
             </Typography>
             <Typography variant="body1" mb={2}>
-              Since 2016, the deployment of cloud systems has also broadened the
-              attack surface for hackers to penetrate a system. Then hacking and
-              IT related incidents became the dominant type of data breaches
-              since 2020.
+              The surge could result from Bitcoin. Since 2015, Bitcoin has
+              become popular, and the hackers leveraged its anonymity and
+              untrackability to kidnap hospitals' computers and demand ransom
+              via WannaCry ransomware.
+            </Typography>
+            <Typography variant="body1" mb={2}>
+              Data source:
+              https://www.kaggle.com/datasets/archangell/hipaa-breaches-from-20092017
             </Typography>
           </Box>
         </Box>

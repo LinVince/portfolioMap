@@ -74,6 +74,9 @@ export default MultiLineChart;
 
 import * as d3 from "d3";
 import React, { useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { darkThemeOptions, lightThemeOptions } from "../theme";
+import { useMediaQuery } from "@mui/system";
 
 export interface DataPoint {
   Time: string;
@@ -92,6 +95,9 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
   lines,
 }) => {
   const chartRef = useRef<SVGSVGElement | null>(null);
+  const darkMode = useSelector((state: any) => state.darkMode);
+  const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  const isDevice = useMediaQuery("(max-width:800px)");
 
   useEffect(() => {
     // Clear previous SVG content
@@ -108,7 +114,7 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
     const x = d3
       .scaleUtc()
       .domain(d3.extent(data, (d) => new Date(d.Time)) as [Date, Date])
-      .range([0, width - 50]); // Shorten the range to leave room for labels
+      .range([0, isDevice ? width : width - 200]); // Shorten the range to leave room for labels
 
     const y = d3
       .scaleLinear()
@@ -161,7 +167,7 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
         );
 
       // Add the label at the end of the line in the reserved label area
-      const lastDataPoint = data[data.length - 1];
+      /*const lastDataPoint = data[data.length - 1];
       const yValue = lastDataPoint ? lastDataPoint[key] : 0;
       const yPos = y(yValue as number);
       const labelXPos = width + 10; // Position labels outside shortened lines
@@ -213,9 +219,69 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
       };
 
       // Use wrapText function for the label
-      wrapText(key, labelXPos, yPos, margin.right);
+      wrapText(key, labelXPos, yPos, margin.right);*/
     });
-  }, [data, lines, max]);
+
+    //Adding a legend
+    const legend = svg
+      .append("g")
+      .attr("transform", `translate(${isDevice ? width + 50 : width - 150},0)`); // Position the legend
+
+    // Get the last data point from the data array
+    const lastDataPoint = data[data.length - 1];
+
+    // Ensure lastDataPoint is not null or undefined
+    if (lastDataPoint) {
+      // Remove "Time" and sort the fields by values
+      const sortedFields = Object.entries(lastDataPoint)
+        .filter(([key]) => key !== "Time") // Remove "Time"
+        .sort(
+          ([, valueA], [, valueB]) => (valueB as number) - (valueA as number)
+        ) // Sort by values in descending order
+        .slice(0, 4); // Keep only the top 4
+
+      // Create an object with only the top 4 fields
+      const topFourDataPoint = Object.fromEntries(sortedFields);
+      console.log(topFourDataPoint);
+
+      // Get the list of keys from the topFourDataPoint object
+      const topFourKeys = Object.keys(topFourDataPoint);
+      console.log(topFourKeys);
+
+      // Iterate through the lines and add legend items for the top 4 fields
+      lines.forEach((line, i) => {
+        // Check if line.key is in the topFourKeys
+        if (topFourKeys.includes(line.key)) {
+          const yValue = topFourDataPoint[line.key] || 0; // Default to 0 if undefined
+          const yPos = y(yValue as number);
+
+          const legendItem = legend
+            .append("g")
+            .attr("transform", `translate(0,${i})`); // Adjust spacing between legend items (25px apart)
+
+          legendItem
+            .append("rect")
+            .attr("width", 15)
+            .attr("height", 15)
+            .attr("y", yPos) // Reset y to 0 because we are already translating by i * 25
+            .attr("fill", line.color);
+
+          legendItem
+            .append("text")
+            .attr("x", 20)
+            .attr("y", yPos + 5) // Vertically center the text with respect to the rect
+            .attr("font-size", "1.4vw")
+            .attr("dy", "0.32em")
+            .attr("fill", theme.palette.text.primary)
+            .text(line.key);
+        }
+      });
+    } else {
+      console.error("Last data point is null or undefined.");
+    }
+
+    //legend ends
+  }, [data, lines, max, darkMode]);
 
   return (
     <div style={{ display: "flex", justifyContent: "center", paddingTop: 20 }}>
