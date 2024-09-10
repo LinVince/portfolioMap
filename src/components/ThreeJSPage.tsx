@@ -388,7 +388,7 @@ const ThreeJSPage: React.FC = () => {
           fontStyle={{ color: "#CCC" }}
           fontSize={fontSize}
         >
-          Data Visualization Playground
+          Data Report
         </Typography>
       </Box>
       <Box

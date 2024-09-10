@@ -119,9 +119,9 @@ const DataBreachesByType: React.FC = () => {
       tlMaster.add(tlText);
     });
     if (isRunning) {
-      gsap.globalTimeline.resume();
+      tlMaster.play();
     } else {
-      gsap.globalTimeline.pause();
+      tlMaster.pause();
     }
     return () => {
       // Clean up the animation when the component unmounts
@@ -146,9 +146,9 @@ const DataBreachesByType: React.FC = () => {
       tlMaster.add(tlText);
     });
     if (isRunning) {
-      gsap.globalTimeline.resume();
+      tlMaster?.play();
     } else {
-      gsap.globalTimeline.pause();
+      tlMaster?.pause();
     }
     return () => {
       // Clean up the animation when the component unmounts
@@ -184,10 +184,6 @@ const DataBreachesByType: React.FC = () => {
               become popular, and the hackers leveraged its anonymity and
               untrackability to kidnap hospitals' computers and demand ransom
               via WannaCry ransomware.
-            </Typography>
-            <Typography variant="body1" mb={2}>
-              Data source:
-              https://www.kaggle.com/datasets/archangell/hipaa-breaches-from-20092017
             </Typography>
           </Box>
         </Box>
@@ -321,6 +317,86 @@ const DataBreachesByLocation: React.FC = () => {
     left: 0,
   };
 
+  /*Area for the animated texts */
+  const Text = [
+    {
+      text: "The same applies to the location of the data breaches.",
+      duration: 5,
+      delay: 0,
+    },
+    {
+      text: "Data loss tended to occur physically as hacking through the Internet to demand ransom would leave transaction records...until Bitcoin was invented.",
+      duration: 9,
+      delay: 0,
+    },
+
+    {
+      text: "Now, ransomware and email phishing through network are the primary data breach type.",
+      duration: 6,
+      delay: 1,
+    },
+  ];
+
+  const isDevice = useMediaQuery("(max-width:600px)");
+  const fontSize = isDevice ? "4vw" : "1.4vw";
+  const fontFamily = "Inter, sans-serif; Orbitron, sans-serif";
+
+  useEffect(() => {
+    let tlMaster = gsap.timeline();
+
+    Text.forEach((word: any) => {
+      const tlText = gsap.timeline({
+        yoyo: false,
+      });
+      tlText
+        .to("#animated_text_2", { duration: 0.5, opacity: 0 }) // Fade out current text
+        .set("#animated_text_2", { text: word.text }) // Set new text
+        .to("#animated_text_2", {
+          duration: word.duration,
+          opacity: 1,
+        }); // Fade in new text
+      tlMaster.add(tlText);
+    });
+    if (isRunning) {
+      tlMaster.resume();
+    } else {
+      tlMaster.pause();
+    }
+    return () => {
+      // Clean up the animation when the component unmounts
+      tlMaster.kill();
+    };
+  }, [isRunning]);
+
+  const Years = Array.from({ length: 13 }, (_, i) => 2009 + i);
+  useEffect(() => {
+    let tlMaster = gsap.timeline();
+
+    Years.forEach((year: any) => {
+      const tlText = gsap.timeline({
+        yoyo: false,
+      });
+      tlText
+        .set("#animated_year_2", { text: year }) // Set new text
+        .to("#animated_year_2", {
+          duration: 1.8,
+          opacity: 1,
+        }); // Fade in new text
+      tlMaster.add(tlText);
+    });
+    if (isRunning) {
+      tlMaster.resume();
+    } else {
+      tlMaster.pause();
+    }
+    return () => {
+      // Clean up the animation when the component unmounts
+      tlMaster.kill();
+    };
+  }, [isRunning]);
+
+  /*Closed */
+
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Box className="App" sx={{ width: "100%", paddingTop: 10 }}>
@@ -377,8 +453,41 @@ const DataBreachesByLocation: React.FC = () => {
             </IconButton>
           </Box>
         )}
+        <Box sx={{ position: "relative" }}>
+          {/*Animated Texts*/}
+          <Box
+            sx={{
+              width: "100%",
+              //height: isDevice ? "600px" : "800px",
+              display: "flex",
+              p: isDevice ? 0 : 10,
+              //paddingTop: 40,
+              position: isDevice ? "relative" : "absolute",
+              top: 0,
+              left: 0,
+              alignItems: "center",
+              justifyContent: "start",
+            }}
+          >
+            <Box id="textArea" sx={{ width: isDevice ? "100%" : "50%" }}>
+              <Typography
+                id="animated_year_2"
+                fontSize={fontSize}
+                paddingBottom={isDevice ? 1 : 5}
+                fontFamily={fontFamily}
+              ></Typography>
+              <Typography
+                id="animated_text_2"
+                display="inline"
+                fontSize={fontSize}
+                fontFamily={fontFamily}
+              ></Typography>
+            </Box>
+          </Box>
+          {/*Closed */}
 
-        <MultiLineChart data={currentData} max={max} lines={lines} />
+          <MultiLineChart data={currentData} max={max} lines={lines} />
+        </Box>
       </Box>
     </Box>
   );
@@ -396,9 +505,37 @@ export default function DataBreaches() {
     <>
       <Box paddingY={20} paddingX={isMobile ? 2 : 10}>
         <BackToHomeIcon style={HomeStyle} />
-        <Typography variant="h5" fontWeight={500}>
-          Data Visualization Playground of Cybersecurity
-        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: isMobile ? "90%" : "60%",
+          }}
+        >
+          <Typography variant="h5" fontWeight={500} mb={2}>
+            Bitcoin Contributed to Network-based Data Breaches in Healthcare
+            Systems
+          </Typography>
+          <Typography variant="body1" fontWeight={400} mb={2}>
+            In the past, data breaches in the healthcare systems, such as
+            hospitals, occurred through physical theft or laptop/computer
+            unauthorized access. From hackers' point of view, using any other
+            means through the Internet may not help make profits becasue the
+            transactions would be monitored, and the police would track the
+            record and discover their identities.
+          </Typography>
+          <Typography variant="body1" fontWeight={400} mb={2}>
+            However, the birth of Bitcoin changed the game. With Bitcoin,
+            hackers can receive money without being easily tracked and caught
+            because it is anonymous and untrackable. Since then, network-based
+            data breaches have risen to become the most frequent data breach
+            type.
+          </Typography>
+          <Typography variant="body1" mb={2}>
+            Data source:
+            https://www.kaggle.com/datasets/archangell/hipaa-breaches-from-20092017
+          </Typography>
+        </Box>
         <DataBreachesByType />
         <DataBreachesByLocation />
       </Box>
