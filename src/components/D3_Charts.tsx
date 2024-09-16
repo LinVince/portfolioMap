@@ -72,6 +72,8 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
 export default MultiLineChart;
 */
 
+// Multi Line Chart
+
 import * as d3 from "d3";
 import React, { useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -89,7 +91,7 @@ interface MultiLineChartProps {
   lines: { key: string; color: string }[];
 }
 
-const MultiLineChart: React.FC<MultiLineChartProps> = ({
+export const MultiLineChart: React.FC<MultiLineChartProps> = ({
   data,
   max,
   lines,
@@ -290,4 +292,169 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
   );
 };
 
-export default MultiLineChart;
+// Lever
+
+import { Slider, Box, Typography } from "@mui/material";
+
+interface LeverProps {
+  value: number;
+  setValue: (newValue: number) => void;
+  marks: any[];
+  displayUnit: any;
+  displayValue: any;
+}
+
+export const BasicLever: React.FC<LeverProps> = ({
+  value,
+  setValue,
+  marks,
+  displayUnit,
+  displayValue,
+}) => {
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    console.log(event);
+    setValue(newValue as number);
+  };
+
+  return (
+    <Box sx={{ width: 800 }}>
+      <Typography>
+        {displayUnit}: {displayValue}
+      </Typography>
+      <Slider
+        aria-label="Restricted values"
+        value={value}
+        onChange={handleChange}
+        aria-labelledby="lever-slider"
+        valueLabelDisplay="off"
+        marks={marks}
+        step={null}
+        sx={{
+          color: "primary.main", // Change color to primary theme
+        }}
+      />
+    </Box>
+  );
+};
+
+// HorizontalBarChart
+
+export const HorizontalBarChart: React.FC<{ data: any }> = ({ data }) => {
+  const chartRef = useRef<SVGSVGElement | null>(null);
+  //const darkMode = useSelector((state: any) => state.darkMode);
+  //const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  //const isDevice = useMediaQuery("(max-width:800px)");
+
+  // Update currentData when data changes
+
+  useEffect(() => {
+    if (data) {
+      // Clear previous SVG content
+      const svgContainer = d3.select(chartRef.current);
+      svgContainer.selectAll("*").remove();
+
+      const barHeight = 25;
+      const marginTop = 0;
+      const marginRight = 200;
+      const marginBottom = 100;
+      const marginLeft = 200;
+      const basicHeight = 0;
+      const width = 1000;
+      const height =
+        Math.ceil(((data.length ?? 0) + 0.1) * barHeight) +
+        marginTop +
+        marginBottom +
+        basicHeight;
+
+      const x = d3
+        .scaleLinear()
+        .domain([95, d3.max(data, (d: any) => +d.value) ?? 0])
+        .range([marginLeft, width - marginRight]);
+
+      const y = d3
+        .scaleBand()
+        .domain(
+          d3
+            .sort(data, (a: any, b: any) => d3.descending(a.value, b.value))
+            .map((d: any) => d.name)
+        )
+        .rangeRound([marginTop, height - marginBottom])
+        .padding(0.2);
+
+      const format = d3.format(".0f");
+
+      const svg = svgContainer
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("style", "font: 16px Inter, sans-serif;");
+
+      // Append rect for each bar
+
+      svg
+        .append("g")
+        .attr("fill", "steelblue")
+        .selectAll("rect")
+        .data(data)
+        .join("rect")
+        .attr("x", x(95))
+        .attr("y", (d: any) => y(d.name)!)
+        .attr("width", (d: any) => x(d.value) - x(95))
+        .attr("height", y.bandwidth());
+
+      // Append labels for each bar
+
+      svg
+        .append("g")
+        .attr("fill", "white")
+        .attr("text-anchor", "end")
+        .selectAll("text")
+        .data(data)
+        .join("text")
+        .attr("x", (d: any) => x(d.value))
+        .attr("y", (d: any) => y(d.name)! + y.bandwidth() / 2)
+        .attr("dy", "0.35em")
+        .attr("dx", -7)
+        .text((d: any) => format(d.value))
+        .call((text) =>
+          text
+            .filter((d: any) => x(d.value) - x(0) < 20) // short bars
+            .attr("dx", +4)
+            .attr("fill", "black")
+            .attr("text-anchor", "start")
+        );
+
+      // Create axes
+      svg
+        .append("g")
+        .attr("transform", `translate(0,${height - marginBottom})`)
+        .call(
+          d3
+            .axisBottom(x)
+            .ticks(width / 100, 5)
+            .tickFormat(d3.format(".0f"))
+        )
+
+        .call((g) => {
+          g.select(".domain").style("stroke-width", "1");
+          g.selectAll(".tick text")
+            .style("font-size", "16px")
+            .style("font-family", "Inter, sans-serif");
+        });
+
+      svg
+        .append("g")
+        .attr("transform", `translate(${marginLeft},0)`)
+        .call(d3.axisLeft(y).tickSizeOuter(0))
+        .selectAll("text")
+        .attr("font-size", "16px")
+        .attr("font-family", "Inter, sans-serif");
+    }
+  }, [data]);
+
+  return (
+    <div style={{ display: "flex", justifyContent: "center", paddingTop: 20 }}>
+      <svg ref={chartRef}></svg>
+    </div>
+  );
+};

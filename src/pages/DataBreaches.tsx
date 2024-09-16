@@ -8,7 +8,7 @@ import {
 import { Box, Typography, IconButton, useMediaQuery } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import MultiLineChart, { DataPoint } from "../components/MultiLineChart";
+import { MultiLineChart, DataPoint } from "../components/D3_Charts";
 import BackToHomeIcon from "../components/HomeIcon";
 import { gsap } from "gsap";
 

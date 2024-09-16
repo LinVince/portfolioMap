@@ -337,42 +337,7 @@ const ThreeJSPage: React.FC = () => {
           </Button>
         </Link>
       </Box>*/}
-      {/* Triangle container */}
-      {/* 
-      <Box
-        sx={{
-          width: isMobile ? "300px" : "30%", // Adjust width as needed
-          height: "100%", // Take full height of parent container
-          flexDirection: "column",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          ref={triangleContainerRef}
-          sx={{
-            width: "100%", // Adjust width as needed
-            height: "60%", // Take full height of parent container
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        />
-        <Link to="/services" style={{ textDecoration: "none" }}>
-          <Button
-            sx={{
-              paddingX: 2,
-              marginX: 1,
-              width: "fit-content",
-              borderRadius: "30px",
-              backgroundColor: theme.palette.background.paper,
-            }}
-          >
-            Services
-          </Button>
-        </Link>
-      </Box>*/}
+
       <Box
         sx={{
           width: "100%",
@@ -403,7 +368,7 @@ const ThreeJSPage: React.FC = () => {
         {/* High Hat container */}
         <Box
           sx={{
-            flex: "1 1 100%", // Adjust width as needed
+            flex: "1 1 300px", // Adjust width as needed
             height: "600px", // Take full height of parent container
             flexDirection: "column",
             display: "flex",
@@ -435,6 +400,42 @@ const ThreeJSPage: React.FC = () => {
             </Button>
           </Link>
         </Box>
+        {/* Triangle container */}
+        <Box
+          sx={{
+            flex: "1 1 300px", // Adjust width as needed
+            height: "600px", // Take full height of parent container
+            flexDirection: "column",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            ref={triangleContainerRef}
+            sx={{
+              width: "100%", // Adjust width as needed
+              height: "60%", // Take full height of parent container
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          />
+          <Link to="/economy" style={{ textDecoration: "none" }}>
+            <Button
+              sx={{
+                paddingX: 2,
+                marginX: 1,
+                width: "fit-content",
+                borderRadius: "30px",
+                backgroundColor: theme.palette.background.paper,
+              }}
+            >
+              Economy
+            </Button>
+          </Link>
+        </Box>
+        {/* End of Triangle container */}
       </Box>
       <ScrollDownIcon />
     </>
