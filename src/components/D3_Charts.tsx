@@ -89,12 +89,16 @@ interface MultiLineChartProps {
   data: DataPoint[];
   max: number;
   lines: { key: string; color: string }[];
+  startingYpoint?: number;
+  maxPlus?: number;
 }
 
 export const MultiLineChart: React.FC<MultiLineChartProps> = ({
   data,
   max,
   lines,
+  startingYpoint = 0,
+  maxPlus = 100,
 }) => {
   const chartRef = useRef<SVGSVGElement | null>(null);
   const darkMode = useSelector((state: any) => state.darkMode);
@@ -120,7 +124,7 @@ export const MultiLineChart: React.FC<MultiLineChartProps> = ({
 
     const y = d3
       .scaleLinear()
-      .domain([0, max + 100])
+      .domain([startingYpoint, max + maxPlus])
       .range([height, 0]);
 
     // Create the SVG container
@@ -302,6 +306,7 @@ interface LeverProps {
   marks: any[];
   displayUnit: any;
   displayValue: any;
+  style?: any | null;
 }
 
 export const BasicLever: React.FC<LeverProps> = ({
@@ -310,6 +315,7 @@ export const BasicLever: React.FC<LeverProps> = ({
   marks,
   displayUnit,
   displayValue,
+  style = null,
 }) => {
   const handleChange = (event: Event, newValue: number | number[]) => {
     console.log(event);
@@ -317,7 +323,7 @@ export const BasicLever: React.FC<LeverProps> = ({
   };
 
   return (
-    <Box sx={{ width: 800 }}>
+    <Box sx={{ width: 800, ...style }}>
       <Typography>
         {displayUnit}: {displayValue}
       </Typography>
@@ -355,11 +361,11 @@ export const HorizontalBarChart: React.FC<{ data: any }> = ({ data }) => {
 
       const barHeight = 25;
       const marginTop = 0;
-      const marginRight = 200;
+      const marginRight = 250;
       const marginBottom = 100;
-      const marginLeft = 200;
+      const marginLeft = 350;
       const basicHeight = 0;
-      const width = 1000;
+      const width = 1200;
       const height =
         Math.ceil(((data.length ?? 0) + 0.1) * barHeight) +
         marginTop +
@@ -448,7 +454,8 @@ export const HorizontalBarChart: React.FC<{ data: any }> = ({ data }) => {
         .call(d3.axisLeft(y).tickSizeOuter(0))
         .selectAll("text")
         .attr("font-size", "16px")
-        .attr("font-family", "Inter, sans-serif");
+        .attr("font-family", "Inter, sans-serif")
+        .attr("dy", "0.35em");
     }
   }, [data]);
 
