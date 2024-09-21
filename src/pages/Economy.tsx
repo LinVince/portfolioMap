@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Link, Typography, useMediaQuery } from "@mui/material";
 import { HorizontalBarChart, BasicLever } from "../components/D3_Charts";
 import { India_CPI_Rural, India_CPI_Urban } from "../data/IndianCPI";
 import { useEffect, useState } from "react";
@@ -171,7 +171,7 @@ const IndiaCPIUrbanBytime: React.FC = () => {
             }}
           >
             <Typography variant="h6" mb={2}>
-              CPI by Categories (2013 - 2023)
+              Consumer Price Index in India by Categories (2013 - 2023)
             </Typography>
           </Box>
         </Box>
@@ -314,19 +314,59 @@ export default function Economy() {
             Conversely, a stable or declining CPI can indicate more favorable
             economic conditions and greater consumer purchasing power.
           </Typography>
-          <Typography variant="body1" mb={2}>
-            Data source:
-            https://www.kaggle.com/datasets/satyampd/consumer-price-index-india-inflation-data
-          </Typography>
+          <Link href="https://www.kaggle.com/datasets/satyampd/consumer-price-index-india-inflation-data">
+            Data Source
+          </Link>
         </Box>
         <IndiaCPIUrbanBytime />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: isMobile ? "90%" : "60%",
+          }}
+        >
+          <Typography variant="body1" fontWeight={600} mt={5} mb={2}>
+            Why is the category "Vegetable" fluctuate so much?
+          </Typography>
+          <Typography variant="body1" fontWeight={400} mb={2}>
+            We can see the CPI of vegetables rocketed especially in summer. You
+            can also use the lever below to check the CPI value in August. Many
+            news reports mentioning the rise is due to severe weather conditions
+            or droughts. It has become an expected phenomenon that the price of
+            vegetables tends to rise in the summer.
+          </Typography>
+          <Typography variant="body1" fontWeight={400} mb={2}>
+            <Link
+              target="_blank"
+              href="https://money.usnews.com/investing/news/articles/2024-07-09/india-inflation-seen-up-in-june-due-to-soaring-vegetable-prices-reuters-poll"
+            >
+              Relevant Article
+            </Link>
+          </Typography>
+          <Typography variant="body1" fontWeight={600} mt={5} mb={2}>
+            Why does the category "Meat and Fish" rise and almost double since
+            2018?
+          </Typography>
+          <Typography variant="body1" fontWeight={400} mb={2}>
+            Please use the lever and switch the date to 2018 - 2023. We can see
+            the category "Meat and Fish" has risen to become the top 2 items
+            with the highest CPI value. According to some reports, it may be due
+            to the rising incomes, changing diets. There are also more and more
+            middle-class families. The situation leads to the rise of the demand
+            for fishes and meat.
+          </Typography>
+          <Link href="https://agronfoodprocessing.com/rising-incomes-and-shifting-diets-propel-a-surge-in-fish-consumption-across-india/">
+            Relevant Article
+          </Link>
+        </Box>
         <BasicLever
           value={index}
           setValue={setIndex}
           marks={marks}
           displayUnit="Date"
           displayValue={currentData.Date}
-          style={{ m: 10 }}
+          style={{ my: 10 }}
         />
         <Typography variant="body1" fontWeight={500} mb={2} textAlign="center">
           Urban Areas

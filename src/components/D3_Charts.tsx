@@ -335,6 +335,7 @@ export const BasicLever: React.FC<LeverProps> = ({
         valueLabelDisplay="off"
         marks={marks}
         step={null}
+        max={marks.length}
         sx={{
           color: "primary.main", // Change color to primary theme
         }}
