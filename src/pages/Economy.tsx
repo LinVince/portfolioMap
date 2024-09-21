@@ -99,9 +99,9 @@ const IndiaCPIUrbanBytime: React.FC = () => {
     },
   ];
 
-  const isDevice = useMediaQuery("(max-width:600px)");
-  const fontSize = isDevice ? "4vw" : "1.4vw";
-  const fontFamily = "Inter, sans-serif; Orbitron, sans-serif";
+  //const isDevice = useMediaQuery("(max-width:600px)");
+  //const fontSize = isDevice ? "4vw" : "1.4vw";
+  //const fontFamily = "Inter, sans-serif; Orbitron, sans-serif";
 
   useEffect(() => {
     let tlMaster = gsap.timeline();
