@@ -330,11 +330,11 @@ export default function Economy() {
             Why is the category "Vegetable" fluctuate so much?
           </Typography>
           <Typography variant="body1" fontWeight={400} mb={2}>
-            We can see the CPI of vegetables rocketed especially in summer. You
-            can also use the lever below to check the CPI value in August. Many
-            news reports mentioning the rise is due to severe weather conditions
-            or droughts. It has become an expected phenomenon that the price of
-            vegetables tends to rise in the summer.
+            The CPI for vegetables tends to spike, especially during the summer
+            months. You can use the lever below to check the CPI value for
+            August. Many news reports attribute this increase to severe weather
+            conditions or droughts. It's become an anticipated pattern that
+            vegetable prices rise significantly during the summer.
           </Typography>
           <Typography variant="body1" fontWeight={400} mb={2}>
             <Link
@@ -349,12 +349,13 @@ export default function Economy() {
             2018?
           </Typography>
           <Typography variant="body1" fontWeight={400} mb={2}>
-            Please use the lever and switch the date to 2018 - 2023. We can see
-            the category "Meat and Fish" has risen to become the top 2 items
-            with the highest CPI value. According to some reports, it may be due
-            to the rising incomes, changing diets. There are also more and more
-            middle-class families. The situation leads to the rise of the demand
-            for fishes and meat.
+            Please use the lever and switch the date to 2018 - 2023. The
+            category "Meat and Fish" has risen to become one of the top two
+            items with the highest CPI value. This increase is likely driven by
+            rising incomes, changing dietary preferences, and the growth of the
+            middle class. As more families move into the middle class, the
+            demand for meat and fish has significantly increased, pushing up
+            prices in this category.
           </Typography>
           <Link href="https://agronfoodprocessing.com/rising-incomes-and-shifting-diets-propel-a-surge-in-fish-consumption-across-india/">
             Relevant Article

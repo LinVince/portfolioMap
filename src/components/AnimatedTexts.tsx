@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 gsap.registerPlugin(TextPlugin);
 const fontFamily = "Orbitron, sans-serif";
 
-const AnimatedTextsComponent = () => {
+export const AnimatedTextsComponent = () => {
   const isDevice = useMediaQuery("(max-width:600px)");
   const fontSize = isDevice ? "5vw" : "2vw";
   return (
@@ -159,4 +159,115 @@ export const TypeWritterEffect = ({ Text }: { Text: String[] }) => {
   );
 };
 
-export default AnimatedTextsComponent;
+interface TextFadeProps {
+  DOM_array: string[];
+  Icon_path: string | "";
+  title: string;
+  content: string[][];
+}
+
+export function TextFade({
+  DOM_array,
+  Icon_path,
+  title,
+  content,
+}: TextFadeProps) {
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1 });
+
+    DOM_array.map((d) => {
+      tl.to(`${d} > *`, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+      });
+      tl.to(`${d} > *`, {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        delay: 4,
+      });
+    });
+  }, []);
+
+  return (
+    <>
+      {/* The Column of Skills */}
+      <Box
+        flex="1 1 300px"
+        flexDirection="column"
+        justifyContent="center"
+        p={{ xs: 5, md: 10 }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src={Icon_path}
+            alt={Icon_path}
+            width={0}
+            height={0}
+            style={{ width: "30px", height: "30px", objectFit: "contain" }}
+          />
+          <Typography
+            sx={{
+              fontFamily: { fontFamily }, // Ensure font family is referenced correctly
+              fontWeight: 600,
+              fontSize: "18px",
+              px: 1,
+            }}
+          >
+            {title}
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            position: "relative",
+            width: "100%",
+            height: "300px",
+            marginTop: 5,
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {DOM_array.map((d, i) => (
+            <Box
+              key={i} // Use a unique key for each mapped component
+              id={d.slice(1)} // Removing the '#' or similar character
+              sx={{
+                position: "absolute",
+                top: 0,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {content[i].map((c, index) => (
+                <Typography
+                  key={index} // Ensure each Typography has a unique key
+                  sx={{
+                    opacity: 0,
+                    fontSize: "16px",
+                    fontFamily: { fontFamily }, // Fix font family reference here too
+                    fontWeight: 400,
+                    whiteSpace: "nowrap",
+                    mb: 1,
+                    textAlign: "center",
+                  }}
+                >
+                  {c}
+                </Typography>
+              ))}
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </>
+  );
+}
