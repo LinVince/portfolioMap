@@ -217,7 +217,7 @@ const ThreeJSPage: React.FC = () => {
           fontStyle={{ color: "#CCC" }}
           fontSize={fontSize}
         >
-          Portfolio in Different Forms
+          Projects
         </Typography>
       </Box>
       <Box
@@ -260,7 +260,7 @@ const ThreeJSPage: React.FC = () => {
                 backgroundColor: theme.palette.background.paper,
               }}
             >
-              Map
+              By Region
             </Button>
           </Link>
         </Box>
@@ -295,7 +295,7 @@ const ThreeJSPage: React.FC = () => {
                 backgroundColor: theme.palette.background.paper,
               }}
             >
-              Gallery
+              By Project
             </Button>
           </Link>
         </Box>
@@ -353,7 +353,7 @@ const ThreeJSPage: React.FC = () => {
           fontStyle={{ color: "#CCC" }}
           fontSize={fontSize}
         >
-          Data Report
+          Data Journalism
         </Typography>
       </Box>
       <Box

@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import "../App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { TextPlugin } from "gsap/TextPlugin";
 import { gsap } from "gsap";
 
@@ -166,21 +166,39 @@ interface TextFadeProps {
   content: string[][];
 }
 
+import { useSelector } from "react-redux";
+
 export function TextFade({
   DOM_array,
   Icon_path,
   title,
   content,
 }: TextFadeProps) {
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1 });
+  const [currentIndex, setIndex] = useState(0);
+  const darkMode = useSelector((state: any) => state.darkMode);
+  let thumbnailColor = darkMode ? ["#fff", "#777"] : ["#000", "#ccc"];
 
-    DOM_array.map((d) => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      repeat: -1,
+      onRepeat: () => {
+        handleCarousel();
+      },
+    });
+
+    const handleCarousel = () => {
+      setIndex((prev) => prev % DOM_array.length);
+    };
+
+    DOM_array.map((d, index) => {
       tl.to(`${d} > *`, {
         y: 0,
         opacity: 1,
         duration: 1,
         stagger: 0.2,
+        onStart: () => {
+          setIndex(index);
+        },
       });
       tl.to(`${d} > *`, {
         y: -50,
@@ -265,6 +283,31 @@ export function TextFade({
                 </Typography>
               ))}
             </Box>
+          ))}
+        </Box>
+        {/* Carousel Thumbnail Indicator */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: 1,
+          }}
+        >
+          {DOM_array.map((_, index) => (
+            <Box
+              key={index}
+              sx={{
+                width: "10px",
+                height: "10px",
+                margin: "0 5px",
+                borderRadius: "50%",
+                backgroundColor:
+                  currentIndex === index
+                    ? thumbnailColor[0]
+                    : thumbnailColor[1],
+                transition: "background-color 0.3s ease",
+              }}
+            />
           ))}
         </Box>
       </Box>
