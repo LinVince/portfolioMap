@@ -1,9 +1,13 @@
+export const Skills = ['Fullstack', 'Frontend', 'ReactJS', 'NextJS', 'JavaScript', 'TypeScript', 'Python','Flask','Django','deck.gl','d3','UI/UX', 'Content Strategy','Graphic Design']
+
+
 interface NodeDetailItem {
     banner: string;
     title: string;
     description: string;
     client: string;
-    overview?: {class:string, text:string}[];
+    skill: string[];
+    overview: {class:string, text:string}[];
     text: {
       tag: string;
       class?: string;
@@ -16,6 +20,7 @@ interface NodeDetailItem {
 const NodeDetail : Record<number, NodeDetailItem> = {
     1 : {
         'banner':'../image/banner_p1.jpg',
+        'skill':['UI/UX', 'Content Strategy', 'Graphic Design'],
         'title':'Cybersecurity Product Showcase',
         'description':'IKV-Tech is a cybersecurity solution provider in Taiwan. They specialize in cryptographic hardware implementation. In the project, as one of their employees, I renovated their existing website, generated technical articles, and made a video to resolve some UX and brand image issues.',
         'client':'InfoKeyVault Technology',
@@ -79,6 +84,7 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     
     2 : {
         'banner':'../image/banner_p2.jpg',
+        'skill':['Fullstack', 'JavaScript', 'Flask'],
         'title':'Tourism Booking Web App',
         'description':'The tourism booking web application allows for tourist package online booking and payment. Users can choose the date and tourist attrations to visit and then pay by card.',
         'client':'',
@@ -125,7 +131,8 @@ const NodeDetail : Record<number, NodeDetailItem> = {
 
     3 : {
         'banner':'../image/banner_p3.jpg',
-        'title':'B2C - Educational Institution Website',
+        'skill': ['UI/UX', 'Fullstack'],
+        'title':'Language Learning Center ',
         'description':"The reason why it's called a 'Titan Project' is that I literally built everything as an all-in-one solution for my customer, a startup education institute called LITE English. First, I managed to execute our content strategty and built a website from scratch. Second, I programmed a business report generator with Google Analytics API and Python, utilizing flexible GA4 API to extensively visualize the traffic data of the website. Third, to boost inbound marketing, I designed the newsletter for promotional purposes. Also, I proposed and managed to set up email auto-reply to streamline the business conversion process, creating a smoother user experience, for both students and administrators. Finally, I initiated a desgin concept of a backend student and course management system, aiming to streamline administrative work in reception, coure management and students' progress assessment.",
         'client':'',
         'overview':[
@@ -267,6 +274,7 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     4 : {
         'banner':'../image/banner_p4.jpg',
         'title':'Bitcoin Generator App',
+        'skill':['Fullstack','ReactJS','TypeScript','Flask'],
         'description':'Working in a cybersecurity-related company that specialized in cryptography, I programmed a tool for our customer, a cryptocurrency exchange. The tool was a money generator which created a QR code to be printed on a card. Those who scanned the code with the app they developed would get Bitcoin in their wallet.',
         'client':'',
         'overview': [
@@ -318,6 +326,7 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     5: {
         'banner':'../image/banner_p5.jpg',
         'title':'UK GOV - Energy Scenario Explorer',
+        'skill':['Fullstack', 'Python', 'Data Visualization'],
         'description':'The project was funded by the UK Engineering and Physical Sciences Research Council and executed by University College London (UCL). In this project, I co-worked with an outstanding research fellow who did research on energy transition. We together built an interactive web app for users to explore the energy transition scenarios so as to facilitate their policy making in relevant domains.',
         'client':'UCL',
         'overview': [
@@ -376,6 +385,7 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     6: {
     'banner':'../image/banner_p6.jpg',
     'title':'TruthTech - Network Knowledge Map',
+    'skill':['Frontend', 'ReactJS', 'TypeScript', 'Python', 'Data Visualization', 'deck.gl'],
     'description':"The knowledge navigation map is a truth tech product I developed with TiiQu, a London-based organization devoted to green and truth technology. During my study in London, I've got the opportunity to work with them. From a UX designer in the first place, a overall product designer and then the frontend engineer, eventually the lead of the whole frontend team, I've seen the product built from scratch. As more and more people devoted their time and efforts, we finally achieved the concept of turning knowledge into a map to defeat misinformation as we aim to let people know what they don't know and show them 'what they don't know they don't know.",
     'client':'TiiQu',
     'overview':[
@@ -430,8 +440,15 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     7: {
     'banner':'../image/banner_p7.jpg',
     'title':'GameHub',
+    'skill': ['Frontend', 'ReactJS', 'TypeScript'],
     'description':"The knowledge navigation map is a truth tech product I developed with TiiQu, a London-based organization devoted to green and truth technology. During my study in London, I've got the opportunity to work with them. From a UX designer in the first place, a overall product designer and then the frontend engineer, eventually the lead of the whole frontend team, I've seen the product built from scratch. As more and more people devoted their time and efforts, we finally achieved the concept of turning knowledge into a map to defeat misinformation as we aim to let people know what they don't know and show them 'what they don't know they don't know.",
     'client':'TiiQu',
+    'overview':[
+        {'class' : 'title', 'text': 'Technical Challenge'},
+        {'class' : 'text', 'text': 'The web application involves fetching data from Game-Hub API endpoints and dynamically page rendering. A clear information architecture design is required. Meanwhile, multiple API endpoints may easily be mingled together.'},
+        {'class' : 'title', 'text': 'Technical Solution'},
+        {'class' : 'text', 'text': '.'},
+    ],
     'text':[ 
         {'tag':'div',
         'class':'title',
@@ -448,14 +465,15 @@ const NodeDetail : Record<number, NodeDetailItem> = {
 }, 
     8: {
     'banner':'../image/banner_p8.jpg',
+    'skill':['Fullstack', 'NextJS', 'TypeScript', 'MongoDB', 'ThreeJS'],
     'title':'Post-quantum Cryptography Showcase',
     'description':"Qinvicta is a tech company specializing in post-quantum cryptography IC design. It aims to mitigate the security risk in the quantum computing era.",
     'client':'Qinvicta',
     'overview': [
         {'class' : 'title', 'text': 'Design Challenge'},
-        {'class' : 'text', 'text': 'Cutting-edge technologies may trigger associate with risks. Unfamiliarity also holds back friendliness. As a cybersecurity vendor, how to create visual effects that give people a sense of security but also make it look great and modern?'},
+        {'class' : 'text', 'text': 'Cutting-edge technologies may trigger association with risks. Unfamiliarity also holds back friendliness. As a cybersecurity vendor, how to create visual effects that give people a sense of security but also make it look great and modern?'},
         {'class' : 'title', 'text': 'Design Solution'},
-        {'class' : 'text', 'text': 'To present the field and expertise as cutting-edge and novel, I used animated light and reflection on the banner and buttons, leveraging CSS :after, transition, and animated attribute. Also, I incorporated Three.JS, placing a 3D spinning sphere to deliver a sense of novelty. As to security and stability, the use of dark blue color throughout the web pages with aligned texts and organized layouts.'},
+        {'class' : 'text', 'text': 'To present the field and expertise as cutting-edge and novel, I used animated light and reflection on the banner and buttons, leveraging CSS :after, transition, and animated attribute. Also, I incorporated Three.JS, placing a 3D spinning sphere to deliver a sense of novelty. As to security and stability, the use of dark blue color throughout the web pages with aligned texts and organized layouts could potentially deliver professionalism and credibility.'},
         {'class' : 'title', 'text': 'Technical Fulfillment'},
         {'class' : 'text', 'text': 'NextJS - full-stack development | ThreeJS - 3D animated object | MongoDB - Database'}
     ],
@@ -465,19 +483,13 @@ const NodeDetail : Record<number, NodeDetailItem> = {
         'text':"Starting from ideating for business goals"},
         {'tag':'div',
         'class':'text',
-        'text':"As a startup specializing in cutting-edge technologies, the website was created at the fund raising stage. Therefore, the design direction is to clearly convey the service and the advantages of this company."},
-        {'tag':'div',
-        'class':'title',
-        'text':"Addressing users' sense of security and trust"},
-        {'tag':'div',
-          'class':'text',
-          'text':"As post-quantum cryptography is a new topic, the whole visual effect should deliver a sense of novelty. Meanwhile, as a cybersecurity company, the website should also give a sense of security. At this point, the darker blue color along with the animated light and reflection effect can enable novelty and security to go hand in hand."},
+        'text':"As a startup specializing in cutting-edge technologies, the website was created at the fundraising stage. Therefore, the design direction is to clearly convey the service and the advantages of this company."},
         {'tag':'div',
             'class':'title',
-            'text':"Technical Consideration - NextJS for Search Engine Optimization (SEO)"},
+            'text':"Utilizing NextJS SSR to boost visability"},
         {'tag':'div',
             'class':'text',
-            'text':"For any coporate website, being searchabled is the nitty gritty. I used full-stack framework NextJS to build the website. Leveraing the server-side rendering (SSR) feature, I optimized the website's visibility and enhanced the HTML rendering performance, allowing speedy content acquisition to boost user experience."},
+            'text':"For any coporate website, being searchable is the nitty gritty. I used fullstack framework NextJS to build the website. Leveraing the server-side rendering (SSR) feature, I optimized the website's visibility and enhanced the HTML rendering performance, allowing speedy content acquisition to boost user experience."},
         {'tag':'div',
             'class':'text',
             'text':"Link to the website:"},

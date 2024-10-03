@@ -5,7 +5,8 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import ColorModeSwitch from "./components/ColorSwitch.tsx";
 import { lightThemeOptions, darkThemeOptions } from "./theme.ts";
 import { Provider, useSelector, useDispatch } from "react-redux";
-import store from "./store";
+import store, { persistor } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
 import { toggleDarkMode } from "./reducers/darkModeReducer";
 import Logo from "./components/Logo.tsx";
 import AppRouter from "./routes.tsx";
@@ -34,7 +35,9 @@ const Root = () => {
 const App = () => {
   return (
     <Provider store={store}>
-      <Root />
+      <PersistGate loading={null} persistor={persistor}>
+        <Root />
+      </PersistGate>
     </Provider>
   );
 };

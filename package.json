@@ -54,6 +54,7 @@
     "rechart": "^0.0.1",
     "recharts": "^2.12.7",
     "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
     "simplex-noise": "^4.0.1",
     "smoothscroll-polyfill": "^0.4.4",
     "three": "^0.165.0",

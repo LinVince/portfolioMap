@@ -5,6 +5,7 @@ import {
   Typography,
   useTheme,
   Skeleton,
+  Chip,
 } from "@mui/material";
 import NodeDetail from "../data/NodeDetail";
 import "../index.css";
@@ -83,7 +84,7 @@ const NodeDetailModal = ({
   };
 
   const nodeDetail = NodeDetail[node.code];
-  const { banner, title, description, overview, text } = nodeDetail;
+  const { banner, title, description, overview, text, skill } = nodeDetail;
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -126,12 +127,20 @@ const NodeDetailModal = ({
               alt="Banner"
             />
           </Box>
+
           <Box sx={InnerBoxStyle}>
+            {skill.map((skill) => {
+              return (
+                <>
+                  <Chip label={skill} sx={{ mb: 4, mr: 1 }} />
+                </>
+              );
+            })}
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {title}
             </Typography>
             <Typography style={{ paddingTop: 5 }}>{description}</Typography>
-            <OverviewBox content={Array.isArray(overview) ? overview : []} />
+            <OverviewBox content={overview} />
             {text.map((item, index) => {
               if (item.tag === "img") {
                 return (
