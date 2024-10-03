@@ -15,6 +15,37 @@ interface Node {
   code: number;
 }
 
+interface OverviewProp {
+  content: {
+    class: string;
+    text: string;
+  }[];
+}
+
+const OverviewBox = ({ content }: OverviewProp) => {
+  return (
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          width: "100%",
+          my: 5,
+          pb: 5,
+          px: 5,
+          borderLeft: "3px solid #e0e0e0",
+        }}
+      >
+        {content.map((object) => {
+          return (
+            <>
+              <Typography className={object.class}>{object.text}</Typography>
+            </>
+          );
+        })}
+      </Box>
+    </Box>
+  );
+};
+
 const NodeDetailModal = ({
   open,
   handleModalClose,
@@ -52,7 +83,7 @@ const NodeDetailModal = ({
   };
 
   const nodeDetail = NodeDetail[node.code];
-  const { banner, title, description, text } = nodeDetail;
+  const { banner, title, description, overview, text } = nodeDetail;
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -100,6 +131,7 @@ const NodeDetailModal = ({
               {title}
             </Typography>
             <Typography style={{ paddingTop: 5 }}>{description}</Typography>
+            <OverviewBox content={Array.isArray(overview) ? overview : []} />
             {text.map((item, index) => {
               if (item.tag === "img") {
                 return (

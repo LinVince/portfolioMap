@@ -3,6 +3,7 @@ interface NodeDetailItem {
     title: string;
     description: string;
     client: string;
+    overview?: {class:string, text:string}[];
     text: {
       tag: string;
       class?: string;
@@ -15,9 +16,20 @@ interface NodeDetailItem {
 const NodeDetail : Record<number, NodeDetailItem> = {
     1 : {
         'banner':'../image/banner_p1.jpg',
-        'title':'B2B - Cybersecurity Website',
+        'title':'Cybersecurity Product Showcase',
         'description':'IKV-Tech is a cybersecurity solution provider in Taiwan. They specialize in cryptographic hardware implementation. In the project, as one of their employees, I renovated their existing website, generated technical articles, and made a video to resolve some UX and brand image issues.',
         'client':'InfoKeyVault Technology',
+        'overview':[
+            {'class' : 'title', 'text':'Design Challenges'},
+            {'class' : 'text', 'text': '(Original site) Complicated technical information, unorganized contents, lack of visual and textual hierarchy, horrible aesthetics'},
+            {'class' : 'title', 'text':'Design Solutions'},
+            {'class' : 'text', 'text': 'Leveraging UI tools to progressively display content, from general ideas to technical details, to avoid cognitive overload.'},
+            {'class' : 'text', 'text': 'Implement visual artefacts to contextualize each product and solution.'},
+            {'class' : 'text', 'text': 'Designing hierarchical information architecture with a wide variety of UI tools, including dropdown, pdf, video, tooltips, slideshow, etc.'},
+            {'class' : 'title', 'text':'Technical Fulfillment'},
+            {'class' : 'text', 'text': 'Leveraging Content Management System to edit and create the website, allowing other non-technical colleagues to update and modify the content in the future.'},
+            
+        ],
         'text':[
         {
         'tag':'div',
@@ -31,7 +43,6 @@ const NodeDetail : Record<number, NodeDetailItem> = {
             {'tag':'div', 'class':'text','text':"Phase 3 - Define"},
             {'tag':'div', 'class':'text','text':"Phase 4 - Ideate"},
             {'tag':'div', 'class':'text','text':"Phase 5 - Prototype and Test"},
-        
         
         {
         'tag':'div',
@@ -68,9 +79,18 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     
     2 : {
         'banner':'../image/banner_p2.jpg',
-        'title':'B2C - E-commerce Website',
-        'description':'The tourism e-commerce website allows for tourist package online booking and payment. Users can choose the date and tourist attrations to visit and then pay by card.',
+        'title':'Tourism Booking Web App',
+        'description':'The tourism booking web application allows for tourist package online booking and payment. Users can choose the date and tourist attrations to visit and then pay by card.',
         'client':'',
+        'overview' : [
+            {'class' : 'title', 'text': 'Technical Challenge'},
+            {'class' : 'text', 'text': 'Payment security risks, orchestration of database, API and frontend, authentication'},
+            {'class' : 'title', 'text': 'Technical Solution'},
+            {'class' : 'text', 'text': 'Seamlessly integrated certified third-party transaction service without redirecting users to other websites, enhancing perceived security.'},
+            {'class' : 'text', 'text': 'Modularize Python Flask API codebase and model codebase for efficient maintenance and development (MVC), leaving frontend functionality clear and simple.'},
+            {'class' : 'title', 'text': 'Technical Fulfillment'},
+            {'class' : 'text', 'text': 'JavaScript, HTML, CSS - Frontend Development | Python Flask - API Endpoints and authentication service | MySQL - Database | AWS EC2 - Cloud web hosting'},
+        ],
         'text':[ 
             {'tag':'div','class':'title','text':'Project at A Glance'},
             {'tag':'div','class':'text','text':'Development Phases'},
@@ -108,6 +128,15 @@ const NodeDetail : Record<number, NodeDetailItem> = {
         'title':'B2C - Educational Institution Website',
         'description':"The reason why it's called a 'Titan Project' is that I literally built everything as an all-in-one solution for my customer, a startup education institute called LITE English. First, I managed to execute our content strategty and built a website from scratch. Second, I programmed a business report generator with Google Analytics API and Python, utilizing flexible GA4 API to extensively visualize the traffic data of the website. Third, to boost inbound marketing, I designed the newsletter for promotional purposes. Also, I proposed and managed to set up email auto-reply to streamline the business conversion process, creating a smoother user experience, for both students and administrators. Finally, I initiated a desgin concept of a backend student and course management system, aiming to streamline administrative work in reception, coure management and students' progress assessment.",
         'client':'',
+        'overview':[
+            {'class' : 'title', 'text': 'Development Challenge'},
+            {'class' : 'text', 'text': 'Requiring comprehensive business operation functionalities, including an official website with SEO, GA4, and GSC, a backend management system with complex student and course information.'},
+            {'class' : 'title', 'text': 'Design Solution'},
+            {'class' : 'text', 'text': 'For the backend management system, I followed standard user research to explore use cases, pain points, user journey and requirements, later defining the API endpoints and data structures, frontend prototypes, and finally assembled the API endpoints with frontend prototypes as a full-stack solution.'},
+            {'class' : 'text', 'text': 'For the official website, I used CMS, integrated with performance and conversion analytics tools, and automated the generation of analytics report with Python.'},
+            {'class' : 'title', 'text': 'Technical Fulfillment'},
+            {'class' : 'text', 'text': 'CMS - Website builder | GA4 - Analytics | Swagger - API Endpoint design | Figma - Prototyping'},
+        ],
         'text':[
         {'tag':'div','class':'title','text':'Project at A Glance'},
         {'tag':'div','class':'text','text':'1. Developing a Backend Management System to Streamline Administration'},     
@@ -237,9 +266,19 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     },
     4 : {
         'banner':'../image/banner_p4.jpg',
-        'title':'B2B - Bitcoin Generator',
+        'title':'Bitcoin Generator App',
         'description':'Working in a cybersecurity-related company that specialized in cryptography, I programmed a tool for our customer, a cryptocurrency exchange. The tool was a money generator which created a QR code to be printed on a card. Those who scanned the code with the app they developed would get Bitcoin in their wallet.',
         'client':'',
+        'overview': [
+            {'class' : 'title', 'text': 'Business Requirement'},
+            {'class' : 'text', 'text': 'Generate Bitcoin token as a gift to onboard initial customers.'},
+            {'class' : 'title', 'text': 'Technical Scope'},
+            {'class' : 'text', 'text': 'ECDSA data structure, cryptographic certificate generation, public key cryptography mechanisms.'},
+            {'class' : 'title', 'text': 'Technical Fulfillment'},
+            {'class' : 'text', 'text': 'Python Flask - API endpoints | Python Crypto Library - Cryptographic computation | ReactJS - Currency information setting'},
+
+
+        ],
         'text':[
 
         {   'tag':'div',
@@ -260,7 +299,6 @@ const NodeDetail : Record<number, NodeDetailItem> = {
             {'tag':'div','class':'title','text':'3. Design Phases'}, 
             {'tag':'div','class':'text','text':'As the requirements were clear, I directly moved on to the technical part of the design without the research part.'},
             {'tag':'div','class':'boldText','text':'Phase 1 - Build the engine'},
-            {'tag':'img','src':"../image/engine_bitcoin.jpg"},
             {'tag':'div','class':'text','text':'The tool involved much encoding and a complex switch between numeral systems. The function of the engine was to encode different inputs of data, concatenate these inputs, then generate a cryptgoraphic key pair and sign the concatenated data with the private key. Also, there was a function to vertify the authenticity of the paper money with a public key as well. (Codes available on GitHub)'},  
                 {'tag':'div','class':'boldText','text':'Phase 2 - Build the server with Python Flask'},
                 {'tag':'div','class':'text','text':'In order to make the engine available not only through integration, I built a backend server so that the frontend could communicate with the engine and make the whole process friendly with a usable browser-based interface.'},
@@ -282,6 +320,18 @@ const NodeDetail : Record<number, NodeDetailItem> = {
         'title':'UK GOV - Energy Scenario Explorer',
         'description':'The project was funded by the UK Engineering and Physical Sciences Research Council and executed by University College London (UCL). In this project, I co-worked with an outstanding research fellow who did research on energy transition. We together built an interactive web app for users to explore the energy transition scenarios so as to facilitate their policy making in relevant domains.',
         'client':'UCL',
+        'overview': [
+            {'class' : 'title', 'text': 'Design Challenge'},
+            {'class' : 'text', 'text': 'Complex, data-heavy user interactions with no established mental models or interaction design references.'},
+            {'class' : 'title', 'text': 'Technical Challenge'},
+            {'class' : 'text', 'text': 'Data modeling, data mapping, data processing and pivoting.'},
+            {'class' : 'title', 'text': 'Design Solutions'},
+            {'class' : 'text', 'text': 'Display pop-up modals as lead-in tutorials.'},
+            {'class' : 'text', 'text': 'Embedded visual cues with texts and supported explanation of professional terms through tooltips'},
+            {'class' : 'text', 'text': 'Incorporated levers to engage users and empower user autonomy'},
+            {'class' : 'title', 'text': 'Technical Fulfillment'},
+            {'class' : 'text', 'text': 'Python Pandas - Data processing | Dash Plotly - Data visualization and web app construction'},
+        ],
         'text':[
         {
             'tag':'div',
@@ -328,6 +378,16 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     'title':'TruthTech - Network Knowledge Map',
     'description':"The knowledge navigation map is a truth tech product I developed with TiiQu, a London-based organization devoted to green and truth technology. During my study in London, I've got the opportunity to work with them. From a UX designer in the first place, a overall product designer and then the frontend engineer, eventually the lead of the whole frontend team, I've seen the product built from scratch. As more and more people devoted their time and efforts, we finally achieved the concept of turning knowledge into a map to defeat misinformation as we aim to let people know what they don't know and show them 'what they don't know they don't know.",
     'client':'TiiQu',
+    'overview':[
+        {'class' : 'title', 'text': 'Business Vision'},
+        {'class' : 'text', 'text': 'Combating misinformation about green energy through a digital technology product.'},
+        {'class' : 'title', 'text': 'Creative Ideation'},
+        {'class' : 'text', 'text': 'Designed a map of knowledge, empowering users in exploring, searching and justifying knowledge.'},
+        {'class' : 'title', 'text': 'Technical Challenge'},
+        {'class' : 'text', 'text': 'Lack of an established map-like data interaction reference, complexity of geo-spatial data visualization.'},
+        {'class' : 'title', 'text': 'Technical Fulfillment'},
+        {'class' : 'text', 'text': 'ReactJS - Frontend | deck.gl - geo-spatial data visualization |  Cognito - authentication | Figma - Prototyping'},
+    ],
     'text':[
         {'tag':'div',
             'class':'title',
@@ -387,6 +447,46 @@ const NodeDetail : Record<number, NodeDetailItem> = {
 
 }, 
     8: {
+    'banner':'../image/banner_p8.jpg',
+    'title':'Post-quantum Cryptography Showcase',
+    'description':"Qinvicta is a tech company specializing in post-quantum cryptography IC design. It aims to mitigate the security risk in the quantum computing era.",
+    'client':'Qinvicta',
+    'overview': [
+        {'class' : 'title', 'text': 'Design Challenge'},
+        {'class' : 'text', 'text': 'Cutting-edge technologies may trigger associate with risks. Unfamiliarity also holds back friendliness. As a cybersecurity vendor, how to create visual effects that give people a sense of security but also make it look great and modern?'},
+        {'class' : 'title', 'text': 'Design Solution'},
+        {'class' : 'text', 'text': 'To present the field and expertise as cutting-edge and novel, I used animated light and reflection on the banner and buttons, leveraging CSS :after, transition, and animated attribute. Also, I incorporated Three.JS, placing a 3D spinning sphere to deliver a sense of novelty. As to security and stability, the use of dark blue color throughout the web pages with aligned texts and organized layouts.'},
+        {'class' : 'title', 'text': 'Technical Fulfillment'},
+        {'class' : 'text', 'text': 'NextJS - full-stack development | ThreeJS - 3D animated object | MongoDB - Database'}
+    ],
+    'text':[ 
+        {'tag':'div',
+        'class':'title',
+        'text':"Starting from ideating for business goals"},
+        {'tag':'div',
+        'class':'text',
+        'text':"As a startup specializing in cutting-edge technologies, the website was created at the fund raising stage. Therefore, the design direction is to clearly convey the service and the advantages of this company."},
+        {'tag':'div',
+        'class':'title',
+        'text':"Addressing users' sense of security and trust"},
+        {'tag':'div',
+          'class':'text',
+          'text':"As post-quantum cryptography is a new topic, the whole visual effect should deliver a sense of novelty. Meanwhile, as a cybersecurity company, the website should also give a sense of security. At this point, the darker blue color along with the animated light and reflection effect can enable novelty and security to go hand in hand."},
+        {'tag':'div',
+            'class':'title',
+            'text':"Technical Consideration - NextJS for Search Engine Optimization (SEO)"},
+        {'tag':'div',
+            'class':'text',
+            'text':"For any coporate website, being searchabled is the nitty gritty. I used full-stack framework NextJS to build the website. Leveraing the server-side rendering (SSR) feature, I optimized the website's visibility and enhanced the HTML rendering performance, allowing speedy content acquisition to boost user experience."},
+        {'tag':'div',
+            'class':'text',
+            'text':"Link to the website:"},
+        {'tag':'a','href':'https://qinvicta.com','text':'Qinvicta.com'},
+     
+    ]
+
+}
+    /*8: {
     'banner':'../image/IctSpring_2.jpg',
     'title':'ICT Spring - Cybersecurity Product Launch',
     'description':"ICT Spring, held annually in Luxembourg, is a significant global tech conference that brings together leaders from the information and communication technology (ICT) sector to discuss innovations and trends shaping the future. The event features keynotes, exhibitions, and networking opportunities, focusing on the latest advancements in technology and digital transformation. WiSECURE Technologies, a prominent participant at ICT Spring, showcases its cutting-edge cybersecurity products designed to enhance digital security. Their offerings include kvHSM, a hardware security module that ensures robust key management and encryption, and passwordless authentication solutions that streamline secure access without the need for traditional passwords, providing both enhanced security and user convenience.",
@@ -410,7 +510,9 @@ const NodeDetail : Record<number, NodeDetailItem> = {
      
     ]
 
-}
+}*/
+
+
 
 
 }

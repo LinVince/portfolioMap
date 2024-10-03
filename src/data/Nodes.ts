@@ -1,23 +1,23 @@
 const nodes = 
 [
     {   'code':1,
-        "text": "B2B - Cybersecurity Website",
+        "text": "Cybersecurity Product Showcase",
         "skill": "UI/UX, Content Strategy, Graphic Design",
         "longitude": 121.5405367810114,
         "latitude": 24.993076218361182,
         "img": '../image/ga_img_1.jpg',
     },
     {   "code":2,
-        "text": "B2C - E-commerce Website",
-        "skill": "Fullstack",
+        "text": "Tourism Booking Web App",
+        "skill": "Fullstack, JavaScript, Flask",
         "longitude": 121.56386581908859,
         "latitude": 25.04417395882178, 
         "img":"../image/ga_img_2.jpg"
     },
     {
         "code":3,
-        "text":"B2C - Educational Institution Digital Infrastructure",
-        "skill": "UX/UI, Fullstack Design",
+        "text":"Educational Institution Digital Infrastructure",
+        "skill": "UX/UI, Fullstack",
         "longitude": 121.5485746705843,
         "latitude": 25.035958249225917, 
         "img":"../image/ga_img_3.jpg",
@@ -25,8 +25,8 @@ const nodes =
     },
     {
         "code":4,
-        "text":"B2B - Bitcoin Generator",
-        "skill": "Fullstack",
+        "text":"Bitcoin Generator App",
+        "skill": "Fullstack, ReactJS, TypeScript, Flask",
         "longitude": 121.53592051950127,
         "latitude": 25.02434493613632, 
         "img":"../image/ga_img_4.jpg",
@@ -35,7 +35,7 @@ const nodes =
     {
         "code":5,
         "text":"UK GOV - Energy Scenario Explorer",
-        "skill": "Fullstack",
+        "skill": "Fullstack, Python, Data Visualization",
         "longitude": -0.13409374722408254,
         "latitude": 51.52467265105652,
         "img":"../image/ga_img_5.jpg",
@@ -43,8 +43,8 @@ const nodes =
     },
     {
         "code":6,
-        "text":"TruthTech - Network Knowledge Map",
-        "skill": "Fullstack, Team Management",
+        "text":"TruthTech - Data Vis & Int",
+        "skill": "Frontend, ReactJS, TypeScript, Python, Data Visualization",
         "longitude": -0.10069366214252222,
         "latitude": 51.52121938709922, 
         "img":"../image/ga_img_6.jpg",
@@ -53,13 +53,13 @@ const nodes =
     {
         "code":7,
         "text":"GameHub",
-        "skill": "Frontend",
+        "skill": "Frontend, ReactJS, TypeScript",
         "longitude": -0.15089766214252222,
         "latitude": 51.52121938709922, 
         "img":"../image/ga_img_11.jpg",
        
     },
-    {
+    /*{
         "code":8,
         "text":"ICT Spring - Cybersecurity Product Launch",
         "skill": "Pitch, Presentation",
@@ -67,6 +67,15 @@ const nodes =
         "latitude": 49.6114555238771, 
         "img":"../image/IctSpring_1.jpg",
        
+    },*/
+    {
+        "code":8,
+        "text":"Post-quantum Cryptography Showcase",
+        "skill": "Fullstack, NextJS, TypeScript",
+        "longitude": -81.71074003706524,
+        "latitude": 27.74135666951521, 
+        "img":"../image/ga_img_12.jpg",
+        
     },
 ]
 
