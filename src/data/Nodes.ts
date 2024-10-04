@@ -77,6 +77,15 @@ const nodes =
         "img":"../image/ga_img_12.jpg",
         
     },
+    {
+        "code":9,
+        "text":"LexicalMap - Data Vis & Int",
+        "skill": "Fullstack, Django, ReactJS, TypeScript",
+        "longitude": -0.13060361214252222,
+        "latitude": 51.52121938709922,  
+        "img":"../image/lexicmap.jpg",
+        
+    },
 ]
 
 

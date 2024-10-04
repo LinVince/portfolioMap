@@ -497,6 +497,27 @@ const NodeDetail : Record<number, NodeDetailItem> = {
      
     ]
 
+}, 
+
+9: {
+    'banner':'../image/banner_p9.jpg',
+    'skill':['Fullstack','OpenAI', 'Django', 'ReactJS','TypeScript'],
+    'title':'ChatGPT Integrated Lexcial Map',
+    'description':"Leximap visualizes the origins of some English words and allows users to send prompts via OpenAI for more information.",
+    'client':'',
+    'overview': [
+        {'class' : 'title', 'text': 'Technical Fulfillment'},
+        {'class' : 'text', 'text': 'Django - Database management and API | ReactJS - Frontend | MySQL - Database'}
+    ],
+    'text':[ 
+        {'tag':'div',
+        'class':'title',
+        'text':"ChatGPT Proof of Concept"},
+        {'tag':'div',
+        'class':'text',
+        'text':"A proof of concept about the integration of ChatGPT with data visualization and geo-spatial interaction."},
+    ]
+
 }
     /*8: {
     'banner':'../image/IctSpring_2.jpg',
