@@ -16,7 +16,7 @@ const nodes =
     },
     {
         "code":3,
-        "text":"Educational Institution Digital Infrastructure",
+        "text":"Language Learning Center",
         "skill": "UX/UI, Fullstack",
         "longitude": 121.5485746705843,
         "latitude": 25.035958249225917, 
