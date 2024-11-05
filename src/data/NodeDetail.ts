@@ -445,8 +445,7 @@ const NodeDetail : Record<number, NodeDetailItem> = {
     'client':'TiiQu',
     'overview':[
         {'class' : 'title', 'text': 'Technical Challenge'},
-        {'class' : 'text', 'text': 'The web application involves fetching data from Game-Hub API endpoints and dynamically page rendering. A clear information architecture design is required. Meanwhile, multiple API endpoints may easily be mingled together.'},
-      
+        {'class' : 'text', 'text': 'The web application involves fetching data from Game-Hub API endpoints and dynamically page rendering. A clear information architecture design is required. Meanwhile, multiple API endpoints may easily be mingled together.'}
     ],
     'text':[ 
         {'tag':'div',
