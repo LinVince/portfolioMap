@@ -22,7 +22,7 @@ const ColorModeSwitch: React.FC<DarkModeState> = () => {
           width: "150px",
           height: "auto",
           position: "absolute",
-          top: "20px",
+          top: "10px",
           right: "5px",
           zIndex: 999,
         } as any
