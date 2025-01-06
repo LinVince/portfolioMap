@@ -37,7 +37,7 @@ function HomePage() {
           }}
         >
           <MuxPlayer
-            playbackId="eOagcsyrvNpWK84xriGjLOObaWs7hPQjLsvGwTAhlUs"
+            playbackId="yKForX3JCoOlGFHbKaxEfplqJzz00RqsKyEQ3frY01PvY"
             streamType="on-demand"
             autoPlay="muted"
             muted
