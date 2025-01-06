@@ -9,7 +9,7 @@ import {
 import { Box, Typography } from "@mui/material";
 import MuxPlayer from "@mux/mux-player-react";
 
-const fontFamilyStyle = "inter, san serif";
+const fontFamilyStyle = "Inter, sans-serif";
 
 function HomePage() {
   return (
