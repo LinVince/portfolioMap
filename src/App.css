@@ -2,7 +2,7 @@ html,
 
 mux-player {
   --media-object-fit: cover;
-  --media-object-position: left;
+  --media-object-position: center;
   --controls: none;
   --play-button: none;
 }
