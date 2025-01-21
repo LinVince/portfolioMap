@@ -6,12 +6,14 @@ import {
   product_skill,
   advantage,
 } from "../data/FrontPageIntro";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import MuxPlayer from "@mux/mux-player-react";
 
 const fontFamilyStyle = "Inter, sans-serif";
 
 function HomePage() {
+  const isSmallDevice = useMediaQuery("(max-width:600px)");
+
   return (
     <>
       {/*Upcoming product lanuch section */}
@@ -37,7 +39,11 @@ function HomePage() {
           }}
         >
           <MuxPlayer
-            playbackId="yKForX3JCoOlGFHbKaxEfplqJzz00RqsKyEQ3frY01PvY"
+            playbackId={
+              isSmallDevice
+                ? "PfJ1wjvE5tswfoZIylK02jaYuQNc5JFDe1z5zp02IqBn4"
+                : "Xz00T9kToBZ2t39lYTr301i01dJ2QxyxA2sEatQ4fgvlw8"
+            }
             streamType="on-demand"
             autoPlay="muted"
             muted
