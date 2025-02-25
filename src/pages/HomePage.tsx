@@ -6,7 +6,7 @@ import {
   product_skill,
   advantage,
 } from "../data/FrontPageIntro";
-import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 const fontFamilyStyle = "Inter, sans-serif";
 
