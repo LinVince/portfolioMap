@@ -7,12 +7,11 @@ import {
   advantage,
 } from "../data/FrontPageIntro";
 import { Box, Button, Typography, useMediaQuery } from "@mui/material";
-import MuxPlayer from "@mux/mux-player-react";
 
 const fontFamilyStyle = "Inter, sans-serif";
 
 function HomePage() {
-  const isSmallDevice = useMediaQuery("(max-width:600px)");
+  //const isSmallDevice = useMediaQuery("(max-width:600px)");
 
   return (
     <>
