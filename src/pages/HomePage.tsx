@@ -6,7 +6,7 @@ import {
   product_skill,
   advantage,
 } from "../data/FrontPageIntro";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import MuxPlayer from "@mux/mux-player-react";
 
 const fontFamilyStyle = "Inter, sans-serif";
@@ -27,6 +27,19 @@ function HomePage() {
           alignItems: "center",
           overflow: "hidden",
         }}
+      ></Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "800px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          overflow: "hidden",
+          position: "absolute",
+          top: 0,
+        }}
       >
         <Box
           sx={{
@@ -38,7 +51,19 @@ function HomePage() {
             position: "relative",
           }}
         >
-          <MuxPlayer
+          <img
+            src="/image/freshtracks.png"
+            alt="Upcoming Product Launch"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          />
+          {/*<MuxPlayer
             playbackId={
               isSmallDevice
                 ? "PfJ1wjvE5tswfoZIylK02jaYuQNc5JFDe1z5zp02IqBn4"
@@ -56,11 +81,11 @@ function HomePage() {
               top: 0,
               left: 0,
             }}
-          />
+          />*/}
           <Box
             sx={{
               position: "absolute",
-              backgroundColor: "#00000055",
+              backgroundColor: "#00000022",
               top: 0,
               left: 0,
               width: "100%",
@@ -84,7 +109,7 @@ function HomePage() {
                 px: 2,
               }}
             >
-              Create, Share, Sell Your Memories
+              Your Journey, Your Way
             </Typography>
             <Typography
               sx={{
@@ -97,8 +122,33 @@ function HomePage() {
                 px: 2,
               }}
             >
-              New Product Launch Coming Soon
+              New Product Launched
             </Typography>
+            <Button
+              component="a"
+              href="https://freshtracks.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="contained"
+              sx={{
+                background: "linear-gradient(135deg, #FF6B6B, #556BFF)",
+                color: "white",
+                fontWeight: "bold",
+                fontSize: "1rem",
+                textTransform: "none",
+                padding: "12px 24px",
+                borderRadius: "8px",
+                marginTop: 5,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  background: "linear-gradient(135deg, #FF4F4F, #4455FF)",
+                  transform: "scale(1.05)",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                },
+              }}
+            >
+              Visit FreshTracks
+            </Button>
           </Box>
         </Box>
       </Box>
