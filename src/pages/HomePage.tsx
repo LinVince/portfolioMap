@@ -125,7 +125,7 @@ function HomePage() {
             </Typography>
             <Button
               component="a"
-              href="https://freshtracks.vercel.app"
+              href="https://bambigo.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               variant="contained"
@@ -146,7 +146,7 @@ function HomePage() {
                 },
               }}
             >
-              Visit FreshTracks
+              Visit BambiGo
             </Button>
           </Box>
         </Box>
