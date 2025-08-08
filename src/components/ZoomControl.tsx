@@ -1,6 +1,5 @@
 import ZoomOutIcon from "@mui/icons-material/ZoomOut";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
-import "../index.css";
 
 type ZoomControlsType = {
   onZoomIn: () => void;

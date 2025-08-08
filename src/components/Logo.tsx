@@ -1,4 +1,4 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, Link, useMediaQuery } from "@mui/material";
 import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
@@ -32,8 +32,10 @@ const Logo = () => {
   }, []);
 
   return (
-    <Box sx={{ position: "sticky", top: 5, left: 5 }}>
-      <img width={isDevice ? "70px" : "100px"} src={path} alt="Yueh Logo" />
+    <Box sx={{ width: "100px", position: "sticky", top: 5, left: 5 }}>
+      <a href="/">
+        <img width={isDevice ? "70px" : "100px"} src={path} alt="Yueh Logo" />
+      </a>
     </Box>
   );
 };

@@ -125,7 +125,7 @@ function HomePage() {
             </Typography>
             <Button
               component="a"
-              href="https://bambigo.vercel.app"
+              href="https://bambigo.co.uk"
               target="_blank"
               rel="noopener noreferrer"
               variant="contained"
