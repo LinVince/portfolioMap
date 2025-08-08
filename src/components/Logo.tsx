@@ -1,4 +1,4 @@
-import { Box, Link, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
