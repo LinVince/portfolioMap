@@ -2,17 +2,7 @@ import ThreeJSPage from "../components/ThreeJSPage";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import SkillsSection from "../components/SkillsSection";
-import { TextFade } from "../components/AnimatedTexts";
-import TestimonialsSection from "../components/TestimonialsSection";
-import ContactCTASection from "../components/ContactCTASection";
-import {
-  technical_skill,
-  product_skill,
-  advantage,
-} from "../data/FrontPageIntro";
-import { Box } from "@mui/material";
 
-const fontFamilyStyle = "Inter, sans-serif";
 
 function HomePage() {
   return (
@@ -56,7 +46,7 @@ function HomePage() {
       {/* Contact CTA 
       <ContactCTASection />
       */}
-      
+
       {/* 3D Showcase */}
       <ThreeJSPage />
     </>
