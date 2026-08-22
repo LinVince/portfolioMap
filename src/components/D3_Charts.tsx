@@ -77,7 +77,7 @@ export default MultiLineChart;
 import * as d3 from "d3";
 import React, { useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { darkThemeOptions, lightThemeOptions } from "../theme";
+import { lightThemeOptions } from "../theme";
 import { useMediaQuery } from "@mui/system";
 
 export interface DataPoint {
@@ -102,7 +102,7 @@ export const MultiLineChart: React.FC<MultiLineChartProps> = ({
 }) => {
   const chartRef = useRef<SVGSVGElement | null>(null);
   const darkMode = useSelector((state: any) => state.darkMode);
-  const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  const theme = lightThemeOptions;
   const isDevice = useMediaQuery("(max-width:800px)");
 
   useEffect(() => {
@@ -349,7 +349,7 @@ export const BasicLever: React.FC<LeverProps> = ({
 export const HorizontalBarChart: React.FC<{ data: any }> = ({ data }) => {
   const chartRef = useRef<SVGSVGElement | null>(null);
   //const darkMode = useSelector((state: any) => state.darkMode);
-  //const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  //const theme = lightThemeOptions;
   //const isDevice = useMediaQuery("(max-width:800px)");
 
   // Update currentData when data changes

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as Three from "three";
 import { useSelector } from "react-redux";
-import { darkThemeOptions, lightThemeOptions } from "../theme";
+import { lightThemeOptions } from "../theme";
 import { useMediaQuery, Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import ScrollDownIcon from "./ScrollDownIcon";
@@ -14,7 +14,7 @@ const ThreeJSPage: React.FC = () => {
   const highHatContainerRef = useRef<HTMLDivElement>(null);
   const darkMode = useSelector((state: any) => state.darkMode);
   const isMobile = useMediaQuery("(max-width: 600px)");
-  const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  const theme = lightThemeOptions;
   const fontFamily = "Orbitron, sans-serif";
   const fontSize = isMobile ? "20px" : "32px";
 

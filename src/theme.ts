@@ -1,42 +1,28 @@
 import { createTheme } from '@mui/material/styles';
 
-// Light theme options
+// Cold Blue Light theme options
 const lightThemeOptions = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: "#4895CF",
+      main: "#0d47a1",
+      light: "#42a5f5",
+      dark: "#051d6b",
+    },
+    secondary: {
+      main: "#0277bd",
+      light: "#4fc3f7",
+      dark: "#01579b",
     },
     background: {
-      default: "#ffffff",
-      paper: "#f5f5f5",
+      default: "#f5f9ff",
+      paper: "#e3f2fd",
     },
     text: {
-      primary: "#757575",
-      secondary: "#555555",
-    },
-  },
- 
-});
-
-// Dark theme options
-const darkThemeOptions = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: "#8ACCFF",
-    },
-    background: {
-      default: "#000000",
-      paper: "#263126",
-    },
-    text: {
-      primary: "#ffffff",
-      secondary: "#cccccc",
+      primary: "#0d2b4a",
+      secondary: "#1a4d7a",
     },
   },
 });
 
-
-
-export { lightThemeOptions, darkThemeOptions };
+export { lightThemeOptions };

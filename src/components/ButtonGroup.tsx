@@ -1,5 +1,5 @@
 import { Button, Stack, Typography } from "@mui/material";
-import { darkThemeOptions, lightThemeOptions } from "../theme";
+import { lightThemeOptions } from "../theme";
 
 interface MapNode {
   text: string;
@@ -18,7 +18,7 @@ export default function ButtonGroup({
   objects: MapNode[];
   onButtonClick: (node: MapNode) => void;
 }) {
-  const theme = darkMode ? darkThemeOptions : lightThemeOptions;
+  const theme = lightThemeOptions;
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function ButtonGroup({
           flexDirection: layout,
           justifyContent: layout === "row" ? "center" : "flex-start",
           position: "absolute",
-          top: "10px",
+          top: "15%",
           left: "10px",
         }}
       >

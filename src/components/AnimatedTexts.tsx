@@ -314,3 +314,185 @@ export function TextFade({
     </>
   );
 }
+
+export const HomeIntroAnimatedTexts = () => {
+  const isDevice = useMediaQuery("(max-width:600px)");
+  const fontSize = isDevice ? "5vw" : "2.2vw";
+  
+  return (
+    <>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 8,
+          marginBottom: 12,
+          overflow: "hidden",
+          gap: 4,
+          px: 2,
+        }}
+      >
+        {/* Computing Lecturer Section */}
+        <Box
+          sx={{
+            padding: 4,
+            borderRadius: 3,
+            boxShadow: "0 8px 24px rgba(13, 71, 161, 0.15)",
+            border: "2px solid rgba(2, 119, 189, 0.3)",
+            maxWidth: "95%",
+            width: "100%",
+            maxWidth: "900px",
+            backgroundColor: "#e3f2fd",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              boxShadow: "0 12px 32px rgba(13, 71, 161, 0.25)",
+              transform: "translateY(-6px)",
+              borderColor: "rgba(2, 119, 189, 0.6)",
+            },
+          }}
+        >
+          <Typography
+            fontSize={fontSize}
+            fontWeight={700}
+            fontFamily={fontFamily}
+            color="#0d47a1"
+            textAlign="center"
+            sx={{ mb: 2 }}
+          >
+            📚 Computing Lecturer
+          </Typography>
+          <Typography
+            fontSize={isDevice ? "4vw" : "1.8vw"}
+            fontWeight={600}
+            fontFamily={fontFamily}
+            color="#1565c0"
+            textAlign="center"
+          >
+            Python, AI, Machine Learning
+          </Typography>
+        </Box>
+
+        {/* Pedagogical Theories Section */}
+        <Box
+          sx={{
+            padding: 4,
+            borderRadius: 3,
+            boxShadow: "0 8px 24px rgba(2, 119, 189, 0.15)",
+            border: "2px solid rgba(2, 119, 189, 0.3)",
+            maxWidth: "95%",
+            width: "100%",
+            maxWidth: "900px",
+            backgroundColor: "#e1f5fe",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              boxShadow: "0 12px 32px rgba(2, 119, 189, 0.25)",
+              transform: "translateY(-6px)",
+              borderColor: "rgba(2, 119, 189, 0.6)",
+            },
+          }}
+        >
+          <Typography
+            fontSize={fontSize}
+            fontWeight={700}
+            fontFamily={fontFamily}
+            color="#0277bd"
+            textAlign="center"
+            sx={{ mb: 2 }}
+          >
+            🎓 Pedagogical Innovation
+          </Typography>
+          <Typography
+            fontSize={isDevice ? "4vw" : "1.8vw"}
+            fontWeight={600}
+            fontFamily={fontFamily}
+            color="#01579b"
+            textAlign="center"
+          >
+            Combining Pedagogical theories with human-computer interaction design
+          </Typography>
+        </Box>
+
+        {/* YouTube Evangelist Section */}
+        <Box
+          sx={{
+            padding: 4,
+            borderRadius: 3,
+            boxShadow: "0 8px 24px rgba(13, 71, 161, 0.15)",
+            border: "2px solid rgba(13, 71, 161, 0.3)",
+            maxWidth: "95%",
+            width: "100%",
+            maxWidth: "900px",
+            backgroundColor: "#e3f2fd",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              boxShadow: "0 12px 32px rgba(13, 71, 161, 0.25)",
+              transform: "translateY(-6px)",
+              borderColor: "rgba(13, 71, 161, 0.6)",
+            },
+          }}
+        >
+          <Typography
+            fontSize={fontSize}
+            fontWeight={700}
+            fontFamily={fontFamily}
+            color="#0d47a1"
+            textAlign="center"
+            sx={{ mb: 2 }}
+          >
+            🎥 AI Evangelist on YouTube
+          </Typography>
+
+          <Box
+            sx={{
+              marginTop: 3,
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 3,
+            }}
+          >
+            <Typography
+              fontSize={isDevice ? "3.5vw" : "1.3vw"}
+              fontWeight={600}
+              fontFamily={fontFamily}
+              color="#0d47a1"
+            >
+              Channel:
+            </Typography>
+            <Box
+              sx={{
+                minWidth: isDevice ? "160px" : "280px",
+                padding: 2.5,
+                backgroundColor: "#fff",
+                border: "2px solid #0277bd",
+                borderRadius: "8px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 2px 8px rgba(2, 119, 189, 0.1)",
+                transition: "all 0.2s ease",
+                "&:hover": {
+                  backgroundColor: "#f0f8ff",
+                  boxShadow: "0 4px 12px rgba(2, 119, 189, 0.2)",
+                },
+              }}
+            >
+              <Typography
+                fontSize={isDevice ? "2.8vw" : "1.1vw"}
+                fontWeight={600}
+                color="#0d47a1"
+                textAlign="center"
+              >
+                [Your YouTube Channel]
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </>
+  );
+};

@@ -1,32 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import ColorModeSwitch from "./components/ColorSwitch.tsx";
-import { lightThemeOptions, darkThemeOptions } from "./theme.ts";
-import { Provider, useSelector, useDispatch } from "react-redux";
+import { ThemeProvider, CssBaseline, Box } from "@mui/material";
+import { lightThemeOptions } from "./theme.ts";
+import { Provider } from "react-redux";
 import store, { persistor } from "./store";
 import { PersistGate } from "redux-persist/integration/react";
-import { toggleDarkMode } from "./reducers/darkModeReducer";
-import Logo from "./components/Logo.tsx";
 import AppRouter from "./routes.tsx";
+import Footer from "./components/Footer.tsx";
 
 const Root = () => {
-  const darkMode = useSelector((state: any) => state.darkMode);
-  const dispatch = useDispatch();
-  const theme = darkMode ? darkThemeOptions : lightThemeOptions;
-
-  const setDarkMode = () => {
-    dispatch(toggleDarkMode());
-  };
-
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightThemeOptions}>
       <CssBaseline />
-      <ColorModeSwitch darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Logo />
       <React.StrictMode>
-        <AppRouter />
+        <Box sx={{ pt: "70px" }}>
+          <AppRouter />
+        </Box>
+        <Footer />
       </React.StrictMode>
     </ThemeProvider>
   );

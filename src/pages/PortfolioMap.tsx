@@ -13,7 +13,7 @@ import ButtonGroup from "../components/ButtonGroup";
 import trendingProject from "../data/ProjectButton";
 import MessageBox from "../components/MessageBox";
 import NodeDetailModal from "../components/NodeDetailModal";
-import { useMediaQuery } from "@mui/material";
+import { useMediaQuery, Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import BackToHomeIcon from "../components/HomeIcon";
 
@@ -123,7 +123,7 @@ function PortfolioMap() {
   // Set the buttongroup layout
   const layout = isMobile ? "column" : "row";
   return (
-    <>
+    <Box sx={{ marginTop: "-70px", pt: "70px", height: "100vh" }}>
       <DeckGL
         views={new MapView({ repeat: false })}
         layers={[textLayer]}
@@ -157,7 +157,7 @@ function PortfolioMap() {
         handleModalClose={handleModalClose}
         node={nodeBrief}
       />
-    </>
+    </Box>
   );
 }
 
