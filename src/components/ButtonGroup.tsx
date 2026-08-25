@@ -8,7 +8,7 @@ interface MapNode {
 }
 
 export default function ButtonGroup({
-  darkMode,
+
   layout,
   objects,
   onButtonClick,

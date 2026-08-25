@@ -1,9 +1,7 @@
 import { Box, Typography, Container, Grid, Card } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
+
 
 const AboutSection = () => {
-  const isDevice = useMediaQuery("(max-width:600px)");
-
   const roles = [
     {
       emoji: "📚",

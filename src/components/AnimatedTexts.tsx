@@ -344,7 +344,7 @@ export const HomeIntroAnimatedTexts = () => {
             border: "2px solid rgba(2, 119, 189, 0.3)",
             maxWidth: "95%",
             width: "100%",
-            maxWidth: "900px",
+     
             backgroundColor: "#e3f2fd",
             transition: "all 0.3s ease",
             "&:hover": {
@@ -384,7 +384,7 @@ export const HomeIntroAnimatedTexts = () => {
             border: "2px solid rgba(2, 119, 189, 0.3)",
             maxWidth: "95%",
             width: "100%",
-            maxWidth: "900px",
+   
             backgroundColor: "#e1f5fe",
             transition: "all 0.3s ease",
             "&:hover": {
@@ -424,7 +424,7 @@ export const HomeIntroAnimatedTexts = () => {
             border: "2px solid rgba(13, 71, 161, 0.3)",
             maxWidth: "95%",
             width: "100%",
-            maxWidth: "900px",
+         
             backgroundColor: "#e3f2fd",
             transition: "all 0.3s ease",
             "&:hover": {
