@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
     <Box
       sx={{
         width: 250,
-        backgroundColor: "#f5f9ff",
+          backgroundColor: "var(--paper)",
         height: "100%",
       }}
     >
@@ -59,17 +59,14 @@ const Navbar: React.FC = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          borderBottom: "1px solid rgba(2, 119, 189, 0.2)",
+            borderBottom: "1px solid var(--rule)",
         }}
       >
         <Typography
           variant="h6"
           sx={{
             fontWeight: 700,
-            background: "linear-gradient(135deg, #0d47a1 0%, #0277bd 100%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+              color: "var(--ink)",
           }}
         >
           Portfolio
@@ -91,13 +88,13 @@ const Navbar: React.FC = () => {
                 py: 1.5,
                 px: 2,
                 borderLeft: isActive(item.path)
-                  ? "4px solid #0277bd"
+                    ? "4px solid var(--signal)"
                   : "4px solid transparent",
                 backgroundColor: isActive(item.path)
-                  ? "rgba(2, 119, 189, 0.1)"
+                    ? "var(--paper-deep)"
                   : "transparent",
                 "&:hover": {
-                  backgroundColor: "rgba(2, 119, 189, 0.08)",
+                    backgroundColor: "var(--paper-deep)",
                 },
               }}
             >
@@ -106,7 +103,7 @@ const Navbar: React.FC = () => {
                 sx={{
                   "& .MuiListItemText-primary": {
                     fontWeight: isActive(item.path) ? 700 : 500,
-                    color: isActive(item.path) ? "#0d47a1" : "#1a4d7a",
+                      color: isActive(item.path) ? "var(--ink)" : "var(--muted-ink)",
                   },
                 }}
               />
@@ -125,10 +122,11 @@ const Navbar: React.FC = () => {
           top: 0,
           left: 0,
           right: 0,
-          backgroundColor: "#fff",
-          color: "#0d47a1",
-          boxShadow: "0 2px 8px rgba(13, 71, 161, 0.1)",
-          borderBottom: "1px solid rgba(2, 119, 189, 0.1)",
+            backgroundColor: "rgba(244, 241, 232, 0.94)",
+            color: "var(--ink)",
+            boxShadow: "none",
+            backdropFilter: "blur(12px)",
+            borderBottom: "1px solid var(--rule)",
           zIndex: 1200,
         }}
       >
@@ -186,7 +184,7 @@ const Navbar: React.FC = () => {
                         left: 0,
                         right: 0,
                         height: "3px",
-                        background: "linear-gradient(135deg, #0d47a1 0%, #0277bd 100%)",
+                          background: "var(--signal)",
                         borderRadius: "2px",
                         transform: isActive(item.path)
                           ? "scaleX(1)"

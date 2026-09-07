@@ -30,8 +30,8 @@ const Footer: React.FC = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#0d47a1",
-        color: "#fff",
+        backgroundColor: "var(--ink)",
+        color: "var(--paper)",
         py: 8,
         mt: 10,
       }}
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   width: "48px",
                   height: "48px",
                   borderRadius: "8px",
-                  background: "linear-gradient(135deg, #42a5f5 0%, #4fc3f7 100%)",
+                  background: "var(--signal)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                   component="a"
                   href={link.path}
                   sx={{
-                    color: "rgba(255, 255, 255, 0.8)",
+                    color: "rgba(244, 241, 232, 0.7)",
                     textDecoration: "none",
                     fontSize: "0.9rem",
                     transition: "color 0.3s ease",

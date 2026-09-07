@@ -1,27 +1,29 @@
 import { createTheme } from '@mui/material/styles';
 
-// Cold Blue Light theme options
 const lightThemeOptions = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: "#0d47a1",
-      light: "#42a5f5",
-      dark: "#051d6b",
+      main: "#e9653b",
+      light: "#f38b67",
+      dark: "#a83b24",
     },
     secondary: {
-      main: "#0277bd",
-      light: "#4fc3f7",
-      dark: "#01579b",
+      main: "#345f72",
+      light: "#62899a",
+      dark: "#1d3c4a",
     },
     background: {
-      default: "#f5f9ff",
-      paper: "#e3f2fd",
+      default: "#f4f1e8",
+      paper: "#e9e4d7",
     },
     text: {
-      primary: "#0d2b4a",
-      secondary: "#1a4d7a",
+      primary: "#17211f",
+      secondary: "#5f6a65",
     },
+  },
+  typography: {
+    fontFamily: "'Space Grotesk', sans-serif",
   },
 });
 
