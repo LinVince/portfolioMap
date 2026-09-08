@@ -1,5 +1,6 @@
 import ThreeJSPage from "../components/ThreeJSPage";
 import HeroSection from "../components/HeroSection";
+import AIInteractiveWorld from "../components/AIInteractiveWorld/InteractiveAIWorld";
 import AboutSection from "../components/AboutSection";
 import SkillsSection from "../components/SkillsSection";
 
@@ -9,6 +10,9 @@ function HomePage() {
     <>
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Interactive AI world */}
+      <AIInteractiveWorld />
 
       {/* About Section */}
       <AboutSection />
