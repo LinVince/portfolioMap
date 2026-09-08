@@ -6,20 +6,21 @@ import { Link as RouterLink } from "react-router-dom";
 type Thumbnail = {
   src: string;
   label: string;
+  youtubeUrl: string;
 };
 
 const thumbnails: Thumbnail[] = [
-  { src: new URL("../../YT thumbnails/5771509389910019990.jpg", import.meta.url).href, label: "AI in practice" },
-  { src: new URL("../../YT thumbnails/6049851767798829093.jpg", import.meta.url).href, label: "Teaching with AI" },
-  { src: new URL("../../YT thumbnails/ChatGPT Image Aug 20, 2026 at 05_04_36 PM.png", import.meta.url).href, label: "Generative thinking" },
-  { src: new URL("../../YT thumbnails/ChatGPT Image Aug 29, 2026 at 11_38_24 AM.png", import.meta.url).href, label: "Human and machine" },
-  { src: new URL("../../YT thumbnails/YT thumbnail.png", import.meta.url).href, label: "Video field notes" },
-  { src: new URL("../../YT thumbnails/thumbnail.png", import.meta.url).href, label: "Learning in public" },
+  { src: new URL("../../YT thumbnails/5771509389910019990.jpg", import.meta.url).href, label: "Reverse Psychology", youtubeUrl: "https://youtu.be/uHXZFu0LUtw?si=l3NyPwvOnxYGfZ3b" },
+  { src: new URL("../../YT thumbnails/6049851767798829093.jpg", import.meta.url).href, label: "FGSM", youtubeUrl: "https://youtu.be/2NxR1rE7Ung?si=S1D182X9mjfMfYDE" },
+  { src: new URL("../../YT thumbnails/ChatGPT Image Aug 20, 2026 at 05_04_36 PM.png", import.meta.url).href, label: "Data Poisoning", youtubeUrl: "https://youtu.be/lNuwuT2_lEs?si=FDia1Gxv-R_RO8CD" },
+  { src: new URL("../../YT thumbnails/ChatGPT Image Aug 29, 2026 at 11_38_24 AM.png", import.meta.url).href, label: "Vibe Coding", youtubeUrl: "https://youtu.be/mV3CEoV1Abs?si=QG9raGJxG-MiTpOI" },
+  { src: new URL("../../YT thumbnails/YT thumbnail.png", import.meta.url).href, label: "Prompt Injection", youtubeUrl: "https://www.youtube.com/watch?v=mV3CEoV1Abs" },
+  { src: new URL("../../YT thumbnails/thumbnail.png", import.meta.url).href, label: "Model Extraction" , youtubeUrl: "https://youtu.be/U78Se9X5IXw?si=SwqI9VnSlCWHSAlN" },
 ];
 
 const HeroSection = () => {
   const stageRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const cardRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const isInteractingRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const pointerX = useMotionValue(0);
@@ -129,14 +130,15 @@ const HeroSection = () => {
         >
           <div className="hero-3d-stage-grid" aria-hidden="true" />
           {thumbnails.map((thumbnail, index) => (
-            <button
+            <a
               className={`hero-3d-card ${activeIndex === index ? "is-active" : ""}`}
               key={thumbnail.src}
               ref={(element) => { cardRefs.current[index] = element; }}
               style={{ "--card-index": index } as React.CSSProperties}
-              type="button"
-              aria-label={`Show ${thumbnail.label}`}
-              aria-pressed={activeIndex === index}
+              href={thumbnail.youtubeUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Watch ${thumbnail.label} on YouTube`}
               onFocus={() => setActiveIndex(index)}
               onMouseEnter={() => {
                 isInteractingRef.current = true;
@@ -147,7 +149,7 @@ const HeroSection = () => {
             >
               <img src={thumbnail.src} alt="" />
               <span>{thumbnail.label}</span>
-            </button>
+            </a>
           ))}
         </motion.div>
 
